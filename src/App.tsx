@@ -179,24 +179,15 @@ const LinkedInSection = () => {
   const posts = [
     { 
       id: 0, 
-      text: "Unlock the power of Knowledge Graphs and Semantic Layers. Discover how connecting data through meaningful relationships creates a more intuitive and automated organizational infrastructure.",
-      date: "Featured",
-      image: "https://picsum.photos/seed/neural-graph-blue/800/600",
-      url: "https://www.linkedin.com/posts/data-bench_knowledgegraph-semanticlayer-ontology-activity-7444774375997800448-3BKh?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAfTR_wBBByb0C7UERxOLxKheF6sLNa6Wx4"
+      urn: "urn:li:activity:7444774375997800448"
     },
     { 
       id: 1, 
-      text: "AI initiatives rely on more than just models, they rely on trusted data. Data lineage preserves the full story behind every data point: where it originated, who modified it, and how transformations changed its meaning.",
-      date: "4 days ago",
-      image: "https://picsum.photos/seed/ai-brain-circuit-glow/800/600",
-      url: "https://www.linkedin.com/posts/data-bench_datagovernance-datamanagement-ai-activity-7430294102388277248-_bf-"
+      urn: "urn:li:activity:7430294102388277248"
     },
     { 
       id: 2, 
-      text: "Unmanaged data costs more than money. It costs time to value. Fragmented, ungoverned data slows decisions, erodes trust, and keeps teams focused on fixing issues instead of driving growth.",
-      date: "2 weeks ago",
-      image: "https://picsum.photos/seed/cyber-network-nodes/800/600",
-      url: "https://www.linkedin.com/feed/update/urn:li:activity:7420144528793399296"
+      urn: "urn:li:activity:7420144528793399296"
     }
   ];
 
@@ -216,37 +207,16 @@ const LinkedInSection = () => {
         </div>
         <div className="grid md:grid-cols-3 gap-8">
           {posts.map((post) => (
-            <a 
-              key={post.id} 
-              href={post.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group cursor-pointer block"
-            >
-              <div className="rounded-2xl overflow-hidden mb-6 aspect-[16/10] bg-slate-100 relative shadow-sm border border-slate-100">
-                <img 
-                  src={post.image} 
-                  alt="Data Modernization" 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                  referrerPolicy="no-referrer"
-                />
-                <div className="absolute top-4 right-4 bg-white/90 backdrop-blur p-2 rounded-lg shadow-sm border border-white/20">
-                  <Linkedin className="w-4 h-4 text-[#0077b5]" />
-                </div>
-              </div>
-              <div className="flex items-center gap-3 mb-3">
-                <span className="text-[10px] font-bold text-emerald-600 uppercase tracking-[0.2em] bg-emerald-50 px-2 py-1 rounded">
-                  {post.date}
-                </span>
-                <div className="h-px flex-grow bg-slate-100" />
-              </div>
-              <p className="text-slate-900 font-bold text-lg leading-tight mb-3 group-hover:text-emerald-600 transition-colors line-clamp-3">
-                {post.text}
-              </p>
-              <div className="flex items-center gap-2 text-emerald-600 font-bold text-xs uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-all transform translate-x-[-10px] group-hover:translate-x-0">
-                Read on LinkedIn <ArrowRight className="w-3 h-3" />
-              </div>
-            </a>
+            <div key={post.id} className="rounded-2xl overflow-hidden bg-slate-50 border border-slate-100 shadow-sm min-h-[600px]">
+              <iframe 
+                src={`https://www.linkedin.com/embed/feed/update/${post.urn}`} 
+                height="600" 
+                width="100%" 
+                frameBorder="0"
+                title={`LinkedIn Post ${post.id}`}
+                className="w-full h-full"
+              ></iframe>
+            </div>
           ))}
         </div>
       </div>
