@@ -8,7 +8,6 @@ export const Navbar = () => {
   const { t } = useTranslation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [logoError, setLogoError] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
@@ -32,27 +31,12 @@ export const Navbar = () => {
       <div className="w-full max-w-[1440px] mx-auto flex items-center justify-between">
         {/* Logo */}
         <a href="/" className="flex-shrink-0 group -ml-2">
-          {logoError ? (
-            <div className="flex items-center gap-3 transition-transform group-hover:scale-105">
-              <span className="font-sans font-bold text-2xl tracking-tighter leading-none text-[#1d4c6a]">
-                data bench
-              </span>
-              <div className="w-8 h-8 rounded-lg bg-[#96e32d] flex-shrink-0 flex items-center justify-center p-1.5 shadow-sm transform rotate-[-2deg]">
-                <svg viewBox="0 0 24 24" fill="none" className="w-full h-full text-[#1d4c6a]" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <rect x="4" y="10" width="16" height="4" rx="1" />
-                  <path d="M6 14v4M18 14v4M10 14V11M14 14V11" />
-                </svg>
-              </div>
-            </div>
-          ) : (
-            <img 
-              src="/logo.png" 
-              alt="data bench" 
-              className="h-14 w-auto object-contain transition-all group-hover:scale-105"
-              onError={() => setLogoError(true)}
-              referrerPolicy="no-referrer"
-            />
-          )}
+          <img 
+            src="/logo.png" 
+            alt="data bench" 
+            className="h-12 w-auto object-contain transition-all group-hover:scale-105"
+            referrerPolicy="no-referrer"
+          />
         </a>
 
         {/* Desktop Nav - Centered */}
