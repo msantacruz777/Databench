@@ -9,7 +9,7 @@ export const Footer = () => {
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
         <a href="/" className="flex items-center gap-2 group">
           <img 
-            src="/logo.png" 
+            src="/logodb.png" 
             alt="data bench" 
             className="h-9 w-auto object-contain brightness-0 invert opacity-90"
             referrerPolicy="no-referrer"

@@ -32,7 +32,7 @@ export const Navbar = () => {
         {/* Logo */}
         <a href="/" className="flex-shrink-0 group -ml-2">
           <img 
-            src="/logo.png" 
+            src="/logodb.png" 
             alt="data bench" 
             className="h-12 w-auto object-contain transition-all group-hover:scale-105"
             referrerPolicy="no-referrer"
