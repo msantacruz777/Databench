@@ -1,0 +1,5 @@
+{
+  "name": "Data Bench Landing Page",
+  "description": "A professional landing page for Data Bench featuring a dynamic, rotating title animation: 'THE DATA [ACTIVATION/AI/MIGRATION/CONTEXT] LAYER'. Built with React, Tailwind CSS, and Framer Motion.",
+  "requestFramePermissions": []
+}
