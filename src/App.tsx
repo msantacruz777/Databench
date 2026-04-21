@@ -41,8 +41,8 @@ const XLogo = ({ className }: { className?: string }) => (
 
 const Logo = ({ className, invert = false }: { className?: string, invert?: boolean }) => {
   const [error, setError] = useState(false);
-  // Using the most recent provided URL for the logo asset
-  const logoUrl = "https://storage.googleapis.com/static.aistudio.google.com/content/file-0-1740778385000-78513561901.png";
+  // Using the local logo asset from the public folder
+  const logoUrl = "/Data_Bench_Logo_(1)_1771872965957.png";
 
   if (error) {
     return (
@@ -67,7 +67,7 @@ const Logo = ({ className, invert = false }: { className?: string, invert?: bool
     <img 
       src={logoUrl} 
       alt="data bench" 
-      className={cn("object-contain transition-all h-10 w-auto", className, invert && "brightness-0 invert opacity-90")}
+      className={cn("object-contain transition-all h-60 w-auto", className, invert && "brightness-0 invert opacity-90")}
       onError={() => {
         console.warn("Logo image failed to load, falling back to styled SVG logo.");
         setError(true);
@@ -104,7 +104,7 @@ const Navbar = () => {
       <div className="max-w-[1440px] mx-auto flex items-center justify-between">
         {/* Logo */}
         <a href="/" className="flex-shrink-0 group -ml-2">
-          <Logo className="h-10 w-auto group-hover:scale-105" />
+          <Logo className="group-hover:scale-105" />
         </a>
 
         {/* Desktop Nav - Centered */}
