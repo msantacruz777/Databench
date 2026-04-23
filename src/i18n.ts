@@ -24,20 +24,20 @@ const resources = {
       },
       platform: {
         label: 'PLATFORM',
-        title: 'The Intelligent Data Hub',
+        title: 'The Data Modernization <br /> Workbench',
         description: 'A comprehensive suite designed to seamlessly ingest, harmonize, and analyze your most critical assets.',
         ingest: {
-          title: 'Ingest, Harmonize & Analyze',
+          title: 'Ingest & Harmonize',
           subtitle: 'Landing zones & real-time processing',
           desc: 'Robust landing zones to capture raw data, intelligent harmonizing engines, and powerful analytics ready for action.'
         },
         governance: {
-          title: 'Governance',
+          title: 'Lineage & Governance',
           subtitle: 'Iterative policy enforcement',
           desc: 'Iterative data governance that evolves with your business, ensuring quality and compliance without slowing you down.'
         },
         lineage: {
-          title: 'Lineage and Transformation',
+          title: 'Transformation',
           subtitle: 'Registry & preservation',
           desc: 'Full lineage preservation coupled with a centralized transformation registry. Never lose sight of your data\'s journey.'
         },
@@ -120,20 +120,20 @@ const resources = {
       },
       platform: {
         label: 'PLATAFORMA',
-        title: 'El Centro de Datos Inteligente',
+        title: 'El Banco de Trabajo de <br /> Modernización de Datos',
         description: 'Una suite integral diseñada para ingerir, armonizar y analizar sin problemas sus activos más críticos.',
         ingest: {
-          title: 'Ingesta, Armonización, Análisis',
+          title: 'Ingest & Harmonize',
           subtitle: 'Zonas de aterrizaje y procesamiento en tiempo real',
           desc: 'Zonas de aterrizaje robustas para capturar datos sin procesar, motores de armonización inteligentes y análisis potentes listos para la acción.'
         },
         governance: {
-          title: 'Gobernanza',
+          title: 'Linaje y Gobernanza',
           subtitle: 'Cumplimiento de políticas iterativas',
           desc: 'Gobernanza de datos iterativa que evoluciona con su negocio, garantizando la calidad y el cumplimiento sin frenarlo.'
         },
         lineage: {
-          title: 'Linaje y Transformación',
+          title: 'Transformación',
           subtitle: 'Registro y preservación',
           desc: 'Preservación completa del linaje junto con un registro de transformación centralizado. Nunca pierda de vista el recorrido de sus datos.'
         },
@@ -216,20 +216,20 @@ const resources = {
       },
       platform: {
         label: 'المنصة',
-        title: 'مركز البيانات الذكي',
+        title: 'منصة عمل <br /> تحديث البيانات',
         description: 'مجموعة شاملة مصممة لاستيعاب أصولك الأكثر أهمية وتنسيقها وتحليلها بسلاسة.',
         ingest: {
-          title: 'الاستيعاب والتنسيق والتحليل',
+          title: 'الاستيعاب والتنسيق',
           subtitle: 'مناطق الهبوط والمعالجة في الوقت الفعلي',
           desc: 'مناطق هبوط قوية لالتقاط البيانات الخام، ومحركات تنسيق ذكية، وتحليلات قوية جاهزة للعمل.'
         },
         governance: {
-          title: 'الحوكمة',
+          title: 'النسب والحوكمة',
           subtitle: 'فرض السياسات المتكرر',
           desc: 'حوكمة البيانات المتكررة التي تتطور مع عملك، مما يضمن الجودة والامتثال دون إبطائك.'
         },
         lineage: {
-          title: 'النسب والتحويل',
+          title: 'التحويل',
           subtitle: 'السجل والحفظ',
           desc: 'الحفاظ الكامل على النسب إلى جانب سجل تحويل مركزي. لا تفقد أبداً مسار رحلة بياناتك.'
         },

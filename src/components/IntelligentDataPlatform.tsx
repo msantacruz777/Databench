@@ -17,10 +17,10 @@ export const IntelligentDataPlatform = () => {
       iconColor: 'text-emerald-600'
     },
     { 
-      icon: <Shield className="w-5 h-5" />, 
-      title: t('platform.governance.title'), 
-      subtitle: t('platform.governance.subtitle'), 
-      desc: t('platform.governance.desc'),
+      icon: <Layers className="w-5 h-5" />, 
+      title: t('platform.dedupe.title'), 
+      subtitle: t('platform.dedupe.subtitle'), 
+      desc: t('platform.dedupe.desc'),
       iconBg: 'bg-blue-50',
       iconColor: 'text-blue-600'
     },
@@ -33,10 +33,10 @@ export const IntelligentDataPlatform = () => {
       iconColor: 'text-emerald-600'
     },
     { 
-      icon: <Layers className="w-5 h-5" />, 
-      title: t('platform.dedupe.title'), 
-      subtitle: t('platform.dedupe.subtitle'), 
-      desc: t('platform.dedupe.desc'),
+      icon: <Shield className="w-5 h-5" />, 
+      title: t('platform.governance.title'), 
+      subtitle: t('platform.governance.subtitle'), 
+      desc: t('platform.governance.desc'),
       iconBg: 'bg-blue-50',
       iconColor: 'text-blue-600'
     },
@@ -49,9 +49,10 @@ export const IntelligentDataPlatform = () => {
           <span className="text-[14px] font-bold tracking-[0.15em] text-[#10b981] uppercase mb-4 block">
             {t('platform.label')}
           </span>
-          <h2 className="text-4xl md:text-[52px] font-sans font-bold text-[#0f172a] mb-6 tracking-[-0.01em] leading-tight">
-            {t('platform.title')}
-          </h2>
+          <h2 
+            className="text-4xl md:text-[52px] font-sans font-bold text-[#0f172a] mb-6 tracking-[-0.01em] leading-tight"
+            dangerouslySetInnerHTML={{ __html: t('platform.title') }}
+          />
           <p className="text-[17px] text-[#64748b] max-w-2xl mx-auto leading-[1.6]">
             {t('platform.description')}
           </p>
@@ -120,9 +121,9 @@ export const IntelligentDataPlatform = () => {
               <div 
                 key={i} 
                 className={cn(
-                  "p-8 md:p-10 flex flex-col gap-3",
-                  i < 3 ? "lg:border-r border-slate-100" : "",
-                  i % 2 === 0 ? "md:border-r lg:md:border-r" : "md:border-r-0 lg:md:border-r"
+                  "p-8 md:p-10 flex flex-col gap-3 border-slate-100",
+                  i % 2 === 0 ? "md:border-r" : "md:border-r-0",
+                  i < 3 ? "lg:border-r" : "lg:border-r-0"
                 )}
               >
                 <h4 className="text-[#10b981] font-bold text-lg">
