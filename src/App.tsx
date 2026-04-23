@@ -242,8 +242,9 @@ const FinalSection = () => {
   const team = [
     { name: 'Mathew Linton', linkedin: 'https://linkedin.com/in/mathewlinton' },
     { name: 'Tucker Grant', linkedin: 'https://linkedin.com/in/tuckergrant' },
-    { name: 'Mark Mclellan', linkedin: 'https://linkedin.com/in/markmclellan' },
-    { name: 'John Flett', linkedin: 'https://linkedin.com/in/johnflett' }
+    { name: 'Mark McLellan', linkedin: 'https://linkedin.com/in/markmclellan' },
+    { name: 'John Flett', linkedin: 'https://linkedin.com/in/johnflett' },
+    { name: 'Reza Babaee', linkedin: 'https://linkedin.com/in/rezababaee' }
   ];
 
   return (
@@ -325,12 +326,6 @@ const FinalSection = () => {
                 <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest block mb-2">Main</span>
                 <a href="mailto:contact@databench.co" className="text-lg font-display font-medium text-slate-600 hover:text-emerald-600 transition-colors">
                   contact@databench.co
-                </a>
-              </div>
-              <div>
-                <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest block mb-2">Partnerships</span>
-                <a href="mailto:partnership@databench.co" className="text-lg font-display font-medium text-slate-600 hover:text-emerald-600 transition-colors">
-                  partnership@databench.co
                 </a>
               </div>
             </div>

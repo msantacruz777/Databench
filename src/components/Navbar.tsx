@@ -31,12 +31,9 @@ export const Navbar = () => {
       <div className="w-full max-w-[1440px] mx-auto flex items-center justify-between">
         {/* Logo */}
         <a href="/" className="flex-shrink-0 group -ml-2">
-          <img 
-            src="/logodb.png" 
-            alt="data bench" 
-            className="h-12 w-auto object-contain transition-all group-hover:scale-105"
-            referrerPolicy="no-referrer"
-          />
+          <span className="font-sans font-bold text-2xl tracking-tighter leading-none text-[#1d4c6a] group-hover:text-emerald-600 transition-colors">
+            data bench
+          </span>
         </a>
 
         {/* Desktop Nav - Centered */}
