@@ -183,19 +183,21 @@ const LinkedInSection = () => {
   return (
     <section id="blog" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="flex items-center justify-between mb-12 px-4">
-          <div className="flex flex-col items-start">
-            <span className="text-[10px] font-black text-emerald-500 uppercase tracking-[0.3em] mb-3">Community</span>
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 tracking-tight">{t('linkedin.title')}</h2>
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 px-4 gap-6">
+          <div className="flex flex-col items-start gap-4">
+            <div className="flex flex-col items-start">
+              <span className="text-[10px] font-black text-emerald-500 uppercase tracking-[0.3em] mb-3">Community</span>
+              <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 tracking-tight">{t('linkedin.title')}</h2>
+            </div>
+            <a 
+              href="https://www.linkedin.com/company/data-bench/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-emerald-600 font-bold hover:opacity-80 transition-opacity"
+            >
+              <Linkedin className="w-5 h-5" /> Follow Us
+            </a>
           </div>
-          <a 
-            href="https://www.linkedin.com/company/data-bench/" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 text-emerald-600 font-bold hover:opacity-80 transition-opacity self-end mb-1"
-          >
-            <Linkedin className="w-5 h-5" /> Follow Us
-          </a>
         </div>
         <div className="grid md:grid-cols-3 gap-8">
           {posts.map((post) => (
@@ -248,7 +250,7 @@ const FinalSection = () => {
   ];
 
   return (
-    <section id="contact" className="py-24 bg-white border-t border-emerald-50">
+    <section id="company" className="py-24 bg-white border-t border-emerald-50">
       <div className="max-w-7xl mx-auto px-6">
         {/* Company Overview & Reach Section */}
         <div className="mb-16">
@@ -267,7 +269,7 @@ const FinalSection = () => {
                   Our teams are strategically located to serve global enterprises across multiple time zones, providing dedicated support and local expertise where it matters most.
                 </p>
                 <div className="mt-12 grid grid-cols-2 gap-6">
-                  {['Toronto', 'Kitchener', 'London', 'UAE'].map(loc => (
+                  {['Toronto', 'Waterloo', 'London', 'UAE'].map(loc => (
                     <div key={loc} className="flex items-center gap-3 text-sm text-slate-900 font-bold uppercase tracking-widest group/loc">
                       <div className="w-2 h-2 rounded-full bg-slate-400 group-hover/loc:bg-emerald-500 group-hover/loc:scale-125 transition-all" />
                       {loc}

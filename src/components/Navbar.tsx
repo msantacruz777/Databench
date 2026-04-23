@@ -1,19 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'motion/react';
 import { Menu, X } from 'lucide-react';
-import { cn } from '../lib/utils';
 
 export const Navbar = () => {
   const { t } = useTranslation();
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 20);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const navItems = [
     { name: t('nav.platform'), href: '#platform' },
@@ -24,10 +16,7 @@ export const Navbar = () => {
   ];
 
   return (
-    <nav className={cn(
-      "fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 h-16 flex items-center",
-      isScrolled ? "bg-white/90 backdrop-blur-md shadow-sm border-b border-emerald-100" : "bg-transparent"
-    )}>
+    <nav className="absolute top-0 left-0 right-0 z-50 px-6 h-16 flex items-center bg-transparent">
       <div className="w-full max-w-[1440px] mx-auto flex items-center justify-between">
         {/* Logo */}
         <a href="/" className="flex-shrink-0 group -ml-2">
