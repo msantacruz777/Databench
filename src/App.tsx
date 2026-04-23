@@ -60,9 +60,6 @@ const UseCasesSection = () => {
               {t('useCases.subtitle')}
             </p>
           </div>
-          <div className="flex-shrink-0">
-            <BenchLogo className="text-[#a3e635]" size={100} />
-          </div>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
