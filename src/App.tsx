@@ -35,6 +35,7 @@ import { Footer } from './components/Footer';
 import { Hero } from './components/Hero';
 import { IntelligentDataPlatform } from './components/IntelligentDataPlatform';
 import { ResultSection } from './components/ResultSection';
+import { SecuritySection } from './components/SecuritySection';
 
 // --- Components ---
 
@@ -47,7 +48,7 @@ const UseCasesSection = () => {
   }>;
 
   return (
-    <section id="use-cases" className="py-24 bg-white">
+    <section id="use-cases" className="pt-24 pb-12 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
           <div className="flex flex-col">
@@ -58,10 +59,14 @@ const UseCasesSection = () => {
               {t('useCases.subtitle')}
             </p>
           </div>
-          <button className="px-8 py-3 bg-[#10a37f] hover:bg-[#0e8c6d] text-white rounded-full font-bold transition-all shadow-[0_10px_25px_rgba(16,163,127,0.2)] flex items-center gap-2 group whitespace-nowrap">
-            {t('useCases.viewAll')}
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </button>
+          <div className="flex-shrink-0">
+            <img 
+              src="/bench-logo.png" 
+              alt="Data Bench Logo" 
+              className="h-16 w-auto object-contain opacity-80"
+              referrerPolicy="no-referrer"
+            />
+          </div>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -160,28 +165,28 @@ const LinkedInSection = () => {
       id: 0, 
       badge: "Today",
       text: "Manual deduplication is often an invisible cost in many organizations. When teams rely on manual processes to clean and deduplicate their data sets, they lose valuable...",
-      image: "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&q=80&w=800&h=600",
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800&h=600",
       url: "https://www.linkedin.com/feed/update/urn:li:activity:7444774375997800448"
     },
     { 
       id: 1, 
       badge: "4 days ago",
       text: "AI initiatives rely on more than just models, they rely on trusted data. Data lineage preserves the full story behind every data point: where it originated, who modified it...",
-      image: "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&q=80&w=800&h=600",
+      image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800&h=600",
       url: "https://www.linkedin.com/feed/update/urn:li:activity:7430294102388277248"
     },
     { 
       id: 2, 
       badge: "2 weeks ago",
       text: "Unmanaged data costs more than money. It costs time to value. Fragmented, ungoverned data slows decisions, erodes trust, and keeps teams trapped in manual cycles...",
-      image: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&q=80&w=800&h=600",
+      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800&h=600",
       url: "https://www.linkedin.com/feed/update/urn:li:activity:7420144528793399296",
       isGreen: true
     }
   ];
 
   return (
-    <section id="blog" className="py-24 bg-white">
+    <section id="blog" className="pt-12 pb-24 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 px-4 gap-6">
           <div className="flex flex-col items-start gap-4">
@@ -350,6 +355,7 @@ export default function App() {
         <IntelligentDataPlatform />
         <ResultSection />
         <AIDataLayerSection />
+        <SecuritySection />
         <UseCasesSection />
         <LinkedInSection />
         <FinalSection />

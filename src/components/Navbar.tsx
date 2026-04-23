@@ -19,7 +19,13 @@ export const Navbar = () => {
     <nav className="absolute top-0 left-0 right-0 z-50 px-6 h-16 flex items-center bg-transparent">
       <div className="w-full max-w-[1440px] mx-auto flex items-center justify-between">
         {/* Logo */}
-        <a href="/" className="flex-shrink-0 group -ml-2">
+        <a href="/" className="flex-shrink-0 group -ml-2 flex items-center gap-3">
+          <img 
+            src="/bench-logo.png" 
+            alt="Data Bench Logo" 
+            className="w-10 h-10 object-contain group-hover:opacity-80 transition-opacity"
+            referrerPolicy="no-referrer"
+          />
           <span className="font-sans font-bold text-2xl tracking-tighter leading-none text-[#1d4c6a] group-hover:text-emerald-600 transition-colors">
             data bench
           </span>
@@ -66,9 +72,14 @@ export const Navbar = () => {
                 {item.name}
               </a>
             ))}
-            <button className="bg-emerald-600 text-white px-6 py-3 rounded-full font-bold shadow-lg shadow-emerald-200 mt-2">
-              {t('nav.requestDemo')}
-            </button>
+            <div className="flex justify-center py-4 bg-emerald-50/50 rounded-2xl">
+              <img 
+                src="/bench-logo.png" 
+                alt="Data Bench Logo" 
+                className="h-12 w-auto object-contain"
+                referrerPolicy="no-referrer"
+              />
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

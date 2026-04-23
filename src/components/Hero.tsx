@@ -57,10 +57,12 @@ export const Hero = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <button className="w-full sm:w-auto bg-[#10a37f] hover:bg-[#0e8c6d] text-white px-12 py-5 rounded-full text-xl font-bold transition-all shadow-[0_20px_40px_rgba(16,163,127,0.25)] flex items-center justify-center gap-3 group">
-                Request a Demo
-                <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
-              </button>
+              <img 
+                src="/bench-logo.png" 
+                alt="Data Bench Logo" 
+                className="w-32 h-32 object-contain opacity-90"
+                referrerPolicy="no-referrer"
+              />
             </div>
           </motion.div>
         </div>

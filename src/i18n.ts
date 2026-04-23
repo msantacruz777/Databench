@@ -63,8 +63,8 @@ const resources = {
           subtitle: 'Experience the Semantic Advantage',
           desc: 'A semantic ontology that inherently enforces data governance while remaining iterative and flexible enough to adapt to your evolving business needs.',
           features: [
-            'Security First Architecture',
-            'Lineage Preservation',
+            'Automated Graph Population',
+            'Auditable Data Lineage',
             'Iterative Schema Design',
             'Automated Deduplication',
             'Transformation Registry',
@@ -79,7 +79,7 @@ const resources = {
         viewAll: 'Request a Demo',
         items: [
           { badge: 'Banking', title: 'Data Governance & Master Data', desc: 'Consolidated disparate legacy sources into a unified, governed data layer that resolved duplication at the source. This produced a reliable master dataset that eliminated migration risk and accelerated operational readiness for the organization\'s new environment.' },
-          { badge: 'Insurance', title: 'Legacy Transformation & Compliance', desc: 'Transforming legacy policy data into a governed, accessible layer that enabled the retirement of multiple high-cost databases. The platform maintained 100% regulatory compliance while providing instant retrieval of over 20 years of historical records for audit purposes.' },
+          { badge: 'Insurance', title: 'Extract & Register Business Logic for Shadow IT', desc: 'Transforming legacy policy data into a governed, accessible layer that enabled the retirement of multiple high-cost databases. The platform maintained 100% regulatory compliance while providing instant retrieval of over 20 years of historical records for audit purposes.' },
           { badge: 'Manufacturing', title: 'Real-Time Portfolio <br /> Analytics', desc: 'Integrated sixty disparate market feeds and internal ledgers into a single dashboard for multi-asset portfolios. This shift reduced reporting times from days to real-time, providing fund managers with instant exposure analysis and actionable risk metrics.' },
           { badge: 'Finance', title: 'Infrastructure <br /> Migration', desc: 'Facilitated the migration of massive historical datasets with zero downtime or loss of data lineage during a major infrastructure overhaul. The platform mapped complex relational dependencies in real-time, ensuring every transaction remained traceable and auditable.' },
           { badge: 'M&A', title: 'Automated Compliance & Ingestion', desc: 'Automated complex compliance rules at ingestion, preventing downstream anomalies and reducing manual review requirements by 85%. This validation engine ensured only high-quality, pre-cleared data entered the pipeline, improving both accuracy and processing speed.' },
@@ -159,8 +159,8 @@ const resources = {
           subtitle: 'Experimente la ventaja semántica',
           desc: 'Una ontología semántica que impone inherentemente la gobernanza de datos mientras permanece lo suficientemente iterativa y flexible para adaptarse a sus necesidades comerciales en evolución.',
           features: [
-            'Arquitectura de Seguridad Primero',
-            'Preservación de Linaje',
+            'Población de Grafos Automatizada',
+            'Linaje de Datos Auditable',
             'Diseño de Esquema Iterativo',
             'Deduplicación Automatizada',
             'Registro de Transformación',
@@ -175,7 +175,7 @@ const resources = {
         viewAll: 'Solicitar una Demo',
         items: [
           { badge: 'Banca', title: 'Gobernanza de Datos y Datos Maestros', desc: 'Consolidó fuentes heredadas en una capa de datos gobernada que resolvió la duplicación en la fuente. Esto produjo un conjunto de datos maestro confiable que eliminó el riesgo de migración y aceleró la preparación operativa para el nuevo entorno de la organización.' },
-          { badge: 'Seguros', title: 'Transformación de Legado y Cumplimiento', desc: 'Transformó los datos de pólizas heredadas en una capa gobernada y accesible que permitió el retiro de múltiples bases de datos de alto costo. La plataforma mantuvo el cumplimiento regulatorio al 100% con recuperación instantánea de registros históricos para fines de auditoría.' },
+          { badge: 'Seguros', title: 'Extraer y Registrar Lógica de Negocios para Shadow IT', desc: 'Transformó los datos de pólizas heredadas en una capa gobernada y accesible que permitió el retiro de múltiples bases de datos de alto costo. La plataforma mantuvo el cumplimiento regulatorio al 100% con recuperación instantánea de registros históricos para fines de auditoría.' },
           { badge: 'Manufactura', title: 'Analítica de Cartera <br /> en Tiempo Real', desc: 'Integró sesenta canales de mercado y libros internos en un único tablero para carteras de múltiples activos. Este cambio redujo los tiempos de informes de días a tiempo real, brindando a los gestores análisis de exposición y métricas de riesgo accionables e instantáneas.' },
           { badge: 'Finanzas', title: 'Migración de <br /> Infraestructura', desc: 'Facilitó la migración de conjuntos de datos históricos masivos sin tiempo de inactividad ni pérdida de linaje durante una revisión importante. La plataforma mapeó dependencias relacionales en tiempo real, asegurando que cada transacción permaneciera rastreable y auditable.' },
           { badge: 'M&A', title: 'Cumplimiento e Ingesta Automatizada', desc: 'Automatizó reglas de cumplimiento en la ingesta, evitando anomalías y reduciendo la revisión manual en un 85%. Este motor de validación aseguró que solo ingresaran datos de alta calidad en el flujo analítico, mejorando significativamente la precisión y la velocidad de procesamiento.' },
@@ -255,8 +255,8 @@ const resources = {
           subtitle: 'اختبر ميزة الدلالية',
           desc: 'أنطولوجيا دلالية تفرض بطبيعتها حوكمة البيانات مع بقائها متكررة ومرنة بما يكفي للتكيف مع احتياجات عملك المتطورة.',
           features: [
-            'بنية الأمان أولاً',
-            'الحفاظ على النسب',
+            'تعبئة الرسم البياني الآلية',
+            'نسب بيانات قابل للتدقيق',
             'تصميم مخطط متكرر',
             'إزالة التكرار الآلي',
             'سجل التحويل',
@@ -271,7 +271,7 @@ const resources = {
         viewAll: 'طلب عرض تجريبي',
         items: [
           { badge: 'الخدمات المصرفية', title: 'حوكمة البيانات والبيانات الأساسية', desc: 'قامت بدمج مصادر قديمة في طبقة بيانات محكومة حلت مشكلة التكرار عند المصدر. أنتج هذا مجموعة بيانات أساسية موثوقة قضت على مخاطر الهجرة وسرعت الجاهزية التشغيلية للبيئة الجديدة للمؤسسة.' },
-          { badge: 'التأمين', title: 'تحويل الأنظمة القديمة والامتثال', desc: 'تحويل بيانات البوليصات القديمة إلى طبقة خاضعة للحوكمة سمحت بإيقاف تشغيل قواعد البيانات عالية التكلفة. حافظت المنصة على الامتثال التنظيمي بنسبة 100% مع توفير استرجاع فوري للسجلات التاريخية لأغراض التدقيق.' },
+          { badge: 'التأمين', title: 'استخراج وتسجيل منطق الأعمال لـ Shadow IT', desc: 'تحويل بيانات البوليصات القديمة إلى طبقة خاضعة للحوكمة سمحت بإيقاف تشغيل قواعد البيانات عالية التكلفة. حافظت المنصة على الامتثال التنظيمي بنسبة 100% مع توفير استرجاع فوري للسجلات التاريخية لأغراض التدقيق.' },
           { badge: 'التصنيع', title: 'تحليلات المحفظة <br /> في الوقت الفعلي', desc: 'قامت بدمج ستين مصدر بيانات سوق ودفاتر حسابات داخلية في لوحة معلومات واحدة للمحافظ. قلل هذا أوقات إعداد التقارير من أيام إلى وقت فعلي، مما وفر للمديرين تحليلاً فورياً ومقاييس مخاطر قابلة للتنفيذ.' },
           { badge: 'المالية', title: 'هجرة البنية <br /> التحتية', desc: 'سهلت هجرة مجموعات البيانات التاريخية الضخمة دون توقف أو فقدان لنِسب البيانات خلال عملية إصلاح شاملة. قامت برسم خرائط للتبعيات العلائقية في الوقت الفعلي، مما يضمن بقاء كل معاملة قابلة للتتبع والتدقيق.' },
           { badge: 'الاندماج والاستحواذ', title: 'الامتثال والاستيعاب المؤتمت', desc: 'أتمتة قواعد الامتثال عند الاستيعاب, مما منع حدوث خلل وقلل المراجعة اليدوية بنسبة 85%. ضمن محرك التحقق دخول البيانات عالية الجودة فقط إلى خط المعالجة التحليلي، مما أدى إلى تحسين الدقة وسرعة المعالجة بشكل كبير.' },

@@ -8,7 +8,7 @@ export const ResultSection = () => {
   const features = t('platform.result.features', { returnObjects: true }) as string[];
 
   return (
-    <section className="py-24 bg-white overflow-hidden">
+    <section className="pt-12 pb-24 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Main Video Card */}
