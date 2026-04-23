@@ -31,12 +31,12 @@ export const Navbar = () => {
         </a>
 
         {/* Desktop Nav - Centered */}
-        <div className="hidden md:flex items-center gap-10 absolute left-1/2 -translate-x-1/2">
+        <div className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
           {navItems.map((item) => (
             <a 
               key={item.name} 
               href={item.href}
-              className="text-[15px] font-semibold text-slate-500 hover:text-emerald-600 transition-colors"
+              className="text-[15px] font-semibold text-[#1d4c6a] hover:text-[#a3e635] transition-colors"
             >
               {item.name}
             </a>
@@ -66,7 +66,7 @@ export const Navbar = () => {
                 key={item.name} 
                 href={item.href}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="text-lg font-medium text-emerald-900 border-b border-emerald-50 pb-2"
+                className="text-lg font-medium text-[#1d4c6a] border-b border-emerald-50 pb-2"
               >
                 {item.name}
               </a>
