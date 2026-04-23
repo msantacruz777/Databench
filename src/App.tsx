@@ -253,8 +253,8 @@ const FinalSection = () => {
     <section id="company" className="py-24 bg-white border-t border-emerald-50">
       <div className="max-w-7xl mx-auto px-6">
         {/* Company Overview & Reach Section */}
-        <div className="mb-16">
-          <div className="mb-12 flex flex-col items-start px-4">
+        <div className="mb-10">
+          <div className="mb-6 flex flex-col items-start px-4">
             <span className="text-[10px] font-black text-emerald-500 uppercase tracking-[0.3em] mb-3">Organization</span>
             <h3 className="text-3xl md:text-4xl font-display font-bold text-slate-900 tracking-tight">Company</h3>
           </div>
