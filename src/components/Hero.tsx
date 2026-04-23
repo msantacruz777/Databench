@@ -13,7 +13,7 @@ export const Hero = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % words.length);
-    }, 2500);
+    }, 4000);
     return () => clearInterval(interval);
   }, []);
 
@@ -43,7 +43,7 @@ export const Hero = () => {
                         transition={{ duration: 0.5, ease: [0.23, 1, 0.32, 1] }}
                         className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-blue-600 inline-flex items-center whitespace-nowrap py-1 px-2"
                       >
-                        {words[index]}&nbsp;DATA
+                        {words[index]}&nbsp;&nbsp;DATA
                       </motion.span>
                     </AnimatePresence>
                   </div>

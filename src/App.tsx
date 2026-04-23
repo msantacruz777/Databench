@@ -108,10 +108,10 @@ const AIDataLayerSection = () => {
   return (
     <section id="ai-data-layer" className="py-24 bg-slate-50 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="max-w-3xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
@@ -121,48 +121,27 @@ const AIDataLayerSection = () => {
             <h2 className="text-4xl md:text-5xl font-sans font-bold text-[#0f172a] mb-8 leading-tight tracking-tight">
               Semantic Layer + Rules Engine + Graph = <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-blue-600">AI Data Layer</span>
             </h2>
-            <p className="text-xl text-slate-600 leading-relaxed mb-8 font-medium italic">
+            <p className="text-xl text-slate-600 leading-relaxed mb-12 font-medium italic">
               "Data in Context"
             </p>
             
-            <div className="space-y-4">
+            <div className="space-y-4 text-left">
               {[
                 { title: 'Neural Semantic Mapping', desc: 'Automatically bridge disparate data models using AI.' },
                 { title: 'Predictive Lineage', desc: 'Anticipate downstream impacts of data changes.' },
                 { title: 'Autonomous Quality Guard', desc: 'Self-healing data pipelines powered by machine learning.' }
               ].map((feature, i) => (
-                <div key={i} className="flex gap-4 p-4 bg-white rounded-2xl border border-slate-200 shadow-sm">
-                  <div className="w-10 h-10 rounded-xl bg-emerald-50 flex items-center justify-center flex-shrink-0">
-                    <Zap className="w-5 h-5 text-emerald-600" />
+                <div key={i} className="flex gap-4 p-5 bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                  <div className="w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center flex-shrink-0">
+                    <Zap className="w-6 h-5 text-emerald-600" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-slate-900">{feature.title}</h4>
-                    <p className="text-sm text-slate-500">{feature.desc}</p>
+                    <h4 className="font-bold text-slate-900 text-lg">{feature.title}</h4>
+                    <p className="text-slate-500 leading-relaxed">{feature.desc}</p>
                   </div>
                 </div>
               ))}
             </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="relative"
-          >
-            <div className="aspect-square bg-white rounded-[3rem] shadow-2xl border border-slate-100 p-8 relative overflow-hidden group">
-              <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-blue-500/5 opacity-50" />
-              <img 
-                src="https://images.unsplash.com/photo-1639322537228-f710d846310a?auto=format&fit=crop&q=80&w=1600&h=1600" 
-                alt="AI Data Layer Technology Architecture" 
-                className="w-full h-full object-cover rounded-2xl grayscale hover:grayscale-0 transition-all duration-700"
-                referrerPolicy="no-referrer"
-              />
-              <div className="absolute inset-0 border-[24px] border-white rounded-[3rem]" />
-            </div>
-            
-            {/* Floating Stats */}
           </motion.div>
         </div>
       </div>
@@ -179,44 +158,77 @@ const LinkedInSection = () => {
   const posts = [
     { 
       id: 0, 
-      urn: "urn:li:activity:7444774375997800448"
+      badge: "Today",
+      text: "Manual deduplication is often an invisible cost in many organizations. When teams rely on manual processes to clean and deduplicate their data sets, they lose valuable...",
+      image: "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&q=80&w=800&h=600",
+      url: "https://www.linkedin.com/feed/update/urn:li:activity:7444774375997800448"
     },
     { 
       id: 1, 
-      urn: "urn:li:activity:7430294102388277248"
+      badge: "4 days ago",
+      text: "AI initiatives rely on more than just models, they rely on trusted data. Data lineage preserves the full story behind every data point: where it originated, who modified it...",
+      image: "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&q=80&w=800&h=600",
+      url: "https://www.linkedin.com/feed/update/urn:li:activity:7430294102388277248"
     },
     { 
       id: 2, 
-      urn: "urn:li:activity:7420144528793399296"
+      badge: "2 weeks ago",
+      text: "Unmanaged data costs more than money. It costs time to value. Fragmented, ungoverned data slows decisions, erodes trust, and keeps teams trapped in manual cycles...",
+      image: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&q=80&w=800&h=600",
+      url: "https://www.linkedin.com/feed/update/urn:li:activity:7420144528793399296",
+      isGreen: true
     }
   ];
 
   return (
     <section id="blog" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="flex items-center justify-between mb-12">
-          <h2 className="text-3xl font-display font-bold text-emerald-950 tracking-tight">{t('linkedin.title')}</h2>
+        <div className="flex items-center justify-between mb-12 px-4">
+          <div className="flex flex-col items-start">
+            <span className="text-[10px] font-black text-emerald-500 uppercase tracking-[0.3em] mb-3">Community</span>
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 tracking-tight">{t('linkedin.title')}</h2>
+          </div>
           <a 
             href="https://www.linkedin.com/company/data-bench/" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="flex items-center gap-2 text-emerald-600 font-bold hover:underline"
+            className="flex items-center gap-2 text-emerald-600 font-bold hover:opacity-80 transition-opacity self-end mb-1"
           >
             <Linkedin className="w-5 h-5" /> Follow Us
           </a>
         </div>
         <div className="grid md:grid-cols-3 gap-8">
           {posts.map((post) => (
-            <div key={post.id} className="rounded-2xl overflow-hidden bg-slate-50 border border-slate-100 shadow-sm min-h-[600px]">
-              <iframe 
-                src={`https://www.linkedin.com/embed/feed/update/${post.urn}`} 
-                height="600" 
-                width="100%" 
-                frameBorder="0"
-                title={`LinkedIn Post ${post.id}`}
-                className="w-full h-full"
-              ></iframe>
-            </div>
+            <a 
+              key={post.id} 
+              href={post.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group cursor-pointer block"
+            >
+              <div className="rounded-2xl overflow-hidden mb-6 aspect-[16/10] bg-slate-100 relative shadow-sm border border-slate-100">
+                <img 
+                  src={post.image} 
+                  alt="LinkedIn Content" 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  referrerPolicy="no-referrer"
+                />
+                <div className="absolute top-4 right-4 bg-white rounded-lg p-1.5 shadow-sm border border-slate-100/50">
+                  <Linkedin className="w-4 h-4 text-[#0077b5]" />
+                </div>
+              </div>
+              <div className="mb-4">
+                <span className="px-2 py-0.5 bg-emerald-50 text-emerald-600 text-[10px] font-bold uppercase tracking-widest rounded">
+                  {post.badge}
+                </span>
+              </div>
+              <p className={cn(
+                "font-bold text-lg leading-snug transition-colors line-clamp-3",
+                post.isGreen ? "text-emerald-600 group-hover:text-emerald-700" : "text-slate-900 group-hover:text-emerald-600"
+              )}>
+                {post.text}
+              </p>
+            </a>
           ))}
         </div>
       </div>
