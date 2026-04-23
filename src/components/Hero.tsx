@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
 import { PlatformVisualization } from './PlatformVisualization';
+import { BenchLogo } from './BenchLogo';
 
 export const Hero = () => {
   const { t, i18n } = useTranslation();
@@ -57,12 +58,7 @@ export const Hero = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <img 
-                src="/bench-logo.png" 
-                alt="Data Bench Logo" 
-                className="w-32 h-32 object-contain opacity-90"
-                referrerPolicy="no-referrer"
-              />
+              <BenchLogo className="text-[#a3e635]" size={140} />
             </div>
           </motion.div>
         </div>

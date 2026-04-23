@@ -36,6 +36,7 @@ import { Hero } from './components/Hero';
 import { IntelligentDataPlatform } from './components/IntelligentDataPlatform';
 import { ResultSection } from './components/ResultSection';
 import { SecuritySection } from './components/SecuritySection';
+import { BenchLogo } from './components/BenchLogo';
 
 // --- Components ---
 
@@ -60,12 +61,7 @@ const UseCasesSection = () => {
             </p>
           </div>
           <div className="flex-shrink-0">
-            <img 
-              src="/bench-logo.png" 
-              alt="Data Bench Logo" 
-              className="h-16 w-auto object-contain opacity-80"
-              referrerPolicy="no-referrer"
-            />
+            <BenchLogo className="text-[#a3e635]" size={100} />
           </div>
         </div>
 
@@ -363,11 +359,11 @@ export default function App() {
 
       <Footer />
 
-      {/* Floating Request Demo Button for Mobile */}
+      {/* Floating Logo for Mobile */}
       <div className="fixed bottom-6 right-6 md:hidden z-40">
-        <button className="bg-emerald-600 text-white p-4 rounded-full shadow-2xl shadow-emerald-400">
-          <Zap className="w-6 h-6" />
-        </button>
+        <div className="bg-white p-4 rounded-full shadow-2xl border border-slate-100 flex items-center justify-center">
+          <BenchLogo className="w-10 h-10 text-[#a3e635]" />
+        </div>
       </div>
     </div>
   );

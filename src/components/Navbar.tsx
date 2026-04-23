@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'motion/react';
 import { Menu, X } from 'lucide-react';
+import { BenchLogo } from './BenchLogo';
 
 export const Navbar = () => {
   const { t } = useTranslation();
@@ -20,11 +21,9 @@ export const Navbar = () => {
       <div className="w-full max-w-[1440px] mx-auto flex items-center justify-between">
         {/* Logo */}
         <a href="/" className="flex-shrink-0 group -ml-2 flex items-center gap-3">
-          <img 
-            src="/bench-logo.png" 
-            alt="Data Bench Logo" 
-            className="w-10 h-10 object-contain group-hover:opacity-80 transition-opacity"
-            referrerPolicy="no-referrer"
+          <BenchLogo 
+            className="text-[#a3e635] group-hover:text-[#10b981] transition-colors" 
+            size={32} 
           />
           <span className="font-sans font-bold text-2xl tracking-tighter leading-none text-[#1d4c6a] group-hover:text-emerald-600 transition-colors">
             data bench
@@ -72,13 +71,8 @@ export const Navbar = () => {
                 {item.name}
               </a>
             ))}
-            <div className="flex justify-center py-4 bg-emerald-50/50 rounded-2xl">
-              <img 
-                src="/bench-logo.png" 
-                alt="Data Bench Logo" 
-                className="h-12 w-auto object-contain"
-                referrerPolicy="no-referrer"
-              />
+            <div className="flex justify-center py-4">
+              <BenchLogo className="text-[#a3e635]" size={80} />
             </div>
           </motion.div>
         )}
