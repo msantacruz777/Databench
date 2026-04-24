@@ -14,7 +14,7 @@ const resources = {
       },
       hero: {
         quote: 'From Data Chaos to Clarity.',
-        subheading: 'Unleash the power of Semantic Ontology. Built for speed, simplicity, flexibility, and iterative growth.',
+        subheading: "Unleash the power of Semantic Ontology.\nBuilt for speed, simplicity, flexibility, and iterative growth.",
         bestUseCase: {
           badge: 'Best Use Case',
           quote: 'Facing the regulatory pressure of IFRS compliance, a leading Caribbean financial and insurance group successfully transformed a fragmented, manual reporting process into a unified data environment.',
@@ -110,7 +110,7 @@ const resources = {
       },
       hero: {
         quote: 'Del caos de los datos a la claridad.',
-        subheading: 'Libere el poder de la ontología semántica. Diseñado para ofrecer velocidad, sencillez, flexibilidad y crecimiento iterativo.',
+        subheading: "Libere el poder de la ontología semántica.\nDiseñado para ofrecer velocidad, sencillez, flexibilidad y crecimiento iterativo.",
         bestUseCase: {
           badge: 'Mejor Caso de Uso',
           quote: 'Enfrentando la presión regulatoria del cumplimiento de la NIIF, un grupo financiero y de seguros líder en el Caribe transformó con éxito un proceso de informes manual y fragmentado en un entorno de datos unificado.',
@@ -206,7 +206,7 @@ const resources = {
       },
       hero: {
         quote: 'من فوضى البيانات إلى الوضوح.',
-        subheading: 'أطلق العنان لقوة الأنطولوجيا الدلالية. صُممت من أجل السرعة والبساطة والمرونة والنمو المتكرر.',
+        subheading: "أطلق العنان لقوة الأنطولوجيا الدلالية.\nصُممت من أجل السرعة والبساطة والمرونة والنمو المتكرر.",
         bestUseCase: {
           badge: 'أفضل حالة استخدام',
           quote: 'في مواجهة الضغوط التنظيمية للامتثال للمعايير الدولية لإعداد التقارير المالية (IFRS)، نجحت مجموعة مالية وتأمينية رائدة في منطقة البحر الكاريبي في تحويل عملية إعداد تقارير يدوية ومجزأة إلى بيئة بيانات موحدة.',

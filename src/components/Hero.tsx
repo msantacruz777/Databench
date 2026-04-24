@@ -53,7 +53,7 @@ export const Hero = () => {
               )}
             </h1>
 
-            <p className="text-xl md:text-2xl text-[#1d4c6a] font-normal leading-tight mb-12 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-[#1d4c6a] font-normal leading-tight mb-12 max-w-3xl mx-auto whitespace-pre-line">
               {t('hero.subheading')}
             </p>
 

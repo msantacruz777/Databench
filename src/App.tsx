@@ -119,7 +119,7 @@ const AIDataLayerSection = () => {
             <h2 className="text-4xl md:text-5xl font-sans font-bold text-[#0f172a] mb-8 leading-tight tracking-tight">
               Semantic Layer + Rules Engine + Graph = <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-blue-600">AI Data Layer</span>
             </h2>
-            <p className="text-xl text-slate-600 leading-relaxed mb-12 font-medium italic">
+            <p className="text-xl text-slate-600 leading-relaxed mb-12 font-medium">
               "Graph traversal activates context, reduces hallucinations and optimizes agentic outcomes"
             </p>
           </motion.div>
