@@ -80,7 +80,7 @@ const UseCasesSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white p-10 rounded-[2rem] border border-slate-100 shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.05)] transition-all flex flex-col items-start"
+                className="bg-white p-10 rounded-[2rem] border border-slate-100 shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.05)] transition-all flex flex-col items-start h-full text-left"
               >
                 <span className="px-6 py-2.5 bg-slate-50 text-slate-500 text-[15px] font-bold rounded-full mb-6 border border-slate-100/50">
                   {item.badge}
@@ -89,7 +89,7 @@ const UseCasesSection = () => {
                   className={cn("text-2xl font-display font-bold mb-4 tracking-tight leading-tight", titleColors[i] || "text-[#0f172a]")}
                   dangerouslySetInnerHTML={{ __html: item.title }}
                 />
-                <p className="text-slate-500 leading-relaxed text-[15px]">
+                <p className="text-slate-500 leading-relaxed text-[15px] text-justify">
                   {item.desc}
                 </p>
               </motion.div>
@@ -179,7 +179,7 @@ const LinkedInSection = () => {
   ];
 
   return (
-    <section id="blog" className="pt-12 pb-24 bg-white">
+    <section id="blog" className="pt-12 pb-12 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 px-4 gap-6">
           <div className="flex flex-col items-start gap-4">
@@ -248,7 +248,7 @@ const FinalSection = () => {
   ];
 
   return (
-    <section id="company" className="py-24 bg-white border-t border-emerald-50">
+    <section id="company" className="pt-12 pb-24 bg-white border-t border-emerald-50">
       <div className="max-w-7xl mx-auto px-6">
         {/* Company Overview & Reach Section */}
         <div className="mb-10">
