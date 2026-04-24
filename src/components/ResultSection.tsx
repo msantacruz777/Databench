@@ -21,8 +21,8 @@ export const ResultSection = () => {
           >
             <div className="absolute inset-0 bg-[#0f172a]/10 z-10 group-hover:bg-transparent transition-colors duration-500" />
             <img 
-              src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1600&h=1000" 
-              alt="Advanced Technology Infrastructure"
+              src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1600&h=1000" 
+              alt="Advanced Global Data Network Visualization"
               referrerPolicy="no-referrer"
               className="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000"
             />

@@ -104,8 +104,8 @@ const UseCasesSection = () => {
 const AIDataLayerSection = () => {
   const { t } = useTranslation();
   return (
-    <section id="ai-data-layer" className="py-24 bg-slate-50 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="ai-data-layer" className="pt-24 pb-12 bg-slate-50 relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -120,7 +120,7 @@ const AIDataLayerSection = () => {
               Semantic Layer + Rules Engine + Graph = <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-blue-600">AI Data Layer</span>
             </h2>
             <p className="text-xl text-slate-600 leading-relaxed mb-12 font-medium italic">
-              "Data in Context"
+              "Graph traversal activates context, reduces hallucinations and optimizes agentic outcomes"
             </p>
           </motion.div>
         </div>
@@ -151,8 +151,8 @@ const AIDataLayerSection = () => {
         </div>
       </div>
       
-      {/* Background Decor */}
-      <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-emerald-50 to-transparent pointer-events-none" />
+      {/* Background Decor - moved to background with z-0 and lower opacity */}
+      <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-emerald-50/50 to-transparent pointer-events-none z-0" />
     </section>
   );
 };

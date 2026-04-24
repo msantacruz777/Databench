@@ -19,7 +19,7 @@ export const Hero = () => {
   }, []);
 
   return (
-    <section className="relative pt-40 pb-20 overflow-hidden bg-white">
+    <section className="relative pt-40 pb-8 overflow-hidden bg-white">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center max-w-5xl mx-auto mb-16">
           <motion.div

@@ -43,7 +43,7 @@ export const IntelligentDataPlatform = () => {
   ];
 
   return (
-    <section id="platform" className="pt-24 pb-12 bg-white">
+    <section id="platform" className="pt-20 pb-12 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <span className="text-[14px] font-bold tracking-[0.15em] text-[#10b981] uppercase mb-4 block">
