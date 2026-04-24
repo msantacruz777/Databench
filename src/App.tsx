@@ -69,7 +69,7 @@ const UseCasesSection = () => {
               'text-blue-600',    // Insurance: Governance & Archiving
               'text-blue-600',    // Manufacturing: Integration & Deduplication
               'text-emerald-600', // Finance: Portfolio Visibility
-              'text-blue-600',    // M&A: Migration
+              'text-blue-600',    // Agriculture: Compliance
               'text-emerald-600'  // Insurance: Rules Enforcement
             ];
             
