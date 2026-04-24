@@ -122,25 +122,32 @@ const AIDataLayerSection = () => {
             <p className="text-xl text-slate-600 leading-relaxed mb-12 font-medium italic">
               "Data in Context"
             </p>
-            
-            <div className="space-y-4 text-left">
-              {[
-                { title: 'Neural Semantic Mapping', desc: 'Automatically bridge disparate data models using AI.' },
-                { title: 'Predictive Lineage', desc: 'Anticipate downstream impacts of data changes.' },
-                { title: 'Autonomous Quality Guard', desc: 'Self-healing data pipelines powered by machine learning.' }
-              ].map((feature, i) => (
-                <div key={i} className="flex gap-4 p-5 bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-                  <div className="w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center flex-shrink-0">
-                    <Zap className="w-6 h-5 text-emerald-600" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-slate-900 text-lg">{feature.title}</h4>
-                    <p className="text-slate-500 leading-relaxed">{feature.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
           </motion.div>
+        </div>
+
+        <div className="grid grid-cols-2 lg:grid-cols-5 gap-4 mt-8">
+          {[
+            { title: 'Context', icon: <Database className="w-5 h-5" />, desc: 'Deep semantic understanding of relationships.' },
+            { title: 'Ontology', icon: <Layers className="w-5 h-5" />, desc: 'Flexible structure for enterprise knowledge.' },
+            { title: 'Inference', icon: <Zap className="w-5 h-5" />, desc: 'AI-driven discovery of hidden insights.' },
+            { title: 'Hyper Relation', icon: <GitBranch className="w-5 h-5" />, desc: 'Multi-dimensional data connectivity.' },
+            { title: 'Automate Graph Assembly', icon: <RefreshCw className="w-5 h-5" />, desc: 'Zero-effort knowledge graph population.' }
+          ].map((feature, i) => (
+            <motion.div 
+              key={i} 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+              viewport={{ once: true }}
+              className="flex flex-col items-center text-center p-6 bg-white rounded-[2rem] border border-slate-200 shadow-sm hover:shadow-xl hover:shadow-emerald-500/5 transition-all hover:-translate-y-1 aspect-square justify-center"
+            >
+              <div className="w-12 h-12 rounded-2xl bg-emerald-50 flex items-center justify-center mb-4 transition-transform group-hover:scale-110">
+                <span className="text-emerald-600">{feature.icon}</span>
+              </div>
+              <h4 className="font-bold text-slate-900 text-sm mb-2 leading-tight">{feature.title}</h4>
+              <p className="text-[10px] text-slate-500 leading-tight px-2">{feature.desc}</p>
+            </motion.div>
+          ))}
         </div>
       </div>
       
