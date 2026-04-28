@@ -92,7 +92,7 @@ export const IntelligentDataPlatform = () => {
         {/* Metrics Section */}
         <div className="mt-24 pt-20 border-t border-slate-100">
           <div className="text-center mb-16">
-            <h3 className="text-3xl md:text-5xl font-sans font-bold text-[#1d4c6a] tracking-tight">
+            <h3 className="text-4xl md:text-[52px] font-sans font-bold text-[#0f172a] mb-6 tracking-[-0.01em] leading-tight">
               {t('platform.metrics.title')}
             </h3>
           </div>
@@ -107,10 +107,10 @@ export const IntelligentDataPlatform = () => {
                 viewport={{ once: true }}
                 className="text-center group"
               >
-                <div className="text-5xl md:text-6xl font-bold text-[#1d4c6a] mb-4 group-hover:scale-105 transition-transform duration-300">
+                <div className="text-5xl md:text-6xl font-bold text-[#0f172a] mb-4 group-hover:scale-105 transition-transform duration-300">
                   {metric.value}
                 </div>
-                <h4 className="text-lg font-bold text-[#1d4c6a] mb-2 leading-tight">
+                <h4 className="text-lg font-bold text-[#0f172a] mb-2 leading-tight">
                   {metric.label}
                 </h4>
                 <p className="text-slate-500 text-sm">

@@ -82,7 +82,7 @@ const UseCasesSection = () => {
                 viewport={{ once: true }}
                 className="bg-white p-10 rounded-[2rem] border border-slate-100 shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.05)] transition-all flex flex-col items-start h-full text-left"
               >
-                <span className="px-6 py-2.5 bg-slate-50 text-slate-500 text-[15px] font-bold rounded-full mb-6 border border-slate-100/50">
+                <span className="px-6 py-2.5 bg-slate-50 text-black text-[15px] font-bold rounded-full mb-6 border border-slate-100/50">
                   {item.badge}
                 </span>
                 <h3 
@@ -251,7 +251,7 @@ const FinalSection = () => {
     { name: 'Tucker Grant', linkedin: 'https://linkedin.com/in/tuckergrant' },
     { name: 'Mark McLellan', linkedin: 'https://linkedin.com/in/markmclellan' },
     { name: 'John Flett', linkedin: 'https://linkedin.com/in/johnflett' },
-    { name: 'Reza Babaee', linkedin: 'https://linkedin.com/in/rezababaee' }
+    { name: 'Reza Babaee', linkedin: 'https://www.linkedin.com/in/reza-babaee/' }
   ];
 
   return (
@@ -334,6 +334,15 @@ const FinalSection = () => {
                 <a href="mailto:contact@databench.co" className="text-lg font-display font-medium text-slate-600 hover:text-emerald-600 transition-colors">
                   contact@databench.co
                 </a>
+              </div>
+              <div className="mt-2">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-6 py-2.5 bg-emerald-600 text-white font-bold rounded-full text-sm shadow-lg shadow-emerald-600/20 hover:bg-emerald-700 transition-colors uppercase tracking-wider"
+                >
+                  {t('nav.requestDemo')}
+                </motion.button>
               </div>
             </div>
           </div>
