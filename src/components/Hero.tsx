@@ -42,9 +42,9 @@ export const Hero = () => {
                         animate={{ y: 0, opacity: 1 }}
                         exit={{ y: "-100%", opacity: 0 }}
                         transition={{ duration: 0.5, ease: [0.23, 1, 0.32, 1] }}
-                        className="text-transparent bg-clip-text bg-gradient-to-r from-[#1d4c6a] to-[#a3e635] inline-flex items-center whitespace-nowrap py-1 px-2"
+                        className="text-transparent bg-clip-text bg-gradient-to-r from-[#10b981] to-[#1d4c6a] inline-flex items-center whitespace-nowrap py-1 px-2"
                       >
-                        {words[index]}&nbsp;&nbsp;DATA
+                        DATA&nbsp;&nbsp;{words[index]}
                       </motion.span>
                     </AnimatePresence>
                   </div>
