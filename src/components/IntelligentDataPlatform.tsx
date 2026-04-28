@@ -43,10 +43,10 @@ export const IntelligentDataPlatform = () => {
   ];
 
   return (
-    <section id="platform" className="pt-20 pb-12 bg-white">
+    <section id="platform" className="pt-16 pb-12 bg-white">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <span className="text-[14px] font-bold tracking-[0.15em] text-[#10b981] uppercase mb-4 block">
+        <div className="text-center mb-10">
+          <span className="text-[14px] font-bold tracking-[0.15em] text-[#10b981] uppercase mb-3 block">
             {t('platform.label')}
           </span>
           <h2 
@@ -59,7 +59,7 @@ export const IntelligentDataPlatform = () => {
         </div>
 
         {/* 4 Cards Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
           {cards.map((card, idx) => (
             <motion.div 
               key={idx}
@@ -90,14 +90,14 @@ export const IntelligentDataPlatform = () => {
         </div>
 
         {/* Metrics Section */}
-        <div className="mt-24 pt-20 border-t border-slate-100">
-          <div className="text-center mb-16">
-            <h3 className="text-4xl md:text-[52px] font-sans font-bold text-[#0f172a] mb-6 tracking-[-0.01em] leading-tight">
+        <div className="mt-16 pt-16 border-t border-slate-100">
+          <div className="text-center mb-10">
+            <h3 className="text-3xl md:text-4xl font-sans font-bold text-[#0f172a] mb-4 tracking-tight leading-tight">
               {t('platform.metrics.title')}
             </h3>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-12 max-w-5xl mx-auto px-4">
+          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto px-4">
             {(t('platform.metrics.items', { returnObjects: true }) as any[]).map((metric: any, idx: number) => (
               <motion.div
                 key={idx}
@@ -105,15 +105,15 @@ export const IntelligentDataPlatform = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
                 viewport={{ once: true }}
-                className="text-center group"
+                className="bg-slate-50 border border-slate-100 rounded-[2rem] p-8 flex flex-col items-center justify-center text-center group shadow-sm hover:shadow-md hover:bg-slate-100/50 transition-all duration-300 min-h-[260px]"
               >
-                <div className="text-5xl md:text-6xl font-bold text-[#0f172a] mb-4 group-hover:scale-105 transition-transform duration-300">
+                <div className="text-4xl md:text-5xl font-bold text-[#0f172a] mb-4 group-hover:scale-110 transition-transform duration-300">
                   {metric.value}
                 </div>
                 <h4 className="text-lg font-bold text-[#0f172a] mb-2 leading-tight">
                   {metric.label}
                 </h4>
-                <p className="text-slate-500 text-sm">
+                <p className="text-slate-500 text-sm leading-relaxed max-w-[200px]">
                   {metric.desc}
                 </p>
               </motion.div>
