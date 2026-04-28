@@ -88,6 +88,38 @@ export const IntelligentDataPlatform = () => {
             </motion.div>
           ))}
         </div>
+
+        {/* Metrics Section */}
+        <div className="mt-24 pt-20 border-t border-slate-100">
+          <div className="text-center mb-16">
+            <h3 className="text-3xl md:text-5xl font-sans font-bold text-[#1d4c6a] tracking-tight">
+              {t('platform.metrics.title')}
+            </h3>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-12 max-w-5xl mx-auto px-4">
+            {(t('platform.metrics.items', { returnObjects: true }) as any[]).map((metric: any, idx: number) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                viewport={{ once: true }}
+                className="text-center group"
+              >
+                <div className="text-5xl md:text-6xl font-bold text-[#1d4c6a] mb-4 group-hover:scale-105 transition-transform duration-300">
+                  {metric.value}
+                </div>
+                <h4 className="text-lg font-bold text-[#1d4c6a] mb-2 leading-tight">
+                  {metric.label}
+                </h4>
+                <p className="text-slate-500 text-sm">
+                  {metric.desc}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );

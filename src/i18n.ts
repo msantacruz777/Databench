@@ -46,6 +46,26 @@ const resources = {
           subtitle: 'Intelligent record matching',
           desc: 'Automated deduplication engines that identify and merge duplicate records across disparate systems.'
         },
+        metrics: {
+          title: 'Transform Your Business with Data Bench',
+          items: [
+            {
+              value: '80%',
+              label: 'Reduction in Data Project Costs',
+              desc: 'Requires a fraction of traditional resources'
+            },
+            {
+              value: '75%',
+              label: 'Reduction in Data Project Time',
+              desc: 'Implement in weeks versus months'
+            },
+            {
+              value: '85%',
+              label: 'Reduction in Time to Value',
+              desc: 'See value immediately'
+            }
+          ]
+        },
         security: {
           title: 'SECURITY',
           subtitle: 'The foundation of the Data Bench platform',
@@ -142,6 +162,26 @@ const resources = {
           subtitle: 'Coincidencia de registros inteligente',
           desc: 'Motores de deduplicación automatizados que identifican y fusionan registros duplicados en sistemas dispares.'
         },
+        metrics: {
+          title: 'Transforme su Negocio con Data Bench',
+          items: [
+            {
+              value: '80%',
+              label: 'Reducción en Costos de Proyectos de Datos',
+              desc: 'Requiere una fracción de los recursos tradicionales'
+            },
+            {
+              value: '75%',
+              label: 'Reducción en Tiempo de Proyectos de Datos',
+              desc: 'Implementación en semanas en lugar de meses'
+            },
+            {
+              value: '85%',
+              label: 'Reducción en el Tiempo de Valor',
+              desc: 'Vea resultados de inmediato'
+            }
+          ]
+        },
         security: {
           title: 'SEGURIDAD',
           subtitle: 'La base de la plataforma Data Bench',
@@ -237,6 +277,26 @@ const resources = {
           title: 'إزالة التكرار',
           subtitle: 'مطابقة السجلات الذكية',
           desc: 'محركات إزالة التكرار الآلية التي تحدد وتدمج السجلات المكررة عبر الأنظمة المتباينة.'
+        },
+        metrics: {
+          title: 'حول عملك مع Data Bench',
+          items: [
+            {
+              value: '80%',
+              label: 'خفض تكاليف مشاريع البيانات',
+              desc: 'يتطلب جزءً بسيطاً من الموارد التقليدية'
+            },
+            {
+              value: '75%',
+              label: 'تقليل وقت مشاريع البيانات',
+              desc: 'التنفيذ في أسابيع بدلاً من شهور'
+            },
+            {
+              value: '85%',
+              label: 'تقليل وقت الوصول إلى القيمة',
+              desc: 'شاهد القيمة على الفور'
+            }
+          ]
         },
         security: {
           title: 'الأمان',
