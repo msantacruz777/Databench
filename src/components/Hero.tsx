@@ -58,7 +58,7 @@ export const Hero = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <BenchLogo className="text-[#a3e635]" size={560} />
+              <BenchLogo className="text-[#99E866]" size={560} />
             </div>
           </motion.div>
         </div>

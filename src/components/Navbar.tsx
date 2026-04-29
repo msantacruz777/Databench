@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'motion/react';
 import { Menu, X } from 'lucide-react';
-import { BenchLogo } from './BenchLogo';
 
 export const Navbar = () => {
   const { t } = useTranslation();
@@ -21,13 +20,13 @@ export const Navbar = () => {
       <div className="w-full max-w-[1440px] mx-auto flex items-center justify-between">
         {/* Logo */}
         <a href="/" className="flex-shrink-0 group -ml-2 flex items-center gap-3">
-          <BenchLogo 
-            className="text-[#a3e635] group-hover:text-[#10b981] transition-colors" 
-            size={32} 
+          <img 
+            src="/Logo.png" 
+            alt="Data Bench Logo" 
+            className="h-12 w-auto"
+            referrerPolicy="no-referrer"
           />
-          <span className="font-sans font-bold text-2xl tracking-tighter leading-none text-[#1d4c6a] group-hover:text-emerald-600 transition-colors">
-            data bench
-          </span>
+          
         </a>
 
         {/* Desktop Nav - Centered */}
@@ -36,7 +35,7 @@ export const Navbar = () => {
             <a 
               key={item.name} 
               href={item.href}
-              className="text-[15px] font-semibold text-[#1d4c6a] hover:text-[#a3e635] transition-colors"
+              className="text-[15px] font-semibold text-[#1d4c6a] hover:text-[#99E866] transition-colors"
             >
               {item.name}
             </a>
@@ -72,7 +71,12 @@ export const Navbar = () => {
               </a>
             ))}
             <div className="flex justify-center py-4">
-              <BenchLogo className="text-[#a3e635]" size={80} />
+              <img 
+                src="/Logo.png" 
+                alt="Data Bench Logo" 
+                className="h-16 w-auto"
+                referrerPolicy="no-referrer"
+              />
             </div>
           </motion.div>
         )}

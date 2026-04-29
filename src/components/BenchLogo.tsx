@@ -5,7 +5,7 @@ interface BenchLogoProps {
   size?: number;
 }
 
-export const BenchLogo: React.FC<BenchLogoProps> = ({ className, size = 40 }) => {
+export const BenchLogo: React.FC<BenchLogoProps> = ({ className, size = 60 }) => {
   return (
     <svg 
       width={size} 
@@ -16,22 +16,22 @@ export const BenchLogo: React.FC<BenchLogoProps> = ({ className, size = 40 }) =>
       className={className}
     >
       {/* Top Bench Surface */}
-      <rect x="10" y="15" width="80" height="14" rx="7" fill="currentColor" />
+      <rect x="10" y="15" width="80" height="14" fill="currentColor" />
       
-      {/* Left Leg (Slanted) */}
+      {/* Left Leg (Brutalist Sharp) */}
       <path 
-        d="M26 29L16 68C15.5 70 17 72 19 72H31C33 72 34.5 71 35 69L41 29H26Z" 
+        d="M26 29L16 65H31L41 29H26Z" 
         fill="currentColor" 
       />
       
-      {/* Right Leg (Slanted) */}
+      {/* Right Leg (Brutalist Sharp) */}
       <path 
-        d="M74 29L84 68C84.5 70 83 72 81 72H69C67 72 65.5 71 65 69L59 29H74Z" 
+        d="M74 29L84 65H69L59 29H74Z" 
         fill="currentColor" 
       />
       
       {/* Crossbar */}
-      <rect x="25" y="44" width="50" height="10" rx="5" fill="currentColor" />
+      <rect x="25" y="42" width="50" height="10" fill="currentColor" />
     </svg>
   );
 };
