@@ -37,12 +37,12 @@ export const Hero = () => {
                   <div className="h-[1.2em] flex items-center overflow-hidden min-w-fit flex-shrink-0">
                     <AnimatePresence mode="wait">
                       <motion.span
-                        key={words[index]}
+                        key={index}
                         initial={{ y: "100%", opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         exit={{ y: "-100%", opacity: 0 }}
                         transition={{ duration: 0.5, ease: [0.23, 1, 0.32, 1] }}
-                        className="text-transparent bg-clip-text bg-gradient-to-r from-[#10b981] to-[#1d4c6a] inline-flex items-center whitespace-nowrap py-1 px-2"
+                        className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-blue-600 inline-flex items-center whitespace-nowrap py-1 px-2"
                       >
                         DATA&nbsp;&nbsp;{words[index]}
                       </motion.span>

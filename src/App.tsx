@@ -38,6 +38,7 @@ import { ResultSection } from './components/ResultSection';
 import { SecuritySection } from './components/SecuritySection';
 import { BenchLogo } from './components/BenchLogo';
 
+
 // --- Components ---
 
 const UseCasesSection = () => {
@@ -89,7 +90,7 @@ const UseCasesSection = () => {
                   className={cn("text-2xl font-display font-bold mb-4 tracking-tight leading-tight", titleColors[i] || "text-[#0f172a]")}
                   dangerouslySetInnerHTML={{ __html: item.title }}
                 />
-                <p className="text-slate-500 leading-relaxed text-[15px] text-justify">
+                <p className="text-slate-500 leading-relaxed text-[15px]">
                   {item.desc}
                 </p>
               </motion.div>
@@ -120,7 +121,7 @@ const AIDataLayerSection = () => {
               Semantic Layer + Rules Engine + Graph = <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-blue-600">AI Data Layer</span>
             </h2>
             <p className="text-xl text-slate-600 leading-relaxed mb-12 font-medium">
-              "Graph traversal activates context, reduces hallucinations and optimizes agentic outcomes"
+              Graph traversal activates context, reduces hallucinations and optimizes agentic outcomes
             </p>
           </motion.div>
         </div>
@@ -334,15 +335,6 @@ const FinalSection = () => {
                 <a href="mailto:contact@databench.co" className="text-lg font-display font-medium text-slate-600 hover:text-emerald-600 transition-colors">
                   contact@databench.co
                 </a>
-              </div>
-              <div className="mt-2">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-6 py-2.5 bg-emerald-600 text-white font-bold rounded-full text-sm shadow-lg shadow-emerald-600/20 hover:bg-emerald-700 transition-colors uppercase tracking-wider"
-                >
-                  {t('nav.requestDemo')}
-                </motion.button>
               </div>
             </div>
           </div>

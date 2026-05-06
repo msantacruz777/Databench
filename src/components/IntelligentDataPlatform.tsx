@@ -102,7 +102,7 @@ export const IntelligentDataPlatform = () => {
               const styles = [
                 { bg: 'bg-emerald-50/40', border: 'border-emerald-100', text: 'text-emerald-700' },
                 { bg: 'bg-blue-50/40', border: 'border-blue-100', text: 'text-blue-700' },
-                { bg: 'bg-indigo-50/40', border: 'border-indigo-100', text: 'text-indigo-700' },
+                { bg: 'bg-emerald-50/40', border: 'border-emerald-100', text: 'text-emerald-700' },
               ];
               const style = styles[idx % styles.length];
 
