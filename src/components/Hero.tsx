@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
-import { PlatformVisualization } from './PlatformVisualization';
+import { CinematicDataAnimation } from './CinematicDataAnimation';
 import { BenchLogo } from './BenchLogo';
 
 export const Hero = () => {
@@ -63,14 +63,14 @@ export const Hero = () => {
           </motion.div>
         </div>
 
-        {/* Platform Visualization */}
+        {/* Cinematic Animation */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 1.2, delay: 0.2 }}
           className="relative max-w-6xl mx-auto"
         >
-          <PlatformVisualization />
+          <CinematicDataAnimation />
         </motion.div>
       </div>
     </section>

@@ -81,18 +81,22 @@ const UseCasesSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white p-10 rounded-[2rem] border border-slate-100 shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.05)] transition-all flex flex-col items-start h-full text-left"
+                className="bg-white p-10 rounded-[2rem] border border-slate-100 shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.05)] transition-all flex flex-col h-full text-left"
               >
-                <span className="px-6 py-2.5 bg-slate-50 text-black text-[15px] font-bold rounded-full mb-6 border border-slate-100/50">
-                  {item.badge}
-                </span>
-                <h3 
-                  className={cn("text-2xl font-display font-bold mb-4 tracking-tight leading-tight", titleColors[i] || "text-[#0f172a]")}
-                  dangerouslySetInnerHTML={{ __html: item.title }}
-                />
-                <p className="text-slate-500 leading-relaxed text-[15px]">
-                  {item.desc}
-                </p>
+                <div className="flex flex-col h-full">
+                  <div className="mb-6">
+                    <span className="px-6 py-2.5 bg-slate-50 text-black text-[15px] font-bold rounded-full border border-slate-100/50 inline-block">
+                      {item.badge}
+                    </span>
+                  </div>
+                  <h3 
+                    className={cn("text-2xl font-display font-bold mb-4 tracking-tight leading-tight min-h-[4rem] flex items-center", titleColors[i] || "text-[#0f172a]")}
+                    dangerouslySetInnerHTML={{ __html: item.title }}
+                  />
+                  <p className="text-slate-500 leading-relaxed text-[15px] flex-grow">
+                    {item.desc}
+                  </p>
+                </div>
               </motion.div>
             );
           })}
