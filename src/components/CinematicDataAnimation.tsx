@@ -3,109 +3,112 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import { Line, Sphere, Float } from '@react-three/drei';
 import * as THREE from 'three';
 
-const RibbonWaveGraph = () => {
+const NetworkGraph = () => {
   const meshRef = useRef<THREE.Group>(null);
   
-  // Grid parameters for the ribbon wave
-  const rows = 14;
-  const cols = 45;
-  const spacing = 0.45;
-  
   const nodes = useMemo(() => {
-    const points: { pos: [number, number, number], color: string, id: number }[] = [];
-    let idCounter = 0;
+    const points: { pos: [number, number, number], color: string, id: number, size: number }[] = [];
     
-    for (let r = 0; r < rows; r++) {
-      for (let c = 0; c < cols; c++) {
-        const x = (c - cols / 2) * spacing;
-        const z = (r - rows / 2) * spacing;
+    const hubs = [
+      { pos: [-4, 2, 0], color: '#2563eb', size: 0.25 },
+      { pos: [4, -2, 0], color: '#99E866', size: 0.25 },
+      { pos: [0, 0, 0], color: '#3b82f6', size: 0.2 },
+      { pos: [-2, -3, 2], color: '#1d4ed8', size: 0.18 },
+      { pos: [3, 3, -1], color: '#84cc16', size: 0.22 },
+    ];
+
+    hubs.forEach((hub, i) => {
+      points.push({ 
+        pos: hub.pos as [number, number, number], 
+        color: hub.color, 
+        id: i, 
+        size: hub.size
+      });
+      
+      const clusterSize = 18 + Math.floor(Math.random() * 8);
+      for (let j = 0; j < clusterSize; j++) {
+        const angle = Math.random() * Math.PI * 2;
+        const radius = 1.5 + Math.random() * 3.5;
+        const x = hub.pos[0] + Math.cos(angle) * radius + (Math.random() - 0.5) * 2;
+        const y = hub.pos[1] + Math.sin(angle) * radius + (Math.random() - 0.5) * 2;
+        const z = hub.pos[2] + (Math.random() - 0.5) * 4;
         
-        // Flowing wave function mimicking a ribbon
-        const y = Math.sin(x * 0.5) * 1.8 + Math.cos(z * 0.6) * 0.6;
-        
-        // Color transition: Blue (#3b82f6) -> Purple/Maroon (#800000) -> Orange (#f97316)
-        const t = c / cols;
+        const t = (x + 6) / 12;
         const color = new THREE.Color();
-        if (t < 0.5) {
-          // Blue to Purple/Maroon
-          color.lerpColors(new THREE.Color('#3b82f6'), new THREE.Color('#800000'), t * 2);
-        } else {
-          // Purple/Maroon to Orange
-          color.lerpColors(new THREE.Color('#800000'), new THREE.Color('#f97316'), (t - 0.5) * 2);
-        }
-        
+        color.lerpColors(new THREE.Color('#2563eb'), new THREE.Color('#99E866'), THREE.MathUtils.clamp(t, 0, 1));
+
         points.push({ 
           pos: [x, y, z], 
           color: `#${color.getHexString()}`,
-          id: idCounter++
+          id: points.length,
+          size: 0.04 + Math.random() * 0.08
         });
       }
-    }
+    });
+
     return points;
-  }, [rows, cols, spacing]);
+  }, []);
 
   const edges = useMemo(() => {
-    const lines: { points: [number, number, number][], color: string }[] = [];
+    const lines: { points: [number, number, number][], color: string, opacity: number }[] = [];
     
-    for (let r = 0; r < rows; r++) {
-      for (let c = 0; c < cols; c++) {
-        const currentIdx = r * cols + c;
-        const node = nodes[currentIdx];
-        
-        // Connect to right neighbor
-        if (c < cols - 1) {
-          const right = nodes[currentIdx + 1];
-          lines.push({ points: [node.pos, right.pos], color: node.color });
-        }
-        
-        // Connect to bottom neighbor
-        if (r < rows - 1) {
-          const bottom = nodes[currentIdx + cols];
-          lines.push({ points: [node.pos, bottom.pos], color: node.color });
-        }
-        
-        // Occasional diagonal connections for "complex network" feel
-        if (r < rows - 1 && c < cols - 1 && Math.random() > 0.7) {
-          const diagonal = nodes[currentIdx + cols + 1];
-          lines.push({ points: [node.pos, diagonal.pos], color: node.color });
-        }
+    nodes.forEach((node, i) => {
+      const distances = nodes
+        .map((other, j) => ({ index: j, dist: new THREE.Vector3(...node.pos).distanceTo(new THREE.Vector3(...other.pos)) }))
+        .filter(d => d.index !== i)
+        .sort((a, b) => a.dist - b.dist);
+
+      for (let k = 0; k < 2; k++) {
+        const neighbor = nodes[distances[k].index];
+        lines.push({ 
+          points: [node.pos, neighbor.pos], 
+          color: node.color,
+          opacity: 0.35 + (1 / (distances[k].dist + 1)) * 0.4
+        });
       }
-    }
+
+      if (Math.random() > 0.98) {
+        const target = nodes[Math.floor(Math.random() * nodes.length)];
+        lines.push({ 
+          points: [node.pos, target.pos], 
+          color: '#cbd5e1',
+          opacity: 0.15
+        });
+      }
+    });
+    
     return lines;
-  }, [nodes, rows, cols]);
+  }, [nodes]);
 
   useFrame((state) => {
     if (meshRef.current) {
       const t = state.clock.getElapsedTime();
-      // Gentle cinematic rotation/orbit
-      meshRef.current.rotation.y = Math.sin(t * 0.05) * 0.1;
-      meshRef.current.position.y = Math.sin(t * 0.2) * 0.1;
+      meshRef.current.rotation.y = Math.sin(t * 0.02) * 0.08;
+      meshRef.current.rotation.x = Math.cos(t * 0.015) * 0.04;
     }
   });
 
   return (
     <group ref={meshRef}>
-      {/* Interconnected Lines */}
       {edges.map((edge, i) => (
         <Line 
           key={`edge-${i}`} 
-          points={edge.points} 
+          points={edge.points}
           color={edge.color} 
-          lineWidth={0.6} 
+          lineWidth={1.2} 
           transparent 
-          opacity={0.35} 
+          opacity={edge.opacity} 
         />
       ))}
       
-      {/* Textured Nodes (Data Points) */}
       {nodes.map((node) => (
-        <Sphere key={`node-${node.id}`} position={node.pos} args={[0.07, 12, 12]}>
+        <Sphere key={`node-${node.id}`} position={node.pos} args={[node.size, 16, 16]}>
           <meshStandardMaterial 
             color={node.color} 
-            roughness={0.7} 
-            metalness={0.2}
+            roughness={0.4} 
+            metalness={0.1}
             emissive={node.color}
-            emissiveIntensity={0.15}
+            emissiveIntensity={0.2}
           />
         </Sphere>
       ))}
@@ -119,45 +122,37 @@ export const CinematicDataAnimation = () => {
       <Canvas 
         shadows 
         gl={{ antialias: true }} 
-        camera={{ position: [0, 6, 16], fov: 32 }}
+        camera={{ position: [0, 0, 15], fov: 35 }}
       >
         <color attach="background" args={['#ffffff']} />
         
-        {/* Clean, even lighting */}
-        <ambientLight intensity={0.7} />
-        <spotLight position={[10, 20, 10]} angle={0.25} penumbra={1} intensity={1} castShadow />
-        <pointLight position={[-10, -10, -10]} intensity={0.5} color="#cbd5e1" />
+        <ambientLight intensity={0.9} />
+        <spotLight position={[10, 20, 10]} angle={0.25} penumbra={1} intensity={1.5} />
+        <pointLight position={[-10, -10, -10]} intensity={0.5} color="#99E866" />
         
-        <Float speed={1.4} rotationIntensity={0.1} floatIntensity={0.25}>
-          <RibbonWaveGraph />
+        <Float speed={0.4} rotationIntensity={0.1} floatIntensity={0.2}>
+          <NetworkGraph />
         </Float>
-        
-        {/* Subtle ground reflection area */}
-        <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -8, 0]}>
-          <planeGeometry args={[100, 100]} />
-          <meshStandardMaterial color="#ffffff" transparent opacity={0.05} />
-        </mesh>
       </Canvas>
       
-      {/* Minimalist Vector Overlay */}
       <div className="absolute top-12 left-12 flex flex-col gap-2 pointer-events-none">
         <div className="flex items-center gap-3">
-          <div className="w-2.5 h-2.5 rounded-full bg-blue-500 animate-pulse shadow-[0_0_10px_rgba(59,130,246,0.5)]" />
-          <span className="text-[12px] font-bold text-slate-500 uppercase tracking-[0.4em]">Precision Data Wave</span>
+          <div className="w-2.5 h-2.5 rounded-full bg-[#99E866] animate-pulse shadow-[0_0_10px_rgba(153,232,102,0.5)]" />
+          <span className="text-[12px] font-bold text-slate-500 uppercase tracking-[0.4em]">Relational Knowledge Graph</span>
         </div>
-        <div className="h-[2px] w-32 bg-slate-100" />
+        <div className="h-[2px] w-32 bg-[#99E866]/20" />
       </div>
 
       <div className="absolute bottom-12 right-12 flex flex-col items-end gap-1 pointer-events-none">
-        <span className="text-[10px] text-slate-300 font-mono tracking-widest uppercase mb-1">
-          Geometric Knowledge Graph // NODE_REF_881
+        <span className="text-[10px] text-slate-400 font-mono tracking-widest uppercase mb-1">
+          Intelligent Network // SYNC_ACTIVE
         </span>
         <div className="flex gap-1">
           <div className="w-8 h-1 bg-blue-500/20 rounded-full overflow-hidden">
-            <div className="h-full bg-blue-500 animate-[loading_2s_ease-in-out_infinite]" />
+            <div className="h-full bg-blue-600 animate-[loading_2s_ease-in-out_infinite]" />
           </div>
-          <div className="w-8 h-1 bg-orange-500/20 rounded-full overflow-hidden">
-            <div className="h-full bg-orange-500 animate-[loading_2s_ease-in-out_infinite_delay-700]" />
+          <div className="w-8 h-1 bg-[#99E866]/30 rounded-full overflow-hidden">
+            <div className="h-full bg-[#99E866] animate-[loading_2s_ease-in-out_infinite_delay-350ms]" />
           </div>
         </div>
       </div>
