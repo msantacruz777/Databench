@@ -19,16 +19,16 @@ export const Hero = () => {
   }, []);
 
   return (
-    <section className="relative pt-40 pb-8 overflow-hidden bg-white">
+    <section className="relative pt-40 pb-20 overflow-hidden bg-white">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center max-w-5xl mx-auto mb-16">
+        <div className="text-center max-w-5xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
             
-            <h1 className="text-[clamp(1.25rem,6vw,4rem)] font-display font-black text-[#0f172a] leading-none mb-8 tracking-tighter uppercase whitespace-nowrap flex items-center justify-center gap-[0.3em]">
+            <h1 className="text-[clamp(1.25rem,6vw,4rem)] font-display font-black text-[#0f172a] leading-none mb-6 tracking-tighter uppercase whitespace-nowrap flex items-center justify-center gap-[0.3em]">
               {isRtl ? (
                 t('hero.quote')
               ) : (
@@ -53,25 +53,17 @@ export const Hero = () => {
               )}
             </h1>
 
-            <p className="text-xl md:text-2xl text-[#1d4c6a] font-normal leading-tight mb-12 max-w-3xl mx-auto whitespace-pre-line">
+            <p className="text-xl md:text-2xl text-[#1d4c6a] font-normal leading-tight mb-8 max-w-3xl mx-auto whitespace-pre-line">
               {t('hero.subheading')}
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <BenchLogo className="text-[#99E866]" size={560} />
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full">
+              <div className="w-full max-w-[280px] sm:max-w-[420px]">
+                <BenchLogo className="text-[#99E866] w-full h-auto" />
+              </div>
             </div>
           </motion.div>
         </div>
-
-        {/* Cinematic Animation */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.2, delay: 0.2 }}
-          className="relative max-w-6xl mx-auto"
-        >
-          <CinematicDataAnimation />
-        </motion.div>
       </div>
     </section>
   );

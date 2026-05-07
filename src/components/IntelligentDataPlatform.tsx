@@ -88,51 +88,6 @@ export const IntelligentDataPlatform = () => {
             </motion.div>
           ))}
         </div>
-
-        {/* Metrics Section */}
-        <div className="mt-16 pt-16 border-t border-slate-100">
-          <div className="text-center mb-10">
-            <h3 className="text-3xl md:text-4xl font-sans font-bold text-[#0f172a] mb-4 tracking-[-0.01em] leading-tight">
-              {t('platform.metrics.title')}
-            </h3>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto px-4">
-            {(t('platform.metrics.items', { returnObjects: true }) as any[]).map((metric: any, idx: number) => {
-              const styles = [
-                { bg: 'bg-emerald-50/40', border: 'border-emerald-100', text: 'text-emerald-700' },
-                { bg: 'bg-blue-50/40', border: 'border-blue-100', text: 'text-blue-700' },
-                { bg: 'bg-emerald-50/40', border: 'border-emerald-100', text: 'text-emerald-700' },
-              ];
-              const style = styles[idx % styles.length];
-
-              return (
-                <motion.div
-                  key={idx}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: idx * 0.1 }}
-                  viewport={{ once: true }}
-                  className={cn(
-                    "border rounded-[2rem] p-8 flex flex-col items-center justify-center text-center group shadow-sm hover:shadow-md transition-all duration-300 min-h-[260px]",
-                    style.bg,
-                    style.border
-                  )}
-                >
-                  <div className={cn("text-4xl md:text-5xl font-bold mb-4 group-hover:scale-110 transition-transform duration-300", style.text)}>
-                    {metric.value}
-                  </div>
-                  <h4 className="text-lg font-bold text-[#0f172a] mb-2 leading-tight">
-                    {metric.label}
-                  </h4>
-                  <p className="text-slate-500 text-sm leading-relaxed max-w-[220px]">
-                    {metric.desc}
-                  </p>
-                </motion.div>
-              );
-            })}
-          </div>
-        </div>
       </div>
     </section>
   );

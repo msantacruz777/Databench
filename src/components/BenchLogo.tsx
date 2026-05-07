@@ -5,11 +5,11 @@ interface BenchLogoProps {
   size?: number;
 }
 
-export const BenchLogo: React.FC<BenchLogoProps> = ({ className, size = 60 }) => {
+export const BenchLogo: React.FC<BenchLogoProps> = ({ className, size }) => {
   return (
     <svg 
       width={size} 
-      height={(size * 0.8)} 
+      height={size ? (size * 0.8) : undefined} 
       viewBox="0 0 100 80" 
       fill="none" 
       xmlns="http://www.w3.org/2000/svg"

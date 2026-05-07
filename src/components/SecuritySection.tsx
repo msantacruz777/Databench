@@ -55,12 +55,6 @@ export const SecuritySection = () => {
             ))}
           </div>
 
-          {/* Bottom Dark Bar */}
-          <div className="bg-[#0f172a] p-8 md:p-12">
-            <p className="text-white text-lg md:text-xl leading-relaxed max-w-4xl font-medium opacity-90 mx-auto text-center">
-              {t('platform.security.desc')}
-            </p>
-          </div>
         </motion.div>
       </div>
     </section>

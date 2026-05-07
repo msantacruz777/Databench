@@ -66,12 +66,12 @@ const UseCasesSection = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {items.map((item, i) => {
             const titleColors = [
-              'text-emerald-600', // Banking: Data Migration
-              'text-blue-600',    // Insurance: Governance & Archiving
-              'text-blue-600',    // Manufacturing: Integration & Deduplication
-              'text-emerald-600', // Finance: Portfolio Visibility
-              'text-blue-600',    // Agriculture: Compliance
-              'text-emerald-600'  // Insurance: Rules Enforcement
+              'text-blue-600', // Banking: Data Migration
+              'text-blue-600', // Insurance: Governance & Archiving
+              'text-blue-600', // Manufacturing: Integration & Deduplication
+              'text-blue-600', // Finance: Portfolio Visibility
+              'text-blue-600', // Retail: Unified Analytics
+              'text-blue-600'  // Insurance: Rules Enforcement
             ];
             
             return (
@@ -265,14 +265,12 @@ const FinalSection = () => {
         {/* Company Overview & Reach Section */}
         <div className="mb-10">
           <div className="mb-6 flex flex-col items-start px-4">
-            <span className="text-[10px] font-black text-emerald-500 uppercase tracking-[0.3em] mb-3">Organization</span>
             <h3 className="text-3xl md:text-4xl font-display font-bold text-slate-900 tracking-tight">Company</h3>
           </div>
           <div className="bg-slate-50/50 rounded-[4rem] p-8 md:p-16 border border-slate-100 relative overflow-hidden group">
             <div className="relative z-10 grid lg:grid-cols-3 gap-16 items-center">
               <div className="lg:col-span-1">
                 <div className="mb-6 flex flex-col items-start">
-                  <span className="text-[10px] font-black text-emerald-500 uppercase tracking-[0.3em] mb-2">Our Reach</span>
                   <h4 className="text-2xl font-display font-bold text-slate-800 tracking-tight">Global Presence</h4>
                 </div>
                 <p className="text-lg text-slate-500 leading-relaxed font-medium">
@@ -335,7 +333,6 @@ const FinalSection = () => {
             <span className="text-xs font-black text-emerald-500 uppercase tracking-[0.2em] mb-6">Contact Us</span>
             <div className="flex flex-col gap-8">
               <div>
-                <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest block mb-2">Main</span>
                 <a href="mailto:contact@databench.co" className="text-lg font-display font-medium text-slate-600 hover:text-emerald-600 transition-colors">
                   contact@databench.co
                 </a>

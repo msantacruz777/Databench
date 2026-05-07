@@ -118,14 +118,12 @@ const NetworkGraph = () => {
 
 export const CinematicDataAnimation = () => {
   return (
-    <div className="w-full h-[650px] bg-white rounded-[3rem] overflow-hidden relative border border-slate-100 shadow-2xl">
+    <div className="w-full h-[650px] overflow-hidden relative">
       <Canvas 
         shadows 
-        gl={{ antialias: true }} 
+        gl={{ antialias: true, alpha: true }} 
         camera={{ position: [0, 0, 15], fov: 35 }}
       >
-        <color attach="background" args={['#ffffff']} />
-        
         <ambientLight intensity={0.9} />
         <spotLight position={[10, 20, 10]} angle={0.25} penumbra={1} intensity={1.5} />
         <pointLight position={[-10, -10, -10]} intensity={0.5} color="#99E866" />
