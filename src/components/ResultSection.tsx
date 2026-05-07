@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'motion/react';
+import { CheckCircle2 } from 'lucide-react';
 
 export const ResultSection = () => {
   const { t } = useTranslation();
@@ -19,26 +20,26 @@ export const ResultSection = () => {
   return (
     <section className="py-24 bg-white overflow-hidden border-t border-slate-50">
       <div className="max-w-7xl mx-auto px-6">
-        {/* Header: Centered Workbench Style */}
+        {/* Header: Reverting typography style */}
         <div className="text-center mb-16">
-          <motion.span 
+          <motion.h2 
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-[14px] font-bold tracking-[0.15em] text-[#10b981] uppercase mb-3 block"
+            className="text-3xl md:text-4xl font-display font-black text-[#0f172a] leading-none mb-3 tracking-tighter uppercase"
           >
             {t('platform.result.title')}
-          </motion.span>
-          <motion.h2 
+          </motion.h2>
+          <motion.p 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-[52px] font-sans font-bold text-[#0f172a] mb-6 tracking-[-0.01em] leading-tight"
+            className="text-xl md:text-2xl font-medium text-[#10b981] leading-tight tracking-tight mb-8"
           >
             {t('platform.result.subtitle')}
-          </motion.h2>
+          </motion.p>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -50,18 +51,19 @@ export const ResultSection = () => {
           </motion.p>
         </div>
 
-        {/* Feature Cards Grid: Simplified and Compact */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-20">
+        {/* bullet points redesigned as elegant pills */}
+        <div className="flex flex-wrap justify-center gap-3 mb-20 max-w-5xl mx-auto">
           {featureTitles.map((title, idx) => (
             <motion.div 
               key={idx}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: idx * 0.05 }}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.4, delay: idx * 0.05 }}
               viewport={{ once: true }}
-              className="p-6 rounded-2xl bg-slate-50/50 border border-slate-100/80 hover:bg-white hover:border-emerald-200 hover:shadow-lg hover:shadow-emerald-500/5 transition-all group flex items-center justify-center text-center h-full min-h-[100px]"
+              className="flex items-center gap-2 px-5 py-3 rounded-full bg-slate-50/80 border border-slate-100 hover:bg-white hover:border-emerald-200 hover:shadow-md transition-all group"
             >
-              <span className="text-slate-900 font-bold text-[13px] leading-tight tracking-tight uppercase group-hover:text-emerald-600 transition-colors">
+              <CheckCircle2 className="w-4 h-4 text-emerald-500 group-hover:scale-110 transition-transform" />
+              <span className="text-slate-900 font-bold text-[12px] leading-none tracking-tight uppercase">
                 {title}
               </span>
             </motion.div>
