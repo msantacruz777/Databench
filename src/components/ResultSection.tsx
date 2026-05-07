@@ -1,117 +1,98 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'motion/react';
-import { Database } from 'lucide-react';
-import { cn } from '../lib/utils';
 
 export const ResultSection = () => {
   const { t } = useTranslation();
-  const features = t('platform.result.features', { returnObjects: true }) as string[];
+  
+  const featureTitles = [
+    'Graph Population',
+    'Auditable Lineage',
+    'Iterative Schema',
+    'Automated Deduplication',
+    'Transformation Registry',
+    'Governance Enforced'
+  ];
 
-  const titleStyle = "text-4xl md:text-[52px] font-sans font-bold text-[#0f172a] mb-6 tracking-[-0.01em] leading-tight";
-  const cardStyle = "rounded-[2.5rem] p-8 bg-slate-50/50 border border-slate-100/80 hover:bg-white hover:border-emerald-200 hover:shadow-xl hover:shadow-emerald-500/5 transition-all duration-500 group";
+  const metrics = t('platform.metrics.items', { returnObjects: true }) as any[];
 
   return (
-    <section className="py-24 bg-white overflow-hidden">
+    <section className="py-24 bg-white overflow-hidden border-t border-slate-50">
       <div className="max-w-7xl mx-auto px-6">
-        {/* Header Row */}
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-start mb-16">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
+        {/* Header: Centered Workbench Style */}
+        <div className="text-center mb-16">
+          <motion.span 
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="lg:w-1/3"
+            className="text-[14px] font-bold tracking-[0.15em] text-[#10b981] uppercase mb-3 block"
           >
-            <h3 className="text-4xl font-display font-black text-[#0f172a] leading-none mb-3 tracking-tighter uppercase">
-              {t('platform.result.title')}
-            </h3>
-            <p className="text-xl font-medium text-[#10b981] leading-tight tracking-tight">
-              {t('platform.result.subtitle')}
-            </p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            {t('platform.result.title')}
+          </motion.span>
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
-            className="lg:w-2/3"
+            className="text-4xl md:text-[52px] font-sans font-bold text-[#0f172a] mb-6 tracking-[-0.01em] leading-tight"
           >
-            <p className="text-xl text-slate-500 leading-relaxed font-medium">
-              {t('platform.result.desc')}
-            </p>
-          </motion.div>
+            {t('platform.result.subtitle')}
+          </motion.h2>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="text-[17px] text-[#64748b] max-w-2xl mx-auto leading-[1.6]"
+          >
+            {t('platform.result.desc')}
+          </motion.p>
         </div>
 
-        {/* Feature Items List: Now Full Width below Header */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 pt-12 border-t border-slate-100 mb-24">
-          {features.map((feature, idx) => (
+        {/* Feature Cards Grid: Simplified and Compact */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-20">
+          {featureTitles.map((title, idx) => (
             <motion.div 
               key={idx}
-              initial={{ opacity: 0, y: 10 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.2 + (idx * 0.05) }}
+              transition={{ duration: 0.5, delay: idx * 0.05 }}
               viewport={{ once: true }}
-              className="flex items-center gap-3 group"
+              className="p-6 rounded-2xl bg-slate-50/50 border border-slate-100/80 hover:bg-white hover:border-emerald-200 hover:shadow-lg hover:shadow-emerald-500/5 transition-all group flex items-center justify-center text-center h-full min-h-[100px]"
             >
-              <div className="w-8 h-8 rounded-lg bg-emerald-50 flex items-center justify-center border border-emerald-100 group-hover:bg-emerald-100 transition-colors">
-                <Database className="w-4 h-4 text-emerald-600" />
-              </div>
-              <span className="text-slate-700 font-bold text-xs leading-tight tracking-tight uppercase">
-                {feature}
+              <span className="text-slate-900 font-bold text-[13px] leading-tight tracking-tight uppercase group-hover:text-emerald-600 transition-colors">
+                {title}
               </span>
             </motion.div>
           ))}
         </div>
 
-        {/* Transform Your Business Title */}
-        <div className="text-center mb-12">
-          <motion.h3
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-sans font-bold text-[#0f172a] mb-4 tracking-[-0.01em] leading-tight"
-          >
-            {t('platform.metrics.title')}
-          </motion.h3>
-        </div>
-
-        {/* Metrics Cards */}
-        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          {(t('platform.metrics.items', { returnObjects: true }) as any[]).map((metric: any, idx: number) => {
-            const styles = [
-              { border: 'border-emerald-100', text: 'text-emerald-600' },
-              { border: 'border-blue-100', text: 'text-blue-600' },
-              { border: 'border-emerald-100', text: 'text-emerald-600' },
-            ];
-            const style = styles[idx % styles.length];
-
-            return (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: idx * 0.1 }}
-                viewport={{ once: true }}
-                className={cn(
-                  "rounded-[2rem] p-8 flex flex-col items-center justify-center text-center group bg-slate-50/50 border hover:bg-white hover:shadow-xl hover:shadow-emerald-500/5 transition-all duration-500 min-h-[260px]",
-                  style.border
+        {/* Metrics Row: Slim Horizontal Row with Dividers */}
+        <div className="max-w-5xl mx-auto border-t border-slate-100 pt-16">
+          <div className="flex flex-col md:flex-row items-center justify-center md:justify-between gap-12 md:gap-4">
+            {metrics.map((metric, idx) => (
+              <React.Fragment key={idx}>
+                <motion.div 
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.3 + (idx * 0.1) }}
+                  viewport={{ once: true }}
+                  className="flex flex-col items-center text-center"
+                >
+                  <div className="text-5xl md:text-6xl font-display font-black text-emerald-500 mb-2">
+                    {metric.value}
+                  </div>
+                  <div className="text-[11px] font-bold text-[#0f172a] uppercase tracking-widest max-w-[150px] leading-tight">
+                    {metric.label}
+                  </div>
+                </motion.div>
+                {idx < metrics.length - 1 && (
+                  <div className="hidden md:block w-px h-16 bg-slate-100 mx-8" />
                 )}
-              >
-                <div className={cn("text-4xl md:text-5xl font-display font-black mb-4 group-hover:scale-110 transition-transform duration-500", style.text)}>
-                  {metric.value}
-                </div>
-                <h4 className="text-lg font-bold text-[#0f172a] mb-2 leading-tight tracking-tight uppercase">
-                  {metric.label}
-                </h4>
-                <p className="text-slate-500 text-sm leading-relaxed max-w-[220px]">
-                  {metric.desc}
-                </p>
-              </motion.div>
-            );
-          })}
+              </React.Fragment>
+            ))}
+          </div>
         </div>
       </div>
     </section>
