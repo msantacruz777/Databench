@@ -25,7 +25,8 @@ import {
   Users,
   Quote,
   Mail,
-  Phone
+  Phone,
+  Plus
 } from 'lucide-react';
 import { cn } from './lib/utils';
 import './i18n';
@@ -114,91 +115,104 @@ const AIDataLayerSection = () => {
       title: 'Semantic Layer',
       icon: <Layers className="w-6 h-6 text-emerald-600" />,
       bullets: ['Context', 'Ontology'],
-      gradient: 'from-emerald-50 to-white'
+      color: 'emerald'
     },
     {
       title: 'Rules Engine',
       icon: <Shield className="w-6 h-6 text-blue-600" />,
       bullets: ['Inference', 'Governance'],
-      gradient: 'from-blue-50 to-white'
+      color: 'blue'
     },
     {
       title: 'Graph',
       icon: <GitBranch className="w-6 h-6 text-indigo-600" />,
-      bullets: ['Hyper Relation', 'Automate Graph Assembly'],
-      gradient: 'from-indigo-50 to-white'
+      bullets: ['Hyper Relation', 'Graph Assembly'],
+      color: 'indigo'
     }
   ];
 
   return (
-    <section id="ai-data-layer" className="pt-24 pb-24 bg-slate-50 relative overflow-hidden">
+    <section id="ai-data-layer" className="pt-24 pb-24 bg-[#f8fafc] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="max-w-4xl mx-auto text-center mb-16">
+        <div className="max-w-4xl mx-auto text-center mb-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <span className="text-emerald-600 font-black text-xs tracking-[0.3em] uppercase mb-4 block">
+            <span className="text-[#10b981] font-bold text-[11px] tracking-[0.3em] uppercase mb-4 block">
               Cognitive Infrastructure
             </span>
-            <h2 className="text-4xl md:text-5xl font-display font-bold text-[#0f172a] mb-8 leading-tight tracking-tight">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-blue-600">AI Data Layer</span>
+            <h2 className="text-2xl md:text-3xl font-display font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-blue-600 mb-6 leading-tight tracking-[0.2em] uppercase">
+              AI Data Layer
             </h2>
-            <p className="text-xl text-slate-600 leading-relaxed font-medium">
-              Graph traversal activates context, reduces hallucinations and optimizes agentic outcomes
+            <p className="text-lg md:text-xl text-slate-500 leading-relaxed font-medium italic">
+              "Graph traversal activates context, reduces hallucinations and optimizes agentic outcomes"
             </p>
           </motion.div>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-6 relative max-w-5xl mx-auto">
           {layers.map((layer, i) => (
-            <motion.div 
-              key={i} 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: i * 0.15 }}
-              viewport={{ once: true }}
-              className={cn(
-                "relative group p-8 rounded-[2.5rem] border border-slate-200 bg-white shadow-sm transition-all duration-500",
-                "hover:shadow-2xl hover:shadow-slate-200 hover:-translate-y-2 overflow-hidden"
-              )}
-            >
-              {/* Subtle gradient background */}
-              <div className={cn("absolute inset-0 bg-gradient-to-br opacity-0 group-hover:opacity-100 transition-opacity duration-500", layer.gradient)} />
-              
-              <div className="relative z-10">
-                <div className="w-14 h-14 rounded-2xl bg-slate-50 flex items-center justify-center mb-8 border border-slate-100 transition-all duration-500 group-hover:scale-110 group-hover:bg-white group-hover:shadow-lg">
-                  {layer.icon}
-                </div>
-                
-                <h3 className="text-2xl font-display font-bold text-slate-900 mb-6 tracking-tight">
-                  {layer.title}
-                </h3>
-                
-                <ul className="space-y-4">
-                  {layer.bullets.map((bullet, j) => (
-                    <li key={j} className="flex items-center gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-                      <span className="text-slate-600 font-bold uppercase tracking-widest text-[11px]">
+            <React.Fragment key={i}>
+              <motion.div 
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: i * 0.15 }}
+                viewport={{ once: true }}
+                className={cn(
+                  "relative group p-8 rounded-[2rem] border border-slate-100 bg-white shadow-[0_10px_40px_-10px_rgba(0,0,0,0.02)] transition-all duration-500",
+                  "hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.08)] hover:-translate-y-1 flex flex-col items-center text-center"
+                )}
+              >
+                <div className="relative z-10 w-full flex flex-col items-center h-full">
+                  <div className={cn(
+                    "w-14 h-14 rounded-2xl flex items-center justify-center mb-6 transition-all duration-500 group-hover:scale-110",
+                    layer.color === 'emerald' ? "bg-emerald-50 text-emerald-600" : 
+                    layer.color === 'blue' ? "bg-blue-50 text-blue-600" : 
+                    "bg-indigo-50 text-indigo-600"
+                  )}>
+                    {layer.icon}
+                  </div>
+                  
+                  <h3 className="text-xl font-display font-bold text-slate-900 mb-4 tracking-tight">
+                    {layer.title}
+                  </h3>
+                  
+                  <div className="flex flex-col gap-2.5 w-full">
+                    {layer.bullets.map((bullet, j) => (
+                      <div 
+                        key={j} 
+                        className="px-6 py-3.5 rounded-full border border-slate-100 bg-white shadow-[0_2px_12px_-4px_rgba(0,0,0,0.04)] text-slate-600 text-[13px] font-black tracking-[0.15em] uppercase flex items-center justify-center transition-all duration-300 group-hover:shadow-lg group-hover:border-slate-200 group-hover:-translate-y-0.5"
+                      >
                         {bullet}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
 
-              {/* Decorative accent */}
-              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-slate-50 rounded-full opacity-50 group-hover:scale-150 transition-transform duration-700" />
-            </motion.div>
+                {/* Decorative accent for the background on hover */}
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-slate-50/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-[2rem]" />
+              </motion.div>
+
+              {/* Plus Sign - Desktop Only */}
+              {i < layers.length - 1 && (
+                <div className="hidden md:flex absolute items-center justify-center top-1/2 -translate-y-1/2 z-20 pointer-events-none" 
+                     style={{ left: `${(i + 1) * 33.33}%`, transform: 'translate(-50%, -50%)' }}>
+                  <div className="w-10 h-10 rounded-full bg-white border border-slate-100 shadow-xl flex items-center justify-center">
+                    <Plus className="w-6 h-6 text-slate-300" />
+                  </div>
+                </div>
+              )}
+            </React.Fragment>
           ))}
         </div>
       </div>
       
-      {/* Background Decor */}
-      <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-emerald-50/30 to-transparent pointer-events-none z-0" />
-      <div className="absolute bottom-0 left-0 w-1/3 h-full bg-gradient-to-r from-blue-50/30 to-transparent pointer-events-none z-0" />
+      {/* Abstract Background Elements */}
+      <div className="absolute top-0 right-0 w-[50%] h-[50%] bg-emerald-50/40 blur-[120px] rounded-full -z-10 -translate-y-1/2 translate-x-1/4" />
+      <div className="absolute bottom-0 left-0 w-[50%] h-[50%] bg-blue-50/40 blur-[120px] rounded-full -z-10 translate-y-1/2 -translate-x-1/4" />
     </section>
   );
 };
