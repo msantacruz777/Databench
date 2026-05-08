@@ -49,7 +49,7 @@ export const ResultSection = () => {
               </p>
             </div>
 
-            {/* Structured grid of prominent pills moved inside the box */}
+            {/* Structured grid of prominent pills */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
               {featureTitles.map((title, idx) => (
                 <motion.div 
@@ -67,76 +67,65 @@ export const ResultSection = () => {
                 </motion.div>
               ))}
             </div>
+
+            {/* Metrics Row: Now inside the box */}
+            <div className="mt-16 pt-16 border-t border-slate-100 relative">
+              <motion.div 
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+                className="text-center mb-12"
+              >
+                <h4 className="text-[12px] font-black text-slate-400 uppercase tracking-[0.4em] mb-2 leading-relaxed">
+                  Transform Your Business With Data Bench
+                </h4>
+              </motion.div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-4 relative">
+                {metrics.map((metric, idx) => {
+                  const themeColor = 'emerald';
+                  const glowColor = 'rgba(16, 185, 129, 0.05)';
+                  const glowColorHover = 'rgba(16, 185, 129, 0.1)';
+
+                  return (
+                    <motion.div 
+                      key={idx}
+                      initial={{ opacity: 0, y: 30 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: 0.2 + (idx * 0.15) }}
+                      viewport={{ once: true }}
+                      className="relative group px-4"
+                    >
+                      <div className="flex flex-col items-center">
+                        <div className="relative mb-6">
+                          <motion.div 
+                            animate={{ 
+                              boxShadow: [`0 10px 40px -10px ${glowColor}`, `0 20px 50px -10px ${glowColorHover}`, `0 10px 40px -10px ${glowColor}`]
+                            }}
+                            transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+                            className={`w-28 h-28 md:w-32 md:h-32 rounded-full bg-slate-50/50 border border-white shadow-xl shadow-emerald-500/5 flex items-center justify-center relative z-10 transition-transform duration-500 group-hover:scale-105`}
+                          >
+                            <div className={`absolute inset-2 rounded-full border border-dashed border-slate-200 group-hover:border-${themeColor}-200 group-hover:rotate-45 transition-all duration-700`} />
+                            <div className="text-3xl md:text-4xl font-display font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-blue-600 tracking-tight transition-all pb-1">
+                              {metric.value}
+                            </div>
+                          </motion.div>
+                        </div>
+
+                        <div className="space-y-2 text-center">
+                          <p className={`text-[12px] md:text-[13px] font-bold text-slate-900 uppercase tracking-widest max-w-[180px] leading-tight transition-colors group-hover:text-emerald-700`}>
+                            {metric.label}
+                          </p>
+                        </div>
+                      </div>
+                    </motion.div>
+                  );
+                })}
+              </div>
+            </div>
           </div>
         </motion.div>
-
-        {/* Removed external pills section as it's now inside the box */}
-
-        {/* Metrics Row: Redesigned for "Catchy" Appeal */}
-        <div className="max-w-6xl mx-auto mt-24 relative">
-          {/* Subtle glowing background element */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[120%] bg-emerald-50/40 blur-[100px] rounded-full -z-10 pointer-events-none" />
-          
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16 relative"
-          >
-            <h4 className="text-[13px] md:text-[15px] font-black text-slate-400 uppercase tracking-[0.4em] mb-2 leading-relaxed max-w-2xl mx-auto">
-              Transform Your Business With Data Bench
-            </h4>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 relative px-4">
-            {metrics.map((metric, idx) => {
-              const themeColor = 'emerald';
-              const glowColor = 'rgba(16, 185, 129, 0.1)';
-              const glowColorHover = 'rgba(16, 185, 129, 0.2)';
-
-              return (
-                <motion.div 
-                  key={idx}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 + (idx * 0.15) }}
-                  viewport={{ once: true }}
-                  className="relative group lg:px-6"
-                >
-                  <div className="flex flex-col items-center">
-                    {/* Decorative background glow for the metric */}
-                    <div className={`absolute top-0 left-1/2 -translate-x-1/2 w-48 h-48 bg-${themeColor}-100/30 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 -z-10`} />
-                    
-                    {/* Metric Container */}
-                    <div className="relative mb-8">
-                      <motion.div 
-                        animate={{ 
-                          boxShadow: [`0 10px 40px -10px ${glowColor}`, `0 20px 50px -10px ${glowColorHover}`, `0 10px 40px -10px ${glowColor}`]
-                        }}
-                        transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-                        className={`w-32 h-32 md:w-36 md:h-36 rounded-full bg-white border border-white shadow-2xl shadow-${themeColor}-500/10 flex items-center justify-center relative z-10 transition-transform duration-500 group-hover:scale-110`}
-                      >
-                        <div className={`absolute inset-2 rounded-full border border-dashed border-slate-100 group-hover:border-${themeColor}-200 group-hover:rotate-45 transition-all duration-700`} />
-                        <div className="text-4xl md:text-5xl font-display font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-blue-600 tracking-tight transition-all pb-1">
-                          {metric.value}
-                        </div>
-                      </motion.div>
-                    </div>
-
-                    {/* Label with better typography */}
-                    <div className="space-y-2">
-                      <div className={`h-1 w-12 bg-${themeColor}-100 mx-auto rounded-full group-hover:w-20 group-hover:bg-${themeColor}-500 transition-all duration-500`} />
-                      <p className={`text-[14px] md:text-[15px] font-bold text-slate-900 uppercase tracking-widest max-w-[200px] leading-tight transition-colors group-hover:text-${themeColor}-700`}>
-                        {metric.label}
-                      </p>
-                    </div>
-                  </div>
-                </motion.div>
-              );
-            })}
-          </div>
-        </div>
       </div>
     </section>
   );

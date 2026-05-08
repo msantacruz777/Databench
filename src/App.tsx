@@ -108,56 +108,97 @@ const UseCasesSection = () => {
 
 const AIDataLayerSection = () => {
   const { t } = useTranslation();
+  
+  const layers = [
+    {
+      title: 'Semantic Layer',
+      icon: <Layers className="w-6 h-6 text-emerald-600" />,
+      bullets: ['Context', 'Ontology'],
+      gradient: 'from-emerald-50 to-white'
+    },
+    {
+      title: 'Rules Engine',
+      icon: <Shield className="w-6 h-6 text-blue-600" />,
+      bullets: ['Inference', 'Governance'],
+      gradient: 'from-blue-50 to-white'
+    },
+    {
+      title: 'Graph',
+      icon: <GitBranch className="w-6 h-6 text-indigo-600" />,
+      bullets: ['Hyper Relation', 'Automate Graph Assembly'],
+      gradient: 'from-indigo-50 to-white'
+    }
+  ];
+
   return (
-    <section id="ai-data-layer" className="pt-24 pb-12 bg-slate-50 relative overflow-hidden">
+    <section id="ai-data-layer" className="pt-24 pb-24 bg-slate-50 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="max-w-3xl mx-auto text-center">
+        <div className="max-w-4xl mx-auto text-center mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <span className="text-emerald-600 font-bold text-xs tracking-[0.2em] uppercase mb-4 block">
+            <span className="text-emerald-600 font-black text-xs tracking-[0.3em] uppercase mb-4 block">
               Cognitive Infrastructure
             </span>
-            <h2 className="text-4xl md:text-5xl font-sans font-bold text-[#0f172a] mb-8 leading-tight tracking-tight">
-              Semantic Layer + Rules Engine + Graph = <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-blue-600">AI Data Layer</span>
+            <h2 className="text-4xl md:text-5xl font-display font-bold text-[#0f172a] mb-8 leading-tight tracking-tight">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-blue-600">AI Data Layer</span>
             </h2>
-            <p className="text-xl text-slate-600 leading-relaxed mb-12 font-medium">
+            <p className="text-xl text-slate-600 leading-relaxed font-medium">
               Graph traversal activates context, reduces hallucinations and optimizes agentic outcomes
             </p>
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-5 gap-4 mt-8">
-          {[
-            { title: 'Context', icon: <Database className="w-5 h-5" />, desc: 'Deep semantic understanding of relationships.' },
-            { title: 'Ontology', icon: <Layers className="w-5 h-5" />, desc: 'Flexible structure for enterprise knowledge.' },
-            { title: 'Inference', icon: <Zap className="w-5 h-5" />, desc: 'AI-driven discovery of hidden insights.' },
-            { title: 'Hyper Relation', icon: <GitBranch className="w-5 h-5" />, desc: 'Multi-dimensional data connectivity.' },
-            { title: 'Automate Graph Assembly', icon: <RefreshCw className="w-5 h-5" />, desc: 'Zero-effort knowledge graph population.' }
-          ].map((feature, i) => (
+        <div className="grid md:grid-cols-3 gap-8">
+          {layers.map((layer, i) => (
             <motion.div 
               key={i} 
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
+              transition={{ duration: 0.6, delay: i * 0.15 }}
               viewport={{ once: true }}
-              className="flex flex-col items-center text-center p-6 bg-white rounded-[2rem] border border-slate-200 shadow-sm hover:shadow-xl hover:shadow-emerald-500/5 transition-all hover:-translate-y-1 aspect-square justify-center"
+              className={cn(
+                "relative group p-8 rounded-[2.5rem] border border-slate-200 bg-white shadow-sm transition-all duration-500",
+                "hover:shadow-2xl hover:shadow-slate-200 hover:-translate-y-2 overflow-hidden"
+              )}
             >
-              <div className="w-12 h-12 rounded-2xl bg-emerald-50 flex items-center justify-center mb-4 transition-transform group-hover:scale-110">
-                <span className="text-emerald-600">{feature.icon}</span>
+              {/* Subtle gradient background */}
+              <div className={cn("absolute inset-0 bg-gradient-to-br opacity-0 group-hover:opacity-100 transition-opacity duration-500", layer.gradient)} />
+              
+              <div className="relative z-10">
+                <div className="w-14 h-14 rounded-2xl bg-slate-50 flex items-center justify-center mb-8 border border-slate-100 transition-all duration-500 group-hover:scale-110 group-hover:bg-white group-hover:shadow-lg">
+                  {layer.icon}
+                </div>
+                
+                <h3 className="text-2xl font-display font-bold text-slate-900 mb-6 tracking-tight">
+                  {layer.title}
+                </h3>
+                
+                <ul className="space-y-4">
+                  {layer.bullets.map((bullet, j) => (
+                    <li key={j} className="flex items-center gap-3">
+                      <div className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                      <span className="text-slate-600 font-bold uppercase tracking-widest text-[11px]">
+                        {bullet}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <h4 className="font-bold text-slate-900 text-sm mb-2 leading-tight">{feature.title}</h4>
-              <p className="text-[10px] text-slate-500 leading-tight px-2">{feature.desc}</p>
+
+              {/* Decorative accent */}
+              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-slate-50 rounded-full opacity-50 group-hover:scale-150 transition-transform duration-700" />
             </motion.div>
           ))}
         </div>
       </div>
       
-      {/* Background Decor - moved to background with z-0 and lower opacity */}
-      <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-emerald-50/50 to-transparent pointer-events-none z-0" />
+      {/* Background Decor */}
+      <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-emerald-50/30 to-transparent pointer-events-none z-0" />
+      <div className="absolute bottom-0 left-0 w-1/3 h-full bg-gradient-to-r from-blue-50/30 to-transparent pointer-events-none z-0" />
     </section>
   );
 };
