@@ -20,80 +20,121 @@ export const ResultSection = () => {
   return (
     <section className="py-24 bg-white overflow-hidden border-t border-slate-50">
       <div className="max-w-7xl mx-auto px-6">
-        {/* Header: Reverting typography style */}
-        <div className="text-center mb-16">
-          <motion.h2 
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-display font-black text-[#0f172a] leading-none mb-3 tracking-tighter uppercase"
-          >
-            {t('platform.result.title')}
-          </motion.h2>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            viewport={{ once: true }}
-            className="text-xl md:text-2xl font-medium text-[#10b981] leading-tight tracking-tight mb-8"
-          >
-            {t('platform.result.subtitle')}
-          </motion.p>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="text-[17px] text-[#64748b] max-w-2xl mx-auto leading-[1.6]"
-          >
-            {t('platform.result.desc')}
-          </motion.p>
-        </div>
+        {/* Header: Matched to SecuritySection style */}
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="bg-white rounded-[1rem] border border-slate-100 overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.02)] mb-16"
+        >
+          <div className="p-8 md:p-10">
+            <div className="flex items-center gap-6">
+              <div className="w-16 h-16 bg-[#0f172a] rounded-[1rem] flex items-center justify-center text-white shadow-lg flex-shrink-0">
+                <CheckCircle2 className="w-8 h-8" strokeWidth={2.5} />
+              </div>
+              <div className="flex flex-col">
+                <h3 className="text-3xl font-display font-bold text-[#0f172a] leading-tight">
+                  {t('platform.result.title')}
+                </h3>
+                <p className="text-lg font-medium text-[#10b981] leading-tight mt-1">
+                  {t('platform.result.subtitle')}
+                </p>
+              </div>
+            </div>
+            
+            <div className="mt-8 pt-8 border-t border-slate-100">
+              <p className="text-[17px] text-[#64748b] max-w-none leading-[1.6]">
+                {t('platform.result.desc')}
+              </p>
+            </div>
 
-        {/* bullet points redesigned as elegant pills */}
-        <div className="flex flex-wrap justify-center gap-3 mb-20 max-w-5xl mx-auto">
-          {featureTitles.map((title, idx) => (
-            <motion.div 
-              key={idx}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.4, delay: idx * 0.05 }}
-              viewport={{ once: true }}
-              className="flex items-center gap-2 px-5 py-3 rounded-full bg-slate-50/80 border border-slate-100 hover:bg-white hover:border-emerald-200 hover:shadow-md transition-all group"
-            >
-              <CheckCircle2 className="w-4 h-4 text-emerald-500 group-hover:scale-110 transition-transform" />
-              <span className="text-slate-900 font-bold text-[12px] leading-none tracking-tight uppercase">
-                {title}
-              </span>
-            </motion.div>
-          ))}
-        </div>
-
-        {/* Metrics Row: Slim Horizontal Row with Dividers */}
-        <div className="max-w-5xl mx-auto border-t border-slate-100 pt-16">
-          <div className="flex flex-col md:flex-row items-center justify-center md:justify-between gap-12 md:gap-4">
-            {metrics.map((metric, idx) => (
-              <React.Fragment key={idx}>
+            {/* Structured grid of prominent pills moved inside the box */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
+              {featureTitles.map((title, idx) => (
                 <motion.div 
+                  key={idx}
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.3 + (idx * 0.1) }}
+                  transition={{ duration: 0.4, delay: idx * 0.05 }}
                   viewport={{ once: true }}
-                  className="flex flex-col items-center text-center"
+                  className="flex items-center gap-3 px-6 py-4 rounded-xl bg-slate-50/80 border border-slate-100 hover:bg-white hover:border-emerald-200 hover:shadow-lg hover:shadow-emerald-500/5 transition-all group"
                 >
-                  <div className="text-5xl md:text-6xl font-display font-black text-emerald-500 mb-2">
-                    {metric.value}
-                  </div>
-                  <div className="text-[11px] font-bold text-[#0f172a] uppercase tracking-widest max-w-[150px] leading-tight">
-                    {metric.label}
+                  <CheckCircle2 className="w-5 h-5 text-emerald-500 group-hover:scale-110 transition-transform flex-shrink-0" />
+                  <span className="text-slate-900 font-bold text-[14px] uppercase tracking-tight group-hover:text-emerald-600 transition-colors">
+                    {title}
+                  </span>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Removed external pills section as it's now inside the box */}
+
+        {/* Metrics Row: Redesigned for "Catchy" Appeal */}
+        <div className="max-w-6xl mx-auto mt-24 relative">
+          {/* Subtle glowing background element */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[120%] bg-emerald-50/40 blur-[100px] rounded-full -z-10 pointer-events-none" />
+          
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16 relative"
+          >
+            <h4 className="text-[13px] md:text-[15px] font-black text-slate-400 uppercase tracking-[0.4em] mb-2 leading-relaxed max-w-2xl mx-auto">
+              Transform Your Business With Data Bench
+            </h4>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 relative px-4">
+            {metrics.map((metric, idx) => {
+              const themeColor = 'emerald';
+              const glowColor = 'rgba(16, 185, 129, 0.1)';
+              const glowColorHover = 'rgba(16, 185, 129, 0.2)';
+
+              return (
+                <motion.div 
+                  key={idx}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.2 + (idx * 0.15) }}
+                  viewport={{ once: true }}
+                  className="relative group lg:px-6"
+                >
+                  <div className="flex flex-col items-center">
+                    {/* Decorative background glow for the metric */}
+                    <div className={`absolute top-0 left-1/2 -translate-x-1/2 w-48 h-48 bg-${themeColor}-100/30 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 -z-10`} />
+                    
+                    {/* Metric Container */}
+                    <div className="relative mb-8">
+                      <motion.div 
+                        animate={{ 
+                          boxShadow: [`0 10px 40px -10px ${glowColor}`, `0 20px 50px -10px ${glowColorHover}`, `0 10px 40px -10px ${glowColor}`]
+                        }}
+                        transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+                        className={`w-32 h-32 md:w-36 md:h-36 rounded-full bg-white border border-white shadow-2xl shadow-${themeColor}-500/10 flex items-center justify-center relative z-10 transition-transform duration-500 group-hover:scale-110`}
+                      >
+                        <div className={`absolute inset-2 rounded-full border border-dashed border-slate-100 group-hover:border-${themeColor}-200 group-hover:rotate-45 transition-all duration-700`} />
+                        <div className="text-4xl md:text-5xl font-display font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-blue-600 tracking-tight transition-all pb-1">
+                          {metric.value}
+                        </div>
+                      </motion.div>
+                    </div>
+
+                    {/* Label with better typography */}
+                    <div className="space-y-2">
+                      <div className={`h-1 w-12 bg-${themeColor}-100 mx-auto rounded-full group-hover:w-20 group-hover:bg-${themeColor}-500 transition-all duration-500`} />
+                      <p className={`text-[14px] md:text-[15px] font-bold text-slate-900 uppercase tracking-widest max-w-[200px] leading-tight transition-colors group-hover:text-${themeColor}-700`}>
+                        {metric.label}
+                      </p>
+                    </div>
                   </div>
                 </motion.div>
-                {idx < metrics.length - 1 && (
-                  <div className="hidden md:block w-px h-16 bg-slate-100 mx-8" />
-                )}
-              </React.Fragment>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>

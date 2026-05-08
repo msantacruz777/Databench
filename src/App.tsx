@@ -50,7 +50,7 @@ const UseCasesSection = () => {
   }>;
 
   return (
-    <section id="use-cases" className="pt-24 pb-12 bg-white">
+    <section id="use-cases" className="pt-12 pb-12 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
           <div className="flex flex-col">
@@ -66,9 +66,9 @@ const UseCasesSection = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {items.map((item, i) => {
             const titleColors = [
-              'text-blue-600', // Banking: Data Migration
-              'text-blue-600', // Insurance: Governance & Archiving
-              'text-blue-600', // Manufacturing: Integration & Deduplication
+              'text-[#1d4c6a]', // Banking: Data Migration
+              'text-[#1d4c6a]', // Insurance: Governance & Archiving
+              'text-[#1d4c6a]', // Manufacturing: Integration & Deduplication
               'text-blue-600', // Finance: Portfolio Visibility
               'text-blue-600', // Retail: Unified Analytics
               'text-blue-600'  // Insurance: Rules Enforcement
@@ -196,7 +196,6 @@ const LinkedInSection = () => {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 px-4 gap-6">
           <div className="flex flex-col items-start gap-4">
             <div className="flex flex-col items-start">
-              <span className="text-[10px] font-black text-emerald-500 uppercase tracking-[0.3em] mb-3">Community</span>
               <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 tracking-tight">{t('linkedin.title')}</h2>
             </div>
             <a 

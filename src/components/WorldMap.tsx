@@ -21,10 +21,7 @@ const WorldMap: React.FC = () => {
 
     const path = d3.geoPath().projection(projection);
 
-    // Simplified world map data (low-res for speed and minimal look)
-    // In a real app, we'd fetch a proper GeoJSON. 
-    // For this demo, I'll use a basic set of coordinates for continents or a simple fetch.
-    
+    // Simplified world map data
     d3.json('https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson')
       .then((data: any) => {
         svg.append('g')
@@ -38,12 +35,12 @@ const WorldMap: React.FC = () => {
           .attr('stroke-width', 0.8)
           .attr('opacity', 1);
 
-        // Locations
+        // Locations with specific label offsets and adjusted coordinates to avoid dot overlap
         const locations = [
-          { name: 'Toronto', coords: [-79.38, 43.65] },
-          { name: 'Kitchener', coords: [-80.48, 43.45] },
-          { name: 'London', coords: [-0.12, 51.50] }, // London, UK
-          { name: 'UAE', coords: [55.27, 25.20] } // Dubai
+          { name: 'Toronto', coords: [-78.8, 44.0] as [number, number], dx: 6, dy: -4 },
+          { name: 'Waterloo', coords: [-81.5, 43.0] as [number, number], dx: 6, dy: 12 },
+          { name: 'London', coords: [-0.12, 51.50] as [number, number], dx: 6, dy: 4 },
+          { name: 'UAE', coords: [55.27, 25.20] as [number, number], dx: 6, dy: 4 }
         ];
 
         // Add markers
@@ -60,30 +57,6 @@ const WorldMap: React.FC = () => {
           .attr('stroke', '#fff')
           .attr('stroke-width', 1.5)
           .attr('class', 'animate-pulse');
-
-        // Add labels on hover or static
-        markers.selectAll('text')
-          .data(locations)
-          .enter()
-          .append('text')
-          .attr('x', d => projection(d.coords as [number, number])![0] + 6)
-          .attr('y', d => projection(d.coords as [number, number])![1] + 4)
-          .text(d => d.name)
-          .attr('font-size', '8px')
-          .attr('font-weight', 'bold')
-          .attr('fill', '#0f172a') // slate-950
-          .attr('class', 'pointer-events-none opacity-0 transition-opacity duration-300')
-          .attr('id', (d, i) => `label-${i}`);
-
-        // Interactive behavior
-        svg.selectAll('circle')
-          .on('mouseenter', function(event, d: any) {
-            d3.select(this).transition().attr('r', 6);
-            // Show label (simplified)
-          })
-          .on('mouseleave', function(event, d: any) {
-            d3.select(this).transition().attr('r', 4);
-          });
       });
 
   }, []);
