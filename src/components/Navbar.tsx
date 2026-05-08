@@ -11,8 +11,8 @@ export const Navbar = () => {
     { name: t('nav.platform'), href: '#platform' },
     { name: t('nav.aiDataLayer'), href: '#ai-data-layer' },
     { name: t('nav.customer'), href: '#use-cases' },
-    { name: t('nav.company'), href: '#company' },
     { name: t('nav.blog'), href: '#blog' },
+    { name: t('nav.company'), href: '#company' },
   ];
 
   return (

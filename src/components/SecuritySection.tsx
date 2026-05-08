@@ -8,7 +8,7 @@ export const SecuritySection = () => {
   const { t } = useTranslation();
 
   return (
-    <section id="security" className="pt-12 pb-12 bg-white">
+    <section id="security" className="pt-8 pb-12 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
@@ -45,7 +45,7 @@ export const SecuritySection = () => {
                   i < 3 ? "lg:border-r" : "lg:border-r-0"
                 )}
               >
-                <h4 className="text-[#10b981] font-bold text-lg">
+                <h4 className="text-[#1d4c6a] font-bold text-lg">
                   {feature.title}
                 </h4>
                 <p className="text-slate-500 text-[15px] leading-relaxed">

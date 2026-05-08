@@ -18,7 +18,7 @@ export const ResultSection = () => {
   const metrics = t('platform.metrics.items', { returnObjects: true }) as any[];
 
   return (
-    <section className="py-24 bg-white overflow-hidden border-t border-slate-50">
+    <section className="pt-4 pb-8 bg-white overflow-hidden border-t border-slate-50">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header: Matched to SecuritySection style */}
         <motion.div 

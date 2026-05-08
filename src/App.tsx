@@ -70,9 +70,9 @@ const UseCasesSection = () => {
               'text-[#1d4c6a]', // Banking: Data Migration
               'text-[#1d4c6a]', // Insurance: Governance & Archiving
               'text-[#1d4c6a]', // Manufacturing: Integration & Deduplication
-              'text-blue-600', // Finance: Portfolio Visibility
-              'text-blue-600', // Retail: Unified Analytics
-              'text-blue-600'  // Insurance: Rules Enforcement
+              'text-[#1d4c6a]', // Finance: Portfolio Visibility
+              'text-[#1d4c6a]', // Retail: Unified Analytics
+              'text-[#1d4c6a]'  // Insurance: Rules Enforcement
             ];
             
             return (
@@ -126,13 +126,13 @@ const AIDataLayerSection = () => {
     {
       title: 'Graph',
       icon: <GitBranch className="w-6 h-6 text-indigo-600" />,
-      bullets: ['Hyper Relation', 'Graph Assembly'],
+      bullets: ['Hyper Relation', 'Automated Graph Assembly'],
       color: 'indigo'
     }
   ];
 
   return (
-    <section id="ai-data-layer" className="pt-24 pb-24 bg-[#f8fafc] relative overflow-hidden">
+    <section id="ai-data-layer" className="pt-8 pb-8 bg-[#f8fafc] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center mb-12">
           <motion.div
@@ -144,8 +144,9 @@ const AIDataLayerSection = () => {
             <span className="text-[#10b981] font-bold text-[11px] tracking-[0.3em] uppercase mb-4 block">
               Cognitive Infrastructure
             </span>
-            <h2 className="text-2xl md:text-3xl font-display font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-emerald-600 mb-6 leading-tight tracking-[0.3em] uppercase">
-              AI Data Layer
+            <h2 className="text-3xl md:text-4xl font-sans font-bold text-[#0f172a] mb-6 tracking-[-0.01em] leading-tight">
+              Semantic Layer + Rules Engine + <br />
+              Graph = <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#10b981] to-[#3b82f6]">AI Data Layer</span>
             </h2>
             <p className="text-lg md:text-xl text-slate-500 leading-relaxed font-medium">
               Graph traversal activates context, reduces hallucinations and optimizes agentic outcomes

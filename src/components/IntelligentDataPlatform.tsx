@@ -73,7 +73,7 @@ export const IntelligentDataPlatform = () => {
                 {card.icon}
               </div>
               <div className="flex flex-col flex-grow">
-                <h3 className={cn("text-xl font-display font-bold mb-2 transition-colors min-h-[4.5rem] flex items-center leading-tight", card.iconColor)}>
+                <h3 className="text-xl font-display font-bold mb-2 transition-colors min-h-[4.5rem] flex items-center leading-tight text-[#1d4c6a]">
                   {card.title}
                 </h3>
                 <div className="min-h-[2.5rem] flex items-start">
