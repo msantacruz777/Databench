@@ -53,15 +53,16 @@ const UseCasesSection = () => {
   return (
     <section id="use-cases" className="pt-12 pb-12 bg-white">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
-          <div className="flex flex-col">
-            <h3 className="text-3xl font-display font-bold text-[#0f172a] leading-tight">
-              {t('useCases.title')}
-            </h3>
-            <p className="text-lg font-medium text-[#10b981] leading-tight mt-1">
-              {t('useCases.subtitle')}
-            </p>
-          </div>
+        <div className="text-center mb-16">
+          <span className="text-[14px] font-bold tracking-[0.15em] text-[#10b981] uppercase mb-3 block">
+            {t('useCases.label')}
+          </span>
+          <h3 className="text-xl md:text-[26px] font-sans font-bold text-[#0f172a] mb-2 tracking-[-0.01em] leading-tight">
+            {t('useCases.title')}
+          </h3>
+          <p className="text-lg md:text-xl text-slate-500 max-w-2xl mx-auto leading-relaxed font-medium">
+            {t('useCases.subtitle')}
+          </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

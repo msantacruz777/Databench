@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'motion/react';
-import { Shield } from 'lucide-react';
+import { Lock } from 'lucide-react';
 import { cn } from '../lib/utils';
 
 export const SecuritySection = () => {
@@ -21,7 +21,7 @@ export const SecuritySection = () => {
           <div className="p-8 md:p-10">
             <div className="flex items-center gap-6">
               <div className="w-16 h-16 bg-[#0f172a] rounded-[1rem] flex items-center justify-center text-white shadow-lg flex-shrink-0">
-                <Shield className="w-8 h-8" strokeWidth={2.5} />
+                <Lock className="w-8 h-8" strokeWidth={2.5} />
               </div>
               <div className="flex flex-col">
                 <h3 className="text-3xl font-display font-bold text-[#0f172a] leading-tight">
