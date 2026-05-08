@@ -144,11 +144,11 @@ const AIDataLayerSection = () => {
             <span className="text-[#10b981] font-bold text-[11px] tracking-[0.3em] uppercase mb-4 block">
               Cognitive Infrastructure
             </span>
-            <h2 className="text-2xl md:text-3xl font-display font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-blue-600 mb-6 leading-tight tracking-[0.2em] uppercase">
+            <h2 className="text-2xl md:text-3xl font-display font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-emerald-600 mb-6 leading-tight tracking-[0.3em] uppercase">
               AI Data Layer
             </h2>
-            <p className="text-lg md:text-xl text-slate-500 leading-relaxed font-medium italic">
-              "Graph traversal activates context, reduces hallucinations and optimizes agentic outcomes"
+            <p className="text-lg md:text-xl text-slate-500 leading-relaxed font-medium">
+              Graph traversal activates context, reduces hallucinations and optimizes agentic outcomes
             </p>
           </motion.div>
         </div>

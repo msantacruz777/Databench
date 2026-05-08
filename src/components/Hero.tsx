@@ -42,7 +42,7 @@ export const Hero = () => {
                         animate={{ y: 0, opacity: 1 }}
                         exit={{ y: "-100%", opacity: 0 }}
                         transition={{ duration: 0.5, ease: [0.23, 1, 0.32, 1] }}
-                        className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-blue-600 inline-flex items-center whitespace-nowrap py-1 px-2"
+                        className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-emerald-600 inline-flex items-center whitespace-nowrap py-1 px-2"
                       >
                         DATA&nbsp;&nbsp;{words[index]}
                       </motion.span>
