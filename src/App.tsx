@@ -145,9 +145,9 @@ const AIDataLayerSection = () => {
             <span className="text-[14px] font-bold tracking-[0.15em] text-[#10b981] uppercase mb-3 block">
               Cognitive Infrastructure
             </span>
-            <h2 className="text-3xl md:text-4xl font-sans font-bold text-[#0f172a] mb-6 tracking-[-0.01em] leading-tight">
-              Semantic Layer + Rules Engine + <br />
-              Graph = <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1d4c6a] to-[#10b981]">AI Data Layer</span>
+            <h2 className="text-3xl md:text-4xl font-sans font-bold text-[#0f172a] mb-6 tracking-[-0.01em] leading-tight flex flex-col items-center">
+              <span>Semantic Layer + Rules Engine + Graph</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1d4c6a] to-[#10b981] uppercase mt-2">AI Data Layer</span>
             </h2>
             <p className="text-lg md:text-xl text-slate-500 leading-relaxed font-medium">
               Graph traversal activates context, reduces hallucinations and optimizes agentic outcomes
@@ -226,35 +226,37 @@ const LinkedInSection = () => {
     { 
       id: 0, 
       badge: "Today",
-      text: "Manual deduplication is often an invisible cost in many organizations. When teams rely on manual processes to clean and deduplicate their data sets, they lose valuable...",
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800&h=600",
+      title: "The Invisible Cost of Manual Data Handling",
+      text: "Manual deduplication is often an invisible cost in many organizations. When teams rely on manual processes to clean and deduplicate their data sets, they lose valuable time and increase risk.",
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=400&h=250",
       url: "https://www.linkedin.com/feed/update/urn:li:activity:7444774375997800448"
     },
     { 
       id: 1, 
       badge: "4 days ago",
-      text: "AI initiatives rely on more than just models, they rely on trusted data. Data lineage preserves the full story behind every data point: where it originated, who modified it...",
-      image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800&h=600",
+      title: "Data Lineage: The Story Behind Trusted AI",
+      text: "AI initiatives rely on more than just models, they rely on trusted data. Data lineage preserves the full story behind every data point: where it originated and who modified it.",
+      image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=400&h=250",
       url: "https://www.linkedin.com/feed/update/urn:li:activity:7430294102388277248"
     },
     { 
       id: 2, 
       badge: "2 weeks ago",
-      text: "Unmanaged data costs more than money. It costs time to value. Fragmented, ungoverned data slows decisions, erodes trust, and keeps teams trapped in manual cycles...",
-      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800&h=600",
-      url: "https://www.linkedin.com/feed/update/urn:li:activity:7420144528793399296",
-      isGreen: true
+      title: "The High Price of Unmanaged Data",
+      text: "Unmanaged data costs more than money. It costs time to value. Fragmented, ungoverned data slows decisions, erodes trust, and keeps teams trapped in manual cycles.",
+      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=400&h=250",
+      url: "https://www.linkedin.com/feed/update/urn:li:activity:7420144528793399296"
     }
   ];
 
   return (
-    <section id="blog" className="pt-12 pb-12 bg-white">
+    <section id="blog" className="pt-16 pb-20 bg-white">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 px-4 gap-6">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div className="flex flex-col items-start gap-4">
-            <div className="flex flex-col items-start">
-              <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 tracking-tight">{t('linkedin.title')}</h2>
-            </div>
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 tracking-tight">
+              {t('linkedin.title')}
+            </h2>
             <a 
               href="https://www.linkedin.com/company/data-bench/" 
               target="_blank" 
@@ -265,38 +267,60 @@ const LinkedInSection = () => {
             </a>
           </div>
         </div>
+
         <div className="grid md:grid-cols-3 gap-8">
           {posts.map((post) => (
-            <a 
+            <motion.a 
               key={post.id} 
               href={post.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group cursor-pointer block"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: post.id * 0.1 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -5 }}
+              className="group flex flex-col h-full bg-[#f8f9fa] border border-slate-100 border-l-4 border-l-emerald-400 rounded-xl p-8 transition-all hover:shadow-xl hover:shadow-emerald-900/5 hover:border-emerald-100"
             >
-              <div className="rounded-2xl overflow-hidden mb-6 aspect-[16/10] bg-slate-100 relative shadow-sm border border-slate-100">
-                <img 
-                  src={post.image} 
-                  alt="LinkedIn Content" 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                  referrerPolicy="no-referrer"
-                />
-                <div className="absolute top-4 right-4 bg-white rounded-lg p-1.5 shadow-sm border border-slate-100/50">
-                  <Linkedin className="w-4 h-4 text-[#0077b5]" />
-                </div>
-              </div>
-              <div className="mb-4">
-                <span className="px-2 py-0.5 bg-emerald-50 text-emerald-600 text-[10px] font-bold uppercase tracking-widest rounded">
+              <div className="mb-6 flex items-start justify-between">
+                <span className="px-3 py-1 bg-emerald-50 text-emerald-600 text-[10px] font-bold uppercase tracking-widest rounded-full">
                   {post.badge}
                 </span>
+                <div className="opacity-20 group-hover:opacity-40 transition-opacity">
+                  <Linkedin className="w-5 h-5 text-[#0077b5]" />
+                </div>
               </div>
-              <p className={cn(
-                "font-bold text-lg leading-snug transition-colors line-clamp-3",
-                post.isGreen ? "text-emerald-600 group-hover:text-emerald-700" : "text-slate-900 group-hover:text-emerald-600"
-              )}>
-                {post.text}
-              </p>
-            </a>
+
+              {/* Small Thumbnail Image */}
+              <div className="mb-6 rounded-lg overflow-hidden h-32 bg-slate-200 border border-slate-100 shadow-sm relative">
+                <img 
+                  src={post.image} 
+                  alt={post.title} 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+                  referrerPolicy="no-referrer"
+                />
+              </div>
+
+              <div className="flex-grow">
+                <h3 className="text-lg font-display font-bold text-[#1d4c6a] leading-tight mb-4 group-hover:text-emerald-700 transition-colors">
+                  {post.title}
+                </h3>
+                <p className="text-slate-500 text-[14px] leading-relaxed line-clamp-2">
+                  {post.text}
+                </p>
+              </div>
+
+              <div className="mt-8 pt-6 border-t border-slate-200/50 flex items-center gap-2 text-emerald-600 text-sm font-bold opacity-0 group-hover:opacity-100 transition-all translate-y-2 group-hover:translate-y-0">
+                <span>Read on LinkedIn</span>
+                <ArrowRight className="w-4 h-4" />
+              </div>
+              
+              {/* Fallback for link on touch devices or non-hover */}
+              <div className="mt-8 pt-6 border-t border-slate-200/50 flex items-center gap-2 text-emerald-600 text-sm font-bold md:hidden">
+                <span>Read on LinkedIn</span>
+                <ArrowRight className="w-4 h-4" />
+              </div>
+            </motion.a>
           ))}
         </div>
       </div>

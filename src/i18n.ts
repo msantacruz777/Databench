@@ -73,7 +73,7 @@ const resources = {
           badge: 'Enterprise Certified',
           features: [
             { title: 'Zero Trust Connectivity', desc: 'All endpoints authenticated and authorized before any IP connectivity' },
-            { title: 'Encryption at Rest', desc: 'AES-256 protection for all stored assets' },
+            { title: 'Encryption at Rest', desc: 'TLS and Curve ZMQ' },
             { title: 'Encryption in Transit', desc: 'TLS 1.3 secured data movement' },
             { title: 'RBAC', desc: 'Granular role-based access control' }
           ]
@@ -189,7 +189,7 @@ const resources = {
           badge: 'Certificado para Empresas',
           features: [
             { title: 'Conectividad Zero Trust', desc: 'Todos los puntos finales autenticados y autorizados antes de cualquier conectividad IP' },
-            { title: 'Cifrado en reposo', desc: 'Protección AES-256 para todos los activos almacenados' },
+            { title: 'Cifrado en reposo', desc: 'TLS y Curve ZMQ' },
             { title: 'Cifrado en tránsito', desc: 'Movimiento de datos asegurado con TLS 1.3' },
             { title: 'RBAC', desc: 'Control de acceso granular basado en roles' }
           ]
@@ -305,7 +305,7 @@ const resources = {
           badge: 'معتمد للمؤسسات',
           features: [
             { title: 'اتصال الثقة الصفرية', desc: 'تتم مصادقة جميع نقاط النهاية وتفويضها قبل أي اتصال IP' },
-            { title: 'التشفير أثناء الراحة', desc: 'حماية AES-256 لجميع الأصول المخزنة' },
+            { title: 'التشفير أثناء الراحة', desc: 'TLS و Curve ZMQ' },
             { title: 'التشفير أثناء الانتقال', desc: 'حركة البيانات المؤمنة بـ TLS 1.3' },
             { title: 'RBAC', desc: 'التحكم الدقيق في الوصول القائم على الأدوار' }
           ]
