@@ -47,7 +47,7 @@ const resources = {
           desc: 'Automated deduplication engines that identify and merge duplicate records across disparate systems.'
         },
         metrics: {
-          title: 'Transform Your Business with Data Bench',
+          title: 'Transform Your Business With Data Bench',
           items: [
             {
               value: '80%',

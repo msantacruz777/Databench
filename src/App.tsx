@@ -115,13 +115,13 @@ const AIDataLayerSection = () => {
     {
       title: 'Semantic Layer',
       icon: <Layers className="w-6 h-6 text-emerald-600" />,
-      bullets: ['Context', 'Ontology'],
+      bullets: ['Contextualization', 'Ontology Creation'],
       color: 'emerald'
     },
     {
       title: 'Rules Engine',
       icon: <Shield className="w-6 h-6 text-blue-600" />,
-      bullets: ['Inference', 'Governance'],
+      bullets: ['Embedded Inference', 'Governance Controls'],
       color: 'blue'
     },
     {
@@ -142,12 +142,12 @@ const AIDataLayerSection = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <span className="text-[#10b981] font-bold text-[11px] tracking-[0.3em] uppercase mb-4 block">
+            <span className="text-[14px] font-bold tracking-[0.15em] text-[#10b981] uppercase mb-3 block">
               Cognitive Infrastructure
             </span>
             <h2 className="text-3xl md:text-4xl font-sans font-bold text-[#0f172a] mb-6 tracking-[-0.01em] leading-tight">
               Semantic Layer + Rules Engine + <br />
-              Graph = <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#10b981] to-[#3b82f6]">AI Data Layer</span>
+              Graph = <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1d4c6a] to-[#10b981]">AI Data Layer</span>
             </h2>
             <p className="text-lg md:text-xl text-slate-500 leading-relaxed font-medium">
               Graph traversal activates context, reduces hallucinations and optimizes agentic outcomes
