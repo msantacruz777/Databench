@@ -365,7 +365,7 @@ const FinalSection = () => {
                   ))}
                 </div>
               </div>
-              <div className="lg:col-span-2 min-h-[400px] relative bg-white rounded-[3rem] border border-slate-100/50 p-8 shadow-2xl shadow-slate-500/5">
+              <div className="lg:col-span-2 min-h-[400px] relative overflow-hidden rounded-[3rem] shadow-xl shadow-slate-200/50">
                 <WorldMap />
               </div>
             </div>

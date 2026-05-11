@@ -73,7 +73,7 @@ export const ResultSection = () => {
             <div className="h-px bg-emerald-100/60 w-full mb-12" />
 
             <div className="text-center mb-10">
-              <span className="text-[11px] font-bold text-[#1d4c6a]/60 uppercase tracking-[0.3em]">
+              <span className="text-[11px] font-bold text-[#1d4c6a] uppercase tracking-[0.3em]">
                 See Results in Weeks at Fraction of the Cost of Alternatives
               </span>
             </div>
