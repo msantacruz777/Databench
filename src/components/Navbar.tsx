@@ -70,14 +70,6 @@ export const Navbar = () => {
                 {item.name}
               </a>
             ))}
-            <div className="flex justify-center py-4">
-              <img 
-                src="/Logo.png" 
-                alt="Data Bench Logo" 
-                className="h-16 w-auto"
-                referrerPolicy="no-referrer"
-              />
-            </div>
           </motion.div>
         )}
       </AnimatePresence>
