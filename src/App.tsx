@@ -228,7 +228,7 @@ const LinkedInSection = () => {
       badge: "Today",
       title: "The Invisible Cost of Manual Data Handling",
       text: "Manual deduplication is often an invisible cost in many organizations. When teams rely on manual processes to clean and deduplicate their data sets, they lose valuable time and increase risk.",
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=400&h=250",
+      image: "/Knowledge.jpeg",
       url: "https://www.linkedin.com/feed/update/urn:li:activity:7444774375997800448"
     },
     { 
