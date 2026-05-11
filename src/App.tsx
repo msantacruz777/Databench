@@ -236,7 +236,7 @@ const LinkedInSection = () => {
       badge: "4 days ago",
       title: "Data Lineage: The Story Behind Trusted AI",
       text: "AI initiatives rely on more than just models, they rely on trusted data. Data lineage preserves the full story behind every data point: where it originated and who modified it.",
-      image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=400&h=250",
+      image: "/Graph.png",
       url: "https://www.linkedin.com/feed/update/urn:li:activity:7430294102388277248"
     },
     { 
@@ -244,7 +244,7 @@ const LinkedInSection = () => {
       badge: "2 weeks ago",
       title: "The High Price of Unmanaged Data",
       text: "Unmanaged data costs more than money. It costs time to value. Fragmented, ungoverned data slows decisions, erodes trust, and keeps teams trapped in manual cycles.",
-      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=400&h=250",
+      image: "/Grafico2.png",
       url: "https://www.linkedin.com/feed/update/urn:li:activity:7420144528793399296"
     }
   ];
