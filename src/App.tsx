@@ -244,7 +244,7 @@ const LinkedInSection = () => {
       badge: "2 weeks ago",
       title: "The High Price of Unmanaged Data",
       text: "Unmanaged data costs more than money. It costs time to value. Fragmented, ungoverned data slows decisions, erodes trust, and keeps teams trapped in manual cycles.",
-      image: "/Grafico2.png",
+      image: "/dbimage.png",
       url: "https://www.linkedin.com/feed/update/urn:li:activity:7420144528793399296"
     }
   ];

@@ -28,14 +28,14 @@ export const Hero = () => {
             transition={{ duration: 0.6 }}
           >
             
-            <h1 className="text-[clamp(1.75rem,9vw,2.75rem)] md:text-[clamp(1.25rem,6vw,4rem)] font-display font-black text-[#0f172a] leading-[1.1] md:leading-none mb-6 md:tracking-tighter uppercase flex flex-col md:flex-row items-center justify-center md:gap-[0.3em] px-4">
+            <h1 className="text-[clamp(1.25rem,8.5vw,2.5rem)] md:text-[clamp(1.25rem,6vw,4rem)] font-display font-black text-[#0f172a] leading-[1.1] md:leading-none mb-6 md:tracking-tighter uppercase flex flex-col md:flex-row items-center justify-center md:gap-[0.3em] px-2 w-full mx-auto">
               {isRtl ? (
                 t('hero.quote')
               ) : (
                 <>
-                  <div className="flex items-center gap-[0.2em] md:gap-[0.3em] whitespace-nowrap justify-center mb-1 md:mb-0">
-                    <span>THE</span>
-                    <div className="h-[1.2em] flex items-center overflow-visible min-w-fit">
+                  <div className="flex items-center gap-[0.2em] md:gap-[0.3em] justify-center mb-1 md:mb-0 max-w-full">
+                    <span className="flex-shrink-0">THE</span>
+                    <div className="h-[1.2em] flex items-center overflow-visible min-w-0">
                       <AnimatePresence mode="wait">
                         <motion.span
                           key={index}
@@ -43,14 +43,14 @@ export const Hero = () => {
                           animate={{ y: 0, opacity: 1 }}
                           exit={{ y: "-100%", opacity: 0 }}
                           transition={{ duration: 0.5, ease: [0.23, 1, 0.32, 1] }}
-                          className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-emerald-600 inline-flex items-center py-1 px-1 md:px-2"
+                          className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-emerald-600 inline-flex items-center py-1 px-1 md:px-2 whitespace-nowrap"
                         >
                           DATA&nbsp;{words[index]}
                         </motion.span>
                       </AnimatePresence>
                     </div>
                   </div>
-                  <span>LAYER</span>
+                  <span className="flex-shrink-0">LAYER</span>
                 </>
               )}
             </h1>
