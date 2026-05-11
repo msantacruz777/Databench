@@ -444,13 +444,6 @@ export default function App() {
       </main>
 
       <Footer />
-
-      {/* Floating Logo for Mobile */}
-      <div className="fixed bottom-6 right-6 md:hidden z-40">
-        <div className="bg-white p-4 shadow-2xl border-2 border-slate-100 flex items-center justify-center">
-          <BenchLogo className="w-10 h-10 text-[#99E866]" />
-        </div>
-      </div>
     </div>
   );
 }

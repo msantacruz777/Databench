@@ -28,14 +28,14 @@ export const Hero = () => {
             transition={{ duration: 0.6 }}
           >
             
-            <h1 className="text-[clamp(1.25rem,8.5vw,2.5rem)] md:text-[clamp(1.25rem,6vw,4rem)] font-display font-black text-[#0f172a] leading-[1.1] md:leading-none mb-6 md:tracking-tighter uppercase flex flex-col md:flex-row items-center justify-center md:gap-[0.3em] px-2 w-full mx-auto">
+            <h1 className="text-[clamp(1rem,8vw,2.5rem)] md:text-[clamp(1.25rem,6vw,4rem)] font-display font-black text-[#0f172a] leading-[1.1] md:leading-none mb-6 md:tracking-tighter uppercase flex flex-col md:flex-row items-center justify-center md:gap-[0.3em] px-2 w-full mx-auto overflow-visible">
               {isRtl ? (
                 t('hero.quote')
               ) : (
                 <>
-                  <div className="flex items-center gap-[0.2em] md:gap-[0.3em] justify-center mb-1 md:mb-0 max-w-full">
+                  <div className="flex flex-wrap items-center gap-[0.2em] md:gap-[0.3em] justify-center mb-1 md:mb-0 max-w-full overflow-visible">
                     <span className="flex-shrink-0">THE</span>
-                    <div className="h-[1.2em] flex items-center overflow-visible min-w-0">
+                    <div className="h-[1.2em] flex items-center overflow-visible min-w-0 relative">
                       <AnimatePresence mode="wait">
                         <motion.span
                           key={index}
