@@ -57,7 +57,7 @@ const UseCasesSection = () => {
           <span className="text-[14px] font-bold tracking-[0.15em] text-[#10b981] uppercase mb-3 block">
             {t('useCases.label')}
           </span>
-          <h3 className="text-xl md:text-[26px] font-sans font-bold text-[#0f172a] mb-2 tracking-[-0.01em] leading-tight">
+          <h3 className="text-3xl md:text-4xl font-sans font-bold text-[#0f172a] mb-2 tracking-[-0.01em] leading-tight">
             {t('useCases.title')}
           </h3>
           <p className="text-lg md:text-xl text-slate-500 max-w-2xl mx-auto leading-relaxed font-medium">
