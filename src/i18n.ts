@@ -51,18 +51,15 @@ const resources = {
           items: [
             {
               value: '80%',
-              label: 'Reduction in Data Project Costs',
-              desc: 'Requires a fraction of traditional resources'
+              label: 'Reduction in Data Project Costs'
             },
             {
               value: '75%',
-              label: 'Reduction in Data Project Time',
-              desc: 'Implement in weeks versus months'
+              label: 'Reduction in Data Project Time'
             },
             {
               value: '85%',
-              label: 'Reduction in Time to Value',
-              desc: 'See value immediately'
+              label: 'Reduction in Time to Value'
             }
           ]
         },
@@ -167,18 +164,15 @@ const resources = {
           items: [
             {
               value: '80%',
-              label: 'Reducción en Costos de Proyectos de Datos',
-              desc: 'Requiere una fracción de los recursos tradicionales'
+              label: 'Reducción en Costos de Proyectos de Datos'
             },
             {
               value: '75%',
-              label: 'Reducción en Tiempo de Proyectos de Datos',
-              desc: 'Implementación en semanas en lugar de meses'
+              label: 'Reducción en Tiempo de Proyectos de Datos'
             },
             {
               value: '85%',
-              label: 'Reducción en el Tiempo de Valor',
-              desc: 'Vea resultados de inmediato'
+              label: 'Reducción en el Tiempo de Valor'
             }
           ]
         },
@@ -283,18 +277,15 @@ const resources = {
           items: [
             {
               value: '80%',
-              label: 'خفض تكاليف مشاريع البيانات',
-              desc: 'يتطلب جزءً بسيطاً من الموارد التقليدية'
+              label: 'خفض تكاليف مشاريع البيانات'
             },
             {
               value: '75%',
-              label: 'تقليل وقت مشاريع البيانات',
-              desc: 'التنفيذ في أسابيع بدلاً من شهور'
+              label: 'تقليل وقت مشاريع البيانات'
             },
             {
               value: '85%',
-              label: 'تقليل وقت الوصول إلى القيمة',
-              desc: 'شاهد القيمة على الفور'
+              label: 'تقليل وقت الوصول إلى القيمة'
             }
           ]
         },
