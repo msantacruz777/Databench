@@ -28,23 +28,23 @@ const resources = {
         description: 'A comprehensive suite designed to seamlessly ingest, harmonize, and analyze your most critical assets.',
         ingest: {
           title: 'Ingest & Harmonize',
-          subtitle: 'Landing zones & real-time processing',
-          desc: 'Robust landing zones to capture raw data, intelligent harmonizing engines, and powerful analytics ready for action.'
+          subtitle: 'Landing zones',
+          desc: 'Ingest raw data directly from source systems, intelligent harmonizing engines, and powerful analytics ready for action.'
         },
         governance: {
           title: 'Lineage & Governance',
           subtitle: 'Iterative policy enforcement',
-          desc: 'Iterative data governance that evolves with your business, ensuring quality and compliance without slowing you down.'
+          desc: 'Native lineage preservation tracing data back to the source, coupled with iterative data governance that evolves with your business.'
         },
         lineage: {
           title: 'Transformation',
-          subtitle: 'Registry & preservation',
-          desc: 'Full lineage preservation coupled with a centralized transformation registry. Never lose sight of your data\'s journey.'
+          subtitle: 'Auditable registry',
+          desc: 'Complete transformation registry ensures you never lose sight of your data\'s journey.'
         },
         dedupe: {
           title: 'Deduplication',
           subtitle: 'Intelligent record matching',
-          desc: 'Automated deduplication engines that identify and merge duplicate records across disparate systems.'
+          desc: 'Automated deduplication algorithm to identify and collapse duplicate records across disparate systems, creating a single golden record.'
         },
         metrics: {
           title: 'Transform Your Business With Data Bench',
@@ -74,13 +74,13 @@ const resources = {
           features: [
             { title: 'Zero Trust Connectivity', desc: 'All endpoints authenticated and authorized before any IP connectivity' },
             { title: 'Encryption at Rest', desc: 'TLS and Curve ZMQ' },
-            { title: 'Encryption in Transit', desc: 'TLS 1.3 secured data movement' },
+            { title: 'Encryption in Transit', desc: 'TLS and CurveZMQ' },
             { title: 'RBAC', desc: 'Granular role-based access control' }
           ]
         },
         result: {
-          title: 'THE RESULT',
-          subtitle: 'Experience the Semantic Advantage',
+          title: 'FAST AND COST EFFECTIVE DATA MODERNIZATION',
+          subtitle: 'Experience the semantic advantage',
           desc: 'A semantic ontology that inherently enforces data governance while remaining iterative and flexible enough to adapt to your evolving business needs.',
           features: [
             'Automated Graph Population',
@@ -88,7 +88,7 @@ const resources = {
             'Iterative Schema Design',
             'Automated Deduplication',
             'Transformation Registry',
-            'Data Governance Enforced'
+            'governance enforcement'
           ]
         }
       },
@@ -98,7 +98,7 @@ const resources = {
         subtitle: 'Scalable outcomes from governance to integration.',
         viewAll: 'Request a Demo',
         items: [
-          { badge: 'Banking', title: 'Post-Merger Risk Management & Integration', desc: 'Unified 122 million customer records from five banking systems with 100% accuracy in 18 hours. The platform eliminated post‑merger data silos, ensured error‑free payment processing, and delivered a transparent, auditable foundation for enterprise‑wide risk management.' },
+          { badge: 'Finance', title: 'Post-Merger Risk Management & Integration', desc: 'Unified 122 million customer records from five banking systems with 100% accuracy in 18 hours. The platform eliminated post‑merger data silos, ensured error‑free payment processing, and delivered a transparent, auditable foundation for enterprise‑wide risk management.' },
           { badge: 'Media', title: 'Semantic Modeling & Revenue Automation', desc: 'Deployed a centralized semantic model to automate complex Net Revenue calculations and replace manual spreadsheets. The platform encoded intricate fee structures, surfaced hidden data errors, and established a scalable, auditable foundation fully aligned with production revenue metrics.' },
           { badge: 'Private Equity', title: 'Unified Multi-ERP <br /> Analytics', desc: 'Implemented a centralized semantic layer to unify reporting across three ERPs with inconsistent structures. The platform standardized terminology and logic, eliminated manual aggregation, and created a single source of truth that accelerated reporting while preserving operational independence' },
           { badge: 'Manufacturing', title: 'Automated ERP Migration & Harmonization', desc: 'Data Bench was deployed to automate the migration from four legacy systems into the Infor M3 ERP platform. The data from these four source systems were moved into a unifying knowledge graph for 100% validation of data prior to uploading to the new ERP.  This process ensured a risk-free transition and provided operational visibility throughout the migration. A key requirement of this project was to unify three disparate parts inventories. The Data Bench platform used advanced pattern matching and supervised ML with reinforcement learning to create a new, clean master list of parts.' },
@@ -144,23 +144,23 @@ const resources = {
         description: 'Una suite integral diseñada para ingerir, armonizar y analizar sin problemas sus activos más críticos.',
         ingest: {
           title: 'Ingest & Harmonize',
-          subtitle: 'Zonas de aterrizaje y procesamiento en tiempo real',
-          desc: 'Zonas de aterrizaje robustas para capturar datos sin procesar, motores de armonización inteligentes y análisis potentes listos para la acción.'
+          subtitle: 'Zonas de aterrizaje',
+          desc: 'Ingiera datos brutos directamente desde los sistemas de origen, motores de armonización inteligentes y análisis potentes listos para la acción.'
         },
         governance: {
           title: 'Linaje y Gobernanza',
           subtitle: 'Cumplimiento de políticas iterativas',
-          desc: 'Gobernanza de datos iterativa que evoluciona con su negocio, garantizando la calidad y el cumplimiento sin frenarlo.'
+          desc: 'Preservación nativa del linaje rastreando los datos hasta la fuente, junto con un gobierno de datos iterativo que evoluciona con su negocio.'
         },
         lineage: {
           title: 'Transformación',
-          subtitle: 'Registro y preservación',
-          desc: 'Preservación completa del linaje junto con un registro de transformación centralizado. Nunca pierda de vista el recorrido de sus datos.'
+          subtitle: 'Registro auditable',
+          desc: 'El registro de transformación completo garantiza que nunca pierda de vista el recorrido de sus datos.'
         },
         dedupe: {
           title: 'Deduplicación',
           subtitle: 'Coincidencia de registros inteligente',
-          desc: 'Motores de deduplicación automatizados que identifican y fusionan registros duplicados en sistemas dispares.'
+          desc: 'Algoritmo de deduplicación automatizado para identificar y colapsar registros duplicados en sistemas dispares, creando un único registro dorado.'
         },
         metrics: {
           title: 'Transforme su Negocio con Data Bench',
@@ -190,12 +190,12 @@ const resources = {
           features: [
             { title: 'Conectividad Zero Trust', desc: 'Todos los puntos finales autenticados y autorizados antes de cualquier conectividad IP' },
             { title: 'Cifrado en reposo', desc: 'TLS y Curve ZMQ' },
-            { title: 'Cifrado en tránsito', desc: 'Movimiento de datos asegurado con TLS 1.3' },
+            { title: 'Cifrado en tránsito', desc: 'TLS and CurveZMQ' },
             { title: 'RBAC', desc: 'Control de acceso granular basado en roles' }
           ]
         },
         result: {
-          title: 'EL RESULTADO',
+          title: 'MODERNIZACIÓN DE DATOS RÁPIDA Y RENTABLE',
           subtitle: 'Experimente la ventaja semántica',
           desc: 'Una ontología semántica que impone inherentemente la gobernanza de datos mientras permanece lo suficientemente iterativa y flexible para adaptarse a sus necesidades comerciales en evolución.',
           features: [
@@ -214,7 +214,7 @@ const resources = {
         subtitle: 'Resultados escalables desde la gobernanza hasta la integración.',
         viewAll: 'Solicitar una Demo',
         items: [
-          { badge: 'Banca', title: 'Gestión de Riesgos e Integración Post-Fusión', desc: 'Unificó 122 millones de registros de clientes en cinco sistemas bancarios con un 100% de precisión en 18 horas. La plataforma eliminó los silos de datos posteriores a la fusión, aseguró un procesamiento de pagos sin errores y brindó una base transparente y auditable para la gestión de riesgos en toda la empresa.' },
+          { badge: 'Finanzas', title: 'Gestión de Riesgos e Integración Post-Fusión', desc: 'Unificó 122 millones de registros de clientes en cinco sistemas bancarios con un 100% de precisión en 18 horas. La plataforma eliminó los silos de datos posteriores a la fusión, aseguró un procesamiento de pagos sin errores y brindó una base transparente y auditable para la gestión de riesgos en toda la empresa.' },
           { badge: 'Media', title: 'Modelado Semántico y Automatización de Ingresos', desc: 'Desplegó un modelo semántico centralizado para automatizar cálculos complejos de ingresos netos y reemplazar las hojas de cálculo manuales. La plataforma codificó estructuras de tarifas intrincadas, sacó a la luz errores de datos ocultos y estableció una base escalable y auditable totalmente alineada con las métricas de ingresos de producción.' },
           { badge: 'Capital Privado', title: 'Analítica Unificada <br /> Multi-ERP', desc: 'Implementó una capa semántica centralizada para unificar los informes en tres ERP con estructuras inconsistentes. La plataforma estandarizó la terminología y la lógica, eliminó la agregación manual y creó una única fuente de verdad que aceleró los informes mientras preservaba la independencia operativa' },
           { badge: 'Manufactura', title: 'Migración y Armonización Automatizada de ERP', desc: 'Data Bench se implementó para automatizar la migración de cuatro sistemas heredados a la plataforma ERP Infor M3. Los datos de estos cuatro sistemas de origen se trasladaron a un grafo de conocimiento unificado para la validación al 100% de los datos antes de cargarlos en el nuevo ERP. Este proceso garantizó una transición libre de riesgos y proporcionó visibilidad operativa durante toda la migración. Un requisito clave de este proyecto fue unificar tres inventarios de piezas dispares. La plataforma Data Bench utilizó coincidencia de patrones avanzada y ML supervisado con aprendizaje por refuerzo para crear una lista maestra de piezas nueva y limpia.' },
@@ -260,23 +260,23 @@ const resources = {
         description: 'مجموعة شاملة مصممة لاستيعاب أصولك الأكثر أهمية وتنسيقها وتحليلها بسلاسة.',
         ingest: {
           title: 'الاستيعاب والتنسيق',
-          subtitle: 'مناطق الهبوط والمعالجة في الوقت الفعلي',
-          desc: 'مناطق هبوط قوية لالتقاط البيانات الخام، ومحركات تنسيق ذكية، وتحليلات قوية جاهزة للعمل.'
+          subtitle: 'مناطق الهبوط',
+          desc: 'استيعاب البيانات الخام مباشرة من أنظمة المصدر، ومحركات تنسيق ذكية، وتحليلات قوية جاهزة للعمل.'
         },
         governance: {
           title: 'النسب والحوكمة',
           subtitle: 'فرض السياسات المتكرر',
-          desc: 'حوكمة البيانات المتكررة التي تتطور مع عملك، مما يضمن الجودة والامتثال دون إبطائك.'
+          desc: 'حفظ النسب الأصلي لتتبع البيانات وصولاً إلى المصدر، بالإضافة إلى حوكمة البيانات المتكررة التي تتطور مع عملك.'
         },
         lineage: {
           title: 'التحويل',
-          subtitle: 'السجل والحفظ',
-          desc: 'الحفاظ الكامل على النسب إلى جانب سجل تحويل مركزي. لا تفقد أبداً مسار رحلة بياناتك.'
+          subtitle: 'سجل قابل للتدقيق',
+          desc: 'يضمن سجل التحويل الكامل عدم فقدان مسار رحلة بياناتك أبداً.'
         },
         dedupe: {
           title: 'إزالة التكرار',
           subtitle: 'مطابقة السجلات الذكية',
-          desc: 'محركات إزالة التكرار الآلية التي تحدد وتدمج السجلات المكررة عبر الأنظمة المتباينة.'
+          desc: 'خوارزمية إزالة التكرار الآلية لتحديد وطي السجلات المكررة عبر الأنظمة المتباينة، مما يؤدي إلى إنشاء سجل ذهبي واحد.'
         },
         metrics: {
           title: 'حول عملك مع Data Bench',
@@ -306,12 +306,12 @@ const resources = {
           features: [
             { title: 'اتصال الثقة الصفرية', desc: 'تتم مصادقة جميع نقاط النهاية وتفويضها قبل أي اتصال IP' },
             { title: 'التشفير أثناء الراحة', desc: 'TLS و Curve ZMQ' },
-            { title: 'التشفير أثناء الانتقال', desc: 'حركة البيانات المؤمنة بـ TLS 1.3' },
+            { title: 'التشفير أثناء الانتقال', desc: 'TLS and CurveZMQ' },
             { title: 'RBAC', desc: 'التحكم الدقيق في الوصول القائم على الأدوار' }
           ]
         },
         result: {
-          title: 'النتيجة',
+          title: 'تحديث بيانات سريع وفعال من حيث التكلفة',
           subtitle: 'اختبر ميزة الدلالية',
           desc: 'أنطولوجيا دلالية تفرض بطبيعتها حوكمة البيانات مع بقائها متكررة ومرنة بما يكفي للتكيف مع احتياجات عملك المتطورة.',
           features: [
@@ -330,7 +330,7 @@ const resources = {
         subtitle: 'نتائج قابلة للتطوير من الحوكمة إلى التكامل.',
         viewAll: 'طلب عرض تجريبي',
         items: [
-          { badge: 'الخدمات المصرفية', title: 'إدارة مخاطر ما بعد الاندماج والتكامل', desc: 'تم توحيد 122 مليون سجل عملاء من خمسة أنظمة مصرفية بدقة 100٪ في 18 ساعة. قضت المنصة على صوامع البيانات بعد الاندماج، وضمنت معالجة دفع خالية من الأخطاء، وقدمت أساسًا شفافًا وقابلًا للتدقيق لإدارة المخاطر على مستوى المؤسسة.' },
+          { badge: 'التمويل', title: 'إدارة مخاطر ما بعد الاندماج والتكامل', desc: 'تم توحيد 122 مليون سجل عملاء من خمسة أنظمة مصرفية بدقة 100٪ في 18 ساعة. قضت المنصة على صوامع البيانات بعد الاندماج، وضمنت معالجة دفع خالية من الأخطاء، وقدمت أساسًا شفافًا وقابلًا للتدقيق لإدارة المخاطر على مستوى المؤسسة.' },
           { badge: 'الإعلام', title: 'النمذجة الدلالية وأتمتة الإيرادات', desc: 'نشر نموذجاً دلالياً مركزياً لأتمتة حسابات صافي الإيرادات المعقدة واستبدال جداول البيانات اليدوية. قامت المنصة بتشفير هياكل الرسوم المعقدة، وكشفت عن أخطاء البيانات المخفية، وأنشأت أساساً قابلاً للتطوير والتدقيق متوافقاً تماماً مع مقاييس إيرادات الإنتاج.' },
           { badge: 'الملكية الخاصة', title: 'تحليلات موحدة لعدة أنظمة تخطيط موارد المؤسسات (ERP)', desc: 'تم تنفيذ طبقة دلالية مركزية لتوحيد التقارير عبر ثلاثة أنظمة لتخطيط موارد المؤسسات (ERPs) ذات هياكل غير متسقة. قامت المنصة بتوحيد المصطلحات والمنطق، وقضت على التجميع اليدوي، وأنشأت مصدراً واحداً للحقيقة أدى إلى تسريع إعداد التقارير مع الحفاظ على الاستقلال التشغيلي' },
           { badge: 'التصنيع', title: 'أتمتة هجرة نظام تخطيط موارد المؤسسات (ERP) والتنسيق', desc: 'تم نشر Data Bench لأتمتة عملية الهجرة من أربعة أنظمة قديمة إلى منصة Infor M3 ERP. تم نقل البيانات من هذه الأنظمة المصدر الأربعة إلى رسم معرفة موحد للتحقق من البيانات بنسبة 100٪ قبل تحميلها على نظام تخطيط موارد المؤسسات الجديد. ضمنت هذه العملية انتقالاً خالياً من المخاطر ووفرت رؤية تشغيلية طوال عملية الهجرة. كان المطلب الرئيسي لهذا المشروع هو توحيد ثلاثة مخازن قطع غيار متباينة. استخدمت منصة Data Bench مطابقة الأنماط المتقدمة والتعلم الآلي الخاضع للإشراف مع التعلم المعزز لإنشاء قائمة رئيسية جديدة ونظيفة لقطع الغيار.' },

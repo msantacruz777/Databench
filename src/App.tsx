@@ -68,7 +68,7 @@ const UseCasesSection = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {items.map((item, i) => {
             const titleColors = [
-              'text-[#1d4c6a]', // Banking: Data Migration
+              'text-[#1d4c6a]', // Finance: Data Migration
               'text-[#1d4c6a]', // Insurance: Governance & Archiving
               'text-[#1d4c6a]', // Manufacturing: Integration & Deduplication
               'text-[#1d4c6a]', // Finance: Portfolio Visibility
@@ -150,7 +150,7 @@ const AIDataLayerSection = () => {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1d4c6a] to-[#10b981] uppercase mt-2">AI Data Layer</span>
             </h2>
             <p className="text-lg md:text-xl text-slate-500 leading-relaxed font-medium">
-              Graph traversal activates context, reduces hallucinations and optimizes agentic outcomes
+              Data Bench Hyper Graph activates context, embeds inference, reduces hallucinations and optimizes agentic outcomes
             </p>
           </motion.div>
         </div>

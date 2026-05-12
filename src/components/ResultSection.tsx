@@ -12,7 +12,7 @@ export const ResultSection = () => {
     'Iterative Schema',
     'Automated Deduplication',
     'Transformation Registry',
-    'Governance Enforced'
+    'governance enforcement'
   ];
 
   const metrics = t('platform.metrics.items', { returnObjects: true }) as any[];
@@ -51,7 +51,7 @@ export const ResultSection = () => {
             </div>
 
             {/* Features: 3x2 Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
               {featureTitles.map((title, idx) => (
                 <motion.div 
                   key={idx}
@@ -70,13 +70,7 @@ export const ResultSection = () => {
             </div>
 
             {/* Horizontal Divider */}
-            <div className="h-px bg-emerald-100/60 w-full mb-12" />
-
-            <div className="text-center mb-10">
-              <span className="text-[11px] font-bold text-[#1d4c6a] uppercase tracking-[0.3em]">
-                See Results in Weeks at Fraction of the Cost of Alternatives
-              </span>
-            </div>
+            <div className="h-px bg-emerald-100/60 w-full mb-6" />
 
             {/* Metrics Row: Premium Card Design - Compact */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5 relative">

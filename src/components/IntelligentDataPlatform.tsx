@@ -59,7 +59,7 @@ export const IntelligentDataPlatform = () => {
         </div>
 
         {/* 4 Cards Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-4">
           {cards.map((card, idx) => (
             <motion.div 
               key={idx}
@@ -67,21 +67,27 @@ export const IntelligentDataPlatform = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
               viewport={{ once: true }}
-              className="p-8 rounded-[2rem] bg-white border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all group flex flex-col h-full"
+              className="p-8 rounded-[2rem] bg-white border border-slate-100 shadow-[0_4px_20px_rgb(0,0,0,0.03)] hover:shadow-[0_12px_40px_rgb(0,0,0,0.08)] transition-all duration-300 group flex flex-col h-full"
             >
-              <div className={cn("w-12 h-12 rounded-2xl flex items-center justify-center mb-6 flex-shrink-0 transition-transform group-hover:scale-110", card.iconBg, card.iconColor)}>
+              <div className={cn("w-12 h-12 rounded-2xl flex items-center justify-center mb-8 flex-shrink-0 transition-transform group-hover:scale-110 shadow-sm", card.iconBg, card.iconColor)}>
                 {card.icon}
               </div>
+              
               <div className="flex flex-col flex-grow">
-                <h3 className="text-xl font-display font-bold mb-2 transition-colors min-h-[4.5rem] flex items-center leading-tight text-[#1d4c6a]">
-                  {card.title}
-                </h3>
-                <div className="min-h-[2.5rem] flex items-start">
-                  <p className="text-[11px] font-bold text-slate-400 uppercase tracking-[0.1em] mb-4">
+                {/* Fixed height label container */}
+                <div className="min-h-[1.5rem] mb-2">
+                  <p className="text-[11px] font-bold text-slate-400 uppercase tracking-[0.15em]">
                     {card.subtitle}
                   </p>
                 </div>
-                <p className="text-sm text-slate-500 leading-relaxed">
+
+                {/* Fixed height title container */}
+                <h3 className="text-xl font-display font-bold leading-snug text-[#1d4c6a] min-h-[3.5rem] flex items-start mb-4">
+                  {card.title}
+                </h3>
+
+                {/* Description with standardized leading and spacing */}
+                <p className="text-[14px] text-slate-500 leading-[1.6] flex-grow">
                   {card.desc}
                 </p>
               </div>
