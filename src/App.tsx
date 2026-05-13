@@ -333,10 +333,10 @@ const FinalSection = () => {
   const { t } = useTranslation();
   
   const team = [
-    { name: 'Mathew Linton', linkedin: 'https://linkedin.com/in/mathewlinton' },
-    { name: 'Tucker Grant', linkedin: 'https://linkedin.com/in/tuckergrant' },
-    { name: 'Mark McLellan', linkedin: 'https://linkedin.com/in/markmclellan' },
-    { name: 'John Flett', linkedin: 'https://linkedin.com/in/johnflett' },
+    { name: 'Matthew Linton', linkedin: 'https://www.linkedin.com/in/matthew-linton-1b6a453/?skipRedirect=true' },
+    { name: 'Tucker Grant', linkedin: 'https://www.linkedin.com/in/tuckerkgrant/' },
+    { name: 'Mark McLellan', linkedin: 'https://www.linkedin.com/in/markmclellan/' },
+    { name: 'John Flett', linkedin: 'https://www.linkedin.com/in/john-flett-05a2a393/' },
     { name: 'Reza Babaee', linkedin: 'https://www.linkedin.com/in/reza-babaee/' }
   ];
 
@@ -400,7 +400,7 @@ const FinalSection = () => {
                     href={member.linkedin} 
                     target="_blank" 
                     rel="noopener noreferrer" 
-                    className="text-slate-300 hover:text-[#0077b5] opacity-0 group-hover:opacity-100 transition-all"
+                    className="text-slate-400 hover:text-[#0077b5] transition-all"
                   >
                     <Linkedin className="w-4 h-4" />
                   </a>
