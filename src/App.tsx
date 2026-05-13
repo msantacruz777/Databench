@@ -68,12 +68,12 @@ const UseCasesSection = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {items.map((item, i) => {
             const titleColors = [
-              'text-[#1d4c6a]', // Finance: Data Migration
-              'text-[#1d4c6a]', // Insurance: Governance & Archiving
-              'text-[#1d4c6a]', // Manufacturing: Integration & Deduplication
-              'text-[#1d4c6a]', // Finance: Portfolio Visibility
-              'text-[#1d4c6a]', // Retail: Unified Analytics
-              'text-[#1d4c6a]'  // Insurance: Rules Enforcement
+              'text-[#1d4c6a]',
+              'text-[#1d4c6a]',
+              'text-[#1d4c6a]',
+              'text-[#1d4c6a]',
+              'text-[#1d4c6a]',
+              'text-[#1d4c6a]'
             ];
             
             return (
@@ -83,19 +83,20 @@ const UseCasesSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white p-10 rounded-[2rem] border border-slate-100 shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.05)] transition-all flex flex-col h-full text-left"
+                className="bg-white p-8 md:p-10 rounded-[2.5rem] border border-slate-100 shadow-[0_4px_25px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_60px_rgba(0,0,0,0.06)] transition-all duration-500 flex flex-col h-full text-left group"
               >
                 <div className="flex flex-col h-full">
-                  <div className="mb-6">
-                    <span className="px-6 py-2.5 bg-slate-50 text-black text-[15px] font-bold rounded-full border border-slate-100/50 inline-block">
+                  <div className="mb-8">
+                    <span className="px-5 py-2 bg-slate-50 text-[#10b981] text-[13px] font-black tracking-[0.1em] uppercase rounded-lg border border-slate-100/50 inline-block group-hover:bg-[#10b981] group-hover:text-white group-hover:border-[#10b981] transition-all duration-300">
                       {item.badge}
                     </span>
                   </div>
                   <h3 
-                    className={cn("text-2xl font-display font-bold mb-4 tracking-tight leading-tight min-h-[4rem] flex items-center", titleColors[i] || "text-[#0f172a]")}
+                    className={cn("text-xl md:text-2xl font-sans font-bold mb-6 tracking-tight leading-[1.2] min-h-[5.5rem] flex items-start", titleColors[i] || "text-[#0f172a]")}
                     dangerouslySetInnerHTML={{ __html: item.title }}
                   />
-                  <p className="text-slate-500 leading-relaxed text-[15px] flex-grow">
+                  <div className="w-12 h-[2px] bg-slate-100 mb-6 group-hover:w-20 group-hover:bg-[#10b981] transition-all duration-500" />
+                  <p className="text-slate-500 leading-[1.65] text-[15px] md:text-[16px] font-medium flex-grow text-justify">
                     {item.desc}
                   </p>
                 </div>
