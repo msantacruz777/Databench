@@ -34,7 +34,7 @@ export const ResultSection = () => {
                 <CheckCircle2 className="w-8 h-8" strokeWidth={2.5} />
               </div>
               <div className="flex flex-col">
-                <h3 className="text-3xl font-display font-bold text-[#0f172a] uppercase tracking-wide leading-tight">
+                <h3 className="text-3xl font-display font-bold text-[#0f172a] uppercase tracking-normal leading-tight">
                   {t('platform.result.title')}
                 </h3>
                 <p className="text-xl font-medium text-[#10b981] tracking-tight mt-1">
