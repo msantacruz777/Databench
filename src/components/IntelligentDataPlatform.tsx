@@ -74,20 +74,22 @@ export const IntelligentDataPlatform = () => {
               </div>
               
               <div className="flex flex-col flex-grow">
-                {/* Fixed height label container */}
-                <div className="min-h-[1.5rem] mb-2">
-                  <p className="text-[11px] font-bold text-slate-400 uppercase tracking-[0.15em]">
+                {/* Fixed height label container to align titles */}
+                <div className="min-h-[3rem] mb-2 flex items-start">
+                  <p className="text-[11px] font-bold text-slate-400 uppercase tracking-[0.15em] leading-tight">
                     {card.subtitle}
                   </p>
                 </div>
 
-                {/* Fixed height title container */}
-                <h3 className="text-xl font-display font-bold leading-snug text-[#1d4c6a] min-h-[3.5rem] flex items-start mb-4">
-                  {card.title}
-                </h3>
+                {/* Fixed height title container to align descriptions */}
+                <div className="min-h-[2.5rem] flex items-start">
+                  <h3 className="text-xl font-display font-bold leading-snug text-[#1d4c6a]">
+                    {card.title}
+                  </h3>
+                </div>
 
-                {/* Description with standardized leading and spacing */}
-                <p className="text-[14px] text-slate-500 leading-[1.6] flex-grow">
+                {/* Description starts at the same line across all cards */}
+                <p className="text-[14px] text-slate-500 leading-[1.6]">
                   {card.desc}
                 </p>
               </div>
