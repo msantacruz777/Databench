@@ -55,9 +55,11 @@ export const Hero = () => {
               )}
             </h1>
 
-            <p className="text-xl md:text-2xl text-[#1d4c6a] font-normal leading-tight mb-8 max-w-3xl mx-auto whitespace-pre-line">
-              {t('hero.subheading')}
-            </p>
+            <div className="text-center text-xl md:text-2xl text-[#1d4c6a] font-normal leading-tight mb-8 max-w-3xl mx-auto px-5 md:px-0 flex flex-col gap-2">
+              {t('hero.subheading').split('\n').map((line, i) => (
+                <p key={i}>{line}</p>
+              ))}
+            </div>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full">
               <div className="w-full max-w-[280px] sm:max-w-[420px]">

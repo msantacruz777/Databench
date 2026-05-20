@@ -311,13 +311,7 @@ const LinkedInSection = () => {
                 </p>
               </div>
 
-              <div className="mt-8 pt-6 border-t border-slate-200/50 flex items-center gap-2 text-emerald-600 text-sm font-bold opacity-0 group-hover:opacity-100 transition-all translate-y-2 group-hover:translate-y-0">
-                <span>Read on LinkedIn</span>
-                <ArrowRight className="w-4 h-4" />
-              </div>
-              
-              {/* Fallback for link on touch devices or non-hover */}
-              <div className="mt-8 pt-6 border-t border-slate-200/50 flex items-center gap-2 text-emerald-600 text-sm font-bold md:hidden">
+              <div className="mt-8 pt-6 border-t border-slate-200/50 flex items-center gap-2 text-emerald-600 text-sm font-bold transition-all opacity-100 translate-y-0 md:opacity-0 md:group-hover:opacity-100 md:translate-y-2 md:group-hover:translate-y-0">
                 <span>Read on LinkedIn</span>
                 <ArrowRight className="w-4 h-4" />
               </div>
@@ -366,7 +360,7 @@ const FinalSection = () => {
                   ))}
                 </div>
               </div>
-              <div className="lg:col-span-2 min-h-[400px] relative overflow-hidden rounded-[3rem] shadow-xl shadow-slate-200/50">
+              <div className="lg:col-span-2 aspect-video sm:aspect-auto min-h-0 sm:min-h-[400px] relative overflow-hidden rounded-[3rem] shadow-xl shadow-slate-200/50">
                 <WorldMap />
               </div>
             </div>
