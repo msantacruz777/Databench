@@ -15,8 +15,6 @@ export const ResultSection = () => {
     'governance enforcement'
   ];
 
-  const metrics = t('platform.metrics.items', { returnObjects: true }) as any[];
-
   return (
     <section className="pt-4 pb-12 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
@@ -51,7 +49,7 @@ export const ResultSection = () => {
             </div>
 
             {/* Features: 3x2 Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {featureTitles.map((title, idx) => (
                 <motion.div 
                   key={idx}
@@ -67,56 +65,6 @@ export const ResultSection = () => {
                   </span>
                 </motion.div>
               ))}
-            </div>
-
-            {/* Horizontal Divider */}
-            <div className="h-px bg-emerald-100/60 w-full mb-6" />
-
-            {/* Metrics Row: Premium Card Design - Compact */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 relative">
-              {metrics.map((metric, idx) => {
-                const numericValue = parseInt(metric.value) || 0;
-                
-                return (
-                  <motion.div 
-                    key={idx}
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: idx * 0.1 }}
-                    viewport={{ once: true }}
-                    whileHover={{ y: -5 }}
-                    className="relative flex flex-col items-center bg-white/60 backdrop-blur-md rounded-2xl px-6 py-6 border border-emerald-100/50 shadow-[0_4px_20px_rgba(16,185,129,0.04)] hover:shadow-[0_20px_40px_rgba(16,185,129,0.08)] hover:border-emerald-200 transition-all group"
-                  >
-                    {/* Animated Accent Bar */}
-                    <div className="w-full h-1 bg-emerald-50 rounded-full mb-5 overflow-hidden">
-                      <motion.div 
-                        initial={{ width: 0 }}
-                        whileInView={{ width: `${numericValue}%` }}
-                        transition={{ duration: 1.5, delay: 0.5 + (idx * 0.2), ease: "easeOut" }}
-                        viewport={{ once: true }}
-                        className="h-full bg-gradient-to-r from-[#1d4c6a] to-[#10b981]"
-                      />
-                    </div>
-
-                    <div className="relative">
-                      {/* Suble Glow for numbers */}
-                      <div className="absolute -inset-4 bg-[#10b981] opacity-0 group-hover:opacity-10 blur-2xl transition-opacity" />
-                      
-                      <div className="text-5xl font-display font-black text-transparent bg-clip-text bg-gradient-to-r from-[#1d4c6a] to-[#10b981] tracking-tighter mb-1 relative">
-                        {metric.value}
-                      </div>
-                    </div>
-
-                    <div className="text-[12px] font-bold text-[#1d4c6a] uppercase tracking-[0.1em] leading-tight text-center mb-1 px-2">
-                      {metric.label}
-                    </div>
-
-                    <div className="text-[11px] font-medium text-slate-500 text-center leading-relaxed opacity-80">
-                      {metric.desc}
-                    </div>
-                  </motion.div>
-                );
-              })}
             </div>
           </div>
         </motion.div>
