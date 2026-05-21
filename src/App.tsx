@@ -3,13 +3,14 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'motion/react';
 import { 
   Menu, 
   X, 
   ChevronRight, 
+  ChevronLeft, 
   Shield, 
   Database, 
   Layers, 
@@ -83,7 +84,7 @@ const UseCasesSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white p-8 md:p-10 rounded-[2.5rem] border border-slate-100 shadow-[0_4px_25px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_60px_rgba(0,0,0,0.06)] transition-all duration-500 flex flex-col h-full text-left group"
+                className="bg-white pt-8 pb-8 pl-8 pr-10 md:pt-10 md:pb-10 md:pl-10 md:pr-12 rounded-[2.5rem] border border-slate-100 shadow-[0_4px_25px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_60px_rgba(0,0,0,0.06)] transition-all duration-500 flex flex-col h-full text-left group"
               >
                 <div className="flex flex-col h-full">
                   <div className="mb-8">
@@ -96,7 +97,7 @@ const UseCasesSection = () => {
                     dangerouslySetInnerHTML={{ __html: item.title }}
                   />
                   <div className="w-12 h-[2px] bg-slate-100 mb-6 group-hover:w-20 group-hover:bg-[#10b981] transition-all duration-500" />
-                  <p className="text-slate-500 leading-[1.65] text-[15px] md:text-[16px] font-medium flex-grow text-justify">
+                  <p className="text-slate-500 leading-[1.65] text-[15px] md:text-[16px] font-medium flex-grow text-left tracking-normal normal-case break-words">
                     {item.desc}
                   </p>
                 </div>
@@ -148,7 +149,7 @@ const AIDataLayerSection = () => {
             </span>
             <h2 className="text-3xl md:text-4xl font-sans font-bold text-[#0f172a] mb-6 tracking-[-0.01em] leading-tight flex flex-col items-center">
               <span>Semantic Layer + Rules Engine + Graph</span>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1d4c6a] to-[#10b981] uppercase mt-2">AI Data Layer</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-emerald-600 uppercase mt-2">AI Data Layer</span>
             </h2>
             <p className="text-lg md:text-xl text-slate-500 leading-relaxed font-medium">
               Data Bench Hyper Graph activates context, embeds inference, reduces hallucinations and optimizes agentic outcomes
@@ -222,7 +223,8 @@ const AIDataLayerSection = () => {
 
 const LinkedInSection = () => {
   const { t } = useTranslation();
-  
+  const carouselRef = useRef<HTMLDivElement>(null);
+
   const posts = [
     { 
       id: 0, 
@@ -247,8 +249,76 @@ const LinkedInSection = () => {
       text: "Unmanaged data costs more than money. It costs time to value. Fragmented, ungoverned data slows decisions, erodes trust, and keeps teams trapped in manual cycles.",
       image: "/image7.png",
       url: "https://www.linkedin.com/feed/update/urn:li:activity:7420144528793399296"
+    },
+    { 
+      id: 3, 
+      badge: "3 weeks ago",
+      title: "Unifying Disparate Data Sources with Precision",
+      text: "Breaking down organizational silos requires sophisticated entity resolution. Standardizing terminology and mapping relationships automatically creates a single, trusted source of truth.",
+      image: "/databenchotra.jpg",
+      url: "https://www.linkedin.com/company/data-bench/"
+    },
+    { 
+      id: 4, 
+      badge: "1 month ago",
+      title: "The Role of Knowledge Graphs in ERP Migrations",
+      text: "Migrating to a modern ERP platform shouldn't be a trust-fall. Transforming source systems into an interactive knowledge validation graph ensures clean, risk-free transitions.",
+      image: "/Knowledge.jpeg",
+      url: "https://www.linkedin.com/company/data-bench/"
+    },
+    { 
+      id: 5, 
+      badge: "1 month ago",
+      title: "Supervised ML for Smart Enterprise Mapping",
+      text: "Continuous learning loops enable pattern matching that evolves with your business logic. Supervised ML paired with reinforcement learning delivers automated, highly precise mapping.",
+      image: "/Graph.png",
+      url: "https://www.linkedin.com/company/data-bench/"
+    },
+    { 
+      id: 6, 
+      badge: "2 months ago",
+      title: "Securing Sensitive Data at Rest and in Motion",
+      text: "Modern data platforms must balance complete visibility with rigorous security protocols. Learn how end-to-end auditability and rule enforcement keep enterprises fully compliant.",
+      image: "/image7.png",
+      url: "https://www.linkedin.com/company/data-bench/"
+    },
+    { 
+      id: 7, 
+      badge: "2 months ago",
+      title: "Beyond Spreadsheets: Automating Complex KPIs",
+      text: "Centralized semantic modeling encodes complex, nested business definitions directly. Say goodbye to fragmented manual spreadsheets and inconsistent reporting logic.",
+      image: "/databenchotra.jpg",
+      url: "https://www.linkedin.com/company/data-bench/"
+    },
+    { 
+      id: 8, 
+      badge: "3 months ago",
+      title: "Post-Merger Risk & System Harmonization",
+      text: "Unifying millions of customer accounts from disparate, newly-acquired banking networks with 100% accuracy requires scalable patterns. Explore our integration blueprints.",
+      image: "/Knowledge.jpeg",
+      url: "https://www.linkedin.com/company/data-bench/"
+    },
+    { 
+      id: 9, 
+      badge: "4 months ago",
+      title: "Architecting Governance for AI Readiness",
+      text: "An enterprise is only as ready for AI as its underlying data infrastructure. Comprehensive data governance ensures models draw from contextually accurate, safe datasets.",
+      image: "/Graph.png",
+      url: "https://www.linkedin.com/company/data-bench/"
     }
   ];
+
+  const scroll = (direction: 'left' | 'right') => {
+    if (carouselRef.current) {
+      const container = carouselRef.current;
+      const isMobile = window.innerWidth < 768;
+      const amount = isMobile ? container.clientWidth : (container.clientWidth / 3);
+      container.scrollBy({
+        left: direction === 'left' ? -amount : amount,
+        behavior: 'smooth'
+      });
+    }
+  };
 
   return (
     <section id="blog" className="pt-16 pb-20 bg-white">
@@ -262,61 +332,90 @@ const LinkedInSection = () => {
               href="https://www.linkedin.com/company/data-bench/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-emerald-600 font-bold hover:opacity-80 transition-opacity"
+              className="flex items-center gap-2 text-[#0a66c2] font-semibold hover:opacity-80 transition-opacity"
             >
-              <Linkedin className="w-5 h-5" /> Follow Us
+              <svg className="w-5 h-5 text-[#0a66c2] fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg> Follow Us
             </a>
           </div>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {posts.map((post) => (
-            <motion.a 
-              key={post.id} 
-              href={post.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: post.id * 0.1 }}
-              viewport={{ once: true }}
-              whileHover={{ y: -5 }}
-              className="group flex flex-col h-full bg-[#f8f9fa] border border-slate-100 border-l-4 border-l-emerald-400 rounded-xl p-8 transition-all hover:shadow-xl hover:shadow-emerald-900/5 hover:border-emerald-100"
-            >
-              <div className="mb-6 flex items-start justify-between">
-                <span className="px-3 py-1 bg-emerald-50 text-emerald-600 text-[10px] font-bold uppercase tracking-widest rounded-full">
-                  {post.badge}
-                </span>
-                <div className="opacity-20 group-hover:opacity-40 transition-opacity">
-                  <Linkedin className="w-5 h-5 text-[#0077b5]" />
-                </div>
-              </div>
+        <div className="relative px-2">
+          {/* Left Arrow */}
+          <button 
+            onClick={() => scroll('left')}
+            className="absolute -left-2 md:-left-6 lg:-left-8 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-white/95 backdrop-blur-xs border border-slate-200/70 shadow-md hover:shadow-lg flex items-center justify-center hover:bg-slate-50 text-slate-600 hover:text-emerald-600 active:scale-95 transition-all focus:outline-none"
+            aria-label="Previous posts"
+          >
+            <ChevronLeft className="w-5 h-5" />
+          </button>
 
-              {/* Small Thumbnail Image */}
-              <div className="mb-6 rounded-lg overflow-hidden h-32 bg-slate-200 border border-slate-100 shadow-sm relative">
-                <img 
-                  src={post.image} 
-                  alt={post.title} 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
-                  referrerPolicy="no-referrer"
-                />
-              </div>
+          <div 
+            ref={carouselRef}
+            className="flex overflow-x-auto gap-8 pb-6 scroll-smooth snap-x snap-mandatory [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          >
+            {posts.map((post, idx) => (
+              <div 
+                key={post.id} 
+                className="w-full md:w-[calc((100%-4rem)/3)] shrink-0 snap-start h-auto flex flex-col"
+              >
+                <motion.a 
+                  href={post.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: (idx % 3) * 0.1 }}
+                  viewport={{ once: true }}
+                  whileHover={{ y: -5 }}
+                  className="group flex flex-col h-full bg-[#f8f9fa] border border-slate-100 border-l-4 border-l-emerald-400 rounded-xl p-8 transition-all hover:shadow-xl hover:shadow-emerald-900/5 hover:border-emerald-100"
+                >
+                  <div className="mb-6 flex items-start justify-between">
+                    <span className="px-3 py-1 bg-emerald-50 text-emerald-600 text-[10px] font-bold uppercase tracking-widest rounded-full">
+                      {post.badge}
+                    </span>
+                    <div className="opacity-20 group-hover:opacity-40 transition-opacity">
+                      <Linkedin className="w-5 h-5 text-[#0077b5]" />
+                    </div>
+                  </div>
 
-              <div className="flex-grow">
-                <h3 className="text-lg font-display font-bold text-[#1d4c6a] leading-tight mb-4 group-hover:text-emerald-700 transition-colors">
-                  {post.title}
-                </h3>
-                <p className="text-slate-500 text-[14px] leading-relaxed line-clamp-2">
-                  {post.text}
-                </p>
-              </div>
+                  {/* Small Thumbnail Image */}
+                  <div className="mb-6 rounded-lg overflow-hidden h-32 bg-slate-200 border border-slate-100 shadow-sm relative">
+                    <img 
+                      src={post.image} 
+                      alt={post.title} 
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+                      referrerPolicy="no-referrer"
+                    />
+                  </div>
 
-              <div className="mt-8 pt-6 border-t border-slate-200/50 flex items-center gap-2 text-emerald-600 text-sm font-bold transition-all opacity-100 translate-y-0 md:opacity-0 md:group-hover:opacity-100 md:translate-y-2 md:group-hover:translate-y-0">
-                <span>Read on LinkedIn</span>
-                <ArrowRight className="w-4 h-4" />
+                  <div className="flex-grow">
+                    <h3 className="text-lg font-display font-bold text-[#1d4c6a] leading-tight mb-4 group-hover:text-emerald-700 transition-colors">
+                      {post.title}
+                    </h3>
+                    <p className="text-slate-500 text-[14px] leading-relaxed line-clamp-2">
+                      {post.text}
+                    </p>
+                  </div>
+
+                  <div className="mt-8 pt-6 border-t border-slate-200/50 flex items-center gap-2 text-emerald-600 text-sm font-bold transition-all opacity-100 translate-y-0 md:opacity-0 md:group-hover:opacity-100 md:translate-y-2 md:group-hover:translate-y-0">
+                    <span>Read on LinkedIn</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </div>
+                </motion.a>
               </div>
-            </motion.a>
-          ))}
+            ))}
+          </div>
+
+          {/* Right Arrow */}
+          <button 
+            onClick={() => scroll('right')}
+            className="absolute -right-2 md:-right-6 lg:-right-8 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-white/95 backdrop-blur-xs border border-slate-200/70 shadow-md hover:shadow-lg flex items-center justify-center hover:bg-slate-50 text-slate-600 hover:text-emerald-600 active:scale-95 transition-all focus:outline-none"
+            aria-label="Next posts"
+          >
+            <ChevronRight className="w-5 h-5" />
+          </button>
         </div>
       </div>
     </section>
@@ -352,7 +451,7 @@ const FinalSection = () => {
                   Our teams are strategically located to serve global enterprises across multiple time zones, providing dedicated support and local expertise where it matters most.
                 </p>
                 <div className="mt-12 grid grid-cols-2 gap-6">
-                  {['Toronto', 'Waterloo', 'London', 'UAE'].map(loc => (
+                  {['Toronto', 'Waterloo', 'London', 'Dubai'].map(loc => (
                     <div key={loc} className="flex items-center gap-3 text-sm text-slate-900 font-bold uppercase tracking-widest group/loc">
                       <div className="w-2 h-2 rounded-full bg-slate-400 group-hover/loc:bg-emerald-500 group-hover/loc:scale-125 transition-all" />
                       {loc}
@@ -394,9 +493,11 @@ const FinalSection = () => {
                     href={member.linkedin} 
                     target="_blank" 
                     rel="noopener noreferrer" 
-                    className="text-slate-400 hover:text-[#0077b5] transition-all"
+                    className="text-slate-400 hover:text-[#0a66c2] transition-colors"
                   >
-                    <Linkedin className="w-4 h-4" />
+                    <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
                   </a>
                 </li>
               ))}
