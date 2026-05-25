@@ -70,8 +70,8 @@ const resources = {
           badge: 'Enterprise Certified',
           features: [
             { title: 'Zero Trust Connectivity', desc: 'All endpoints authenticated and authorized before any IP connectivity' },
-            { title: 'Encryption at Rest', desc: 'TLS and Curve ZMQ' },
-            { title: 'Encryption in Transit', desc: 'TLS and CurveZMQ' },
+            { title: 'Encryption at Rest', desc: 'Data Bench protects your data end‑to‑end with AES‑256 encrypted storage and TLS‑secured communication across every service and replication layer.' },
+            { title: 'Encryption in Transit', desc: 'NetFoundry provides end‑to‑end, zero‑trust encryption in transit using NIST‑certified cryptography, including AES‑256‑GCM for data plane encryption and mutual TLS (mTLS) for identity‑based session establishment.' },
             { title: 'RBAC', desc: 'Granular role-based access control' }
           ]
         },
@@ -96,11 +96,11 @@ const resources = {
         viewAll: 'Request a Demo',
         items: [
           { badge: 'Finance', title: 'Post-Merger Risk Management & Integration', desc: 'Unified 122 million customer records from five banking systems with 100% accuracy in 18 hours. The platform eliminated post‑merger data silos, ensured error‑free payment processing, and delivered a transparent, auditable foundation for enterprise‑wide risk management.' },
-          { badge: 'Media', title: 'Semantic Modeling & Revenue Automation', desc: 'Created and deployed a centralized semantic model to automate complex KPI calculations to replace manual spreadsheets. The platform encoded intricate fee structures, surfaced hidden data errors, and established a scalable, auditable foundation fully aligned with business metrics.' },
+          { badge: 'Insurance', title: 'Regulatory Compliance Reporting', desc: 'The Data Bench platform was employed to replace fragmented workflows with a scalable infrastructure that unified data from three core legacy systems to automate the production of multi-source regulatory reporting. This eliminated inconsistent business logic and manual errors, ensuring organizational confidence in reporting and preserved auditability of results' },
           { badge: 'Private Equity', title: 'Unified Multi-ERP <br /> Analytics', desc: 'Implemented a centralized semantic layer to unify reporting across three distinct operational ERPs with inconsistent structures. The platform standardized terminology and logic, eliminated manual aggregation, and created a single source of truth that accelerated reporting while preserving operational independence' },
           { badge: 'Manufacturing', title: 'ERP Migration & Harmonization', desc: 'Data Bench facilitates migrating four legacy systems into a modern ERP. Source data moves into a unifying knowledge graph for 100% validation before migration, ensuring a risk-free transition and operational visibility. It uses advanced pattern matching and supervised ML with reinforcement learning.' },
           { badge: 'Retail', title: 'Unified Client-centred Analytics', desc: 'A major agriculture retail and investment consortium grew through acquisition and diversification. Data Bench unified disparate client lists into golden records. Temporary, transaction-specific consortia added complexity. The Data Bench knowledge graph proved critical for understanding deal flow, relationships, and participant records.' },
-          { badge: 'Insurance', title: 'Regulatory Compliance Reporting', desc: 'The Data Bench platform was employed to replace fragmented workflows with a scalable infrastructure that unified data from three core legacy systems to automate the production of multi-source regulatory reporting. This eliminated inconsistent business logic and manual errors, ensuring organizational confidence in reporting and preserved auditability of results' }
+          { badge: 'Media', title: 'Semantic Modeling & Revenue Automation', desc: 'Created and deployed a centralized semantic model to automate complex KPI calculations to replace manual spreadsheets. The platform encoded intricate fee structures, surfaced hidden data errors, and established a scalable, auditable foundation fully aligned with business metrics.' }
         ]
       },
       company: {
@@ -183,8 +183,8 @@ const resources = {
           badge: 'Certificado para Empresas',
           features: [
             { title: 'Conectividad Zero Trust', desc: 'Todos los puntos finales autenticados y autorizados antes de cualquier conectividad IP' },
-            { title: 'Cifrado en reposo', desc: 'TLS y Curve ZMQ' },
-            { title: 'Cifrado en tránsito', desc: 'TLS and CurveZMQ' },
+            { title: 'Cifrado en reposo', desc: 'Data Bench protege sus datos de extremo a extremo con almacenamiento cifrado AES-256 y comunicación protegida por TLS en cada servicio y capa de replicación.' },
+            { title: 'Cifrado en tránsito', desc: 'NetFoundry proporciona cifrado en tránsito de extremo a extremo y de confianza cero mediante criptografía certificada por el NIST, que incluye AES-256-GCM para el cifrado del plano de datos y TLS mutuo (mTLS) para el establecimiento de sesiones basadas en la identidad.' },
             { title: 'RBAC', desc: 'Control de acceso granular basado en roles' }
           ]
         },
@@ -209,11 +209,11 @@ const resources = {
         viewAll: 'Solicitar una Demo',
         items: [
           { badge: 'Finanzas', title: 'Gestión de Riesgos e Integración Post-Fusión', desc: 'Unificó 122 millones de registros de clientes en cinco sistemas bancarios con un 100% de precisión en 18 horas. La plataforma eliminó los silos de datos posteriores a la fusión, aseguró un procesamiento de pagos sin errores y brindó una base transparente y auditable para la gestión de riesgos en toda la empresa.' },
-          { badge: 'Media', title: 'Modelado Semántico y Automatización de Ingresos', desc: 'Creado y desplegado un modelo semántico centralizado para automatizar cálculos complejos de KPI para reemplazar las hojas de cálculo manuales. La plataforma codificó estructuras de tarifas intrincadas, sacó a la luz errores de datos ocultos y estableció una base escalable y auditable totalmente alineada con las métricas comerciales.' },
+          { badge: 'Seguros', title: 'Cumplimiento Regulatorio e Informes', desc: 'La plataforma Data Bench se utilizó para reemplazar flujos de trabajo fragmentados con una infraestructura escalable que unificó datos de tres sistemas heredados para automatizar la producción de informes regulatorios de múltiples fuentes. Esto eliminó la lógica comercial inconsistente y los errores manuales, garantizando la confianza organizacional en los informes y preservando la auditabilidad de los resultados.' },
           { badge: 'Capital Privado', title: 'Analítica Unificada <br /> Multi-ERP', desc: 'Implementó una capa semántica centralizada para unificar los informes en tres sistemas operativos ERP distintos con estructuras inconsistentes. La plataforma estandarizó la terminología y la lógica, eliminó la agregación manual y creó una única fuente de verdad que aceleró los informes mientras preservaba la independencia operativa' },
           { badge: 'Manufactura', title: 'Migración y Armonización de ERP', desc: 'Data Bench desplegado para facilitar la migración de cuatro sistemas heredados a una plataforma ERP moderna. Los datos de los sistemas de origen se trasladaron a un grafo de conocimiento unificador para la validación del 100% de los datos antes de la migración. Este proceso garantiza una transición sin riesgos y proporciona visibilidad operativa durante toda la migración. La plataforma Data Bench utiliza coincidencia de patrones avanzada y ML supervisado con aprendizaje por refuerzo para mejorar y automatizar el proceso.' },
           { badge: 'Retail', title: 'Analítica Unificada <br /> Centrada en el Cliente', desc: 'Un importante consorcio minorista y de inversión en el sector agrícola había crecido mediante adquisiciones y diversificación. Data Bench ingirió múltiples listas de clientes dispares y creó un registro dorado unificado para cada cliente y proveedor. Surgió una complejidad única ya que algunos socios y clientes formaron consorcios temporales específicos para transacciones, lo que creó un patrón secuencial de relaciones que existían, estaban vinculadas a una transacción y luego se disolvían. El grafo de conocimiento de Data Bench fue fundamental para comprender y registrar el flujo de transacciones y los participantes.' },
-          { badge: 'Seguros', title: 'Cumplimiento Regulatorio e Informes', desc: 'La plataforma Data Bench se utilizó para reemplazar flujos de trabajo fragmentados con una infraestructura escalable que unificó datos de tres sistemas heredados para automatizar la producción de informes regulatorios de múltiples fuentes. Esto eliminó la lógica comercial inconsistente y los errores manuales, garantizando la confianza organizacional en los informes y preservando la auditabilidad de los resultados.' }
+          { badge: 'Media', title: 'Modelado Semántico y Automatización de Ingresos', desc: 'Creado y desplegado un modelo semántico centralizado para automatizar cálculos complejos de KPI para reemplazar las hojas de cálculo manuales. La plataforma codificó estructuras de tarifas intrincadas, sacó a la luz errores de datos ocultos y estableció una base escalable y auditable totalmente alineada con las métricas comerciales.' }
         ]
       },
       company: {
@@ -296,8 +296,8 @@ const resources = {
           badge: 'معتمد للمؤسسات',
           features: [
             { title: 'اتصال الثقة الصفرية', desc: 'تتم مصادقة جميع نقاط النهاية وتفويضها قبل أي اتصال IP' },
-            { title: 'التشفير أثناء الراحة', desc: 'TLS و Curve ZMQ' },
-            { title: 'التشفير أثناء الانتقال', desc: 'TLS and CurveZMQ' },
+            { title: 'التشفير أثناء الراحة', desc: 'تحمي Data Bench بياناتك من البداية إلى النهاية باستخدام تخزين مشفر بتنسيق AES-256 واتصالات مؤمنة ببروتوكول TLS عبر كل خدمة وطبقة تكرار.' },
+            { title: 'التشفير أثناء الانتقال', desc: 'توفر NetFoundry تشفيرًا أثناء الانتقال من البداية إلى النهاية وثقة صفرية باستخدام تشفير معتمد من NIST، بما في ذلك AES-256-GCM لتشفير مستوى البيانات وبروتوكول TLS المتبادل (mTLS) لإنشاء جلسات قائمة على الهوية.' },
             { title: 'RBAC', desc: 'التحكم الدقيق في الوصول القائم على الأدوار' }
           ]
         },
@@ -322,11 +322,11 @@ const resources = {
         viewAll: 'طلب عرض تجريبي',
         items: [
           { badge: 'التمويل', title: 'إدارة مخاطر ما بعد الاندماج والتكامل', desc: 'تم توحيد 122 مليون سجل عملاء من خمسة أنظمة مصرفية بدقة 100٪ في 18 ساعة. قضت المنصة على صوامع البيانات بعد الاندماج، وضمنت معالجة دفع خالية من الأخطاء، وقدمت أساسًا شفافًا وقابلًا للتدقيق لإدارة المخاطر على مستوى المؤسسة.' },
-          { badge: 'الإعلام', title: 'النمذجة الدلالية وأتمتة الإيرادات', desc: 'تم إنشاء ونشر نموذج دلالي مركزي لأتمتة حسابات مؤشرات الأداء الرئيسية (KPI) المعقدة لاستبدال جداول البيانات اليدوية. قامت المنصة بتشفير هياكل الرسوم المعقدة، وكشفت عن أخطاء البيانات المخفية، وأنشأت أساساً قابلاً للتطوير والتدقيق متوافقاً تماماً مع مقاييس الأعمال.' },
+          { badge: 'التأمين', title: 'الامتثال التنظيمي والتقارير', desc: 'تم استخدام منصة Data Bench لاستبدال سير العمل المجزأ ببنية تحتية قابلة للتطوير قامت بتوحيد البيانات من ثلاثة أنظمة قديمة لأتمتة إنتاج التقارير التنظيمية متعددة المصادر. أدى ذلك إلى القضاء على منطق العمل غير المتسق والأخطاء اليدوية، مما ضمن الثقة المؤسسية في التقارير وحافظ على إمكانية تدقيق النتائج.' },
           { badge: 'الملكية الخاصة', title: 'تحليلات موحدة لعدة أنظمة تخطيط موارد المؤسسات (ERP)', desc: 'تم تنفيذ طبقة دلالية مركزية لتوحيد التقارير عبر ثلاثة أنظمة تشغيل ERP متميزة ذات هياكل غير متسقة. قامت المنصة بتوحيد المصطلحات والمنطق، وقضت على التجميع اليدوي، وأنشأت مصدراً واحداً للحقيقة أدى إلى تسريع إعداد التقارير مع الحفاظ على الاستقلال التشغيلي' },
           { badge: 'التصنيع', title: 'هجرة نظام تخطيط موارد المؤسسات (ERP) والتنسيق', desc: 'تم نشر Data Bench لتسهيل عملية الهجرة من أربعة أنظمة قديمة إلى منصة تخطيط موارد المؤسسات (ERP) حديثة. تم نقل البيانات من هذه الأنظمة المصدر إلى رسم معرفة موحد للتحقق من البيانات بنسبة 100٪ قبل الهجرة. تضمن هذه العملية انتقالاً خالياً من المخاطر وتوفر رؤية تشغيلية طوال عملية الهجرة. تستخدم منصة Data Bench مطابقة الأنماط المتقدمة والتعلم الآلي الخاضع للإشراف مع التعلم المعزز لتعزيز العملية وأتمتتها.' },
           { badge: 'تجارة التجزئة', title: 'تحليلات موحدة متمحورة حول العميل', desc: 'نما اتحاد استثماري وتجزئة كبير في القطاع الزراعي من خلال الاستحواذ والتنويع. استوعبت Data Bench قوائم عملاء متباينة متعددة وأنشأت سجلاً ذهبياً موحداً لكل عميل ومورد. ظهرت تعقيدات فريدة حيث شكل بعض الشركاء والعملاء تحالفات مؤقتة خاصة بالمعاملات، مما أدى إلى إنشاء نمط متسلسل من العلاقات التي كانت موجودة، ومرتبطة بمعاملة، ثم تم حلها. كان رسم معرفة Data Bench أمراً حاسماً لفهم وتسجيل تدفق الصفقات والمشاركين.' },
-          { badge: 'التأمين', title: 'الامتثال التنظيمي والتقارير', desc: 'تم استخدام منصة Data Bench لاستبدال سير العمل المجزأ ببنية تحتية قابلة للتطوير قامت بتوحيد البيانات من ثلاثة أنظمة قديمة لأتمتة إنتاج التقارير التنظيمية متعددة المصادر. أدى ذلك إلى القضاء على منطق العمل غير المتسق والأخطاء اليدوية، مما ضمن الثقة المؤسسية في التقارير وحافظ على إمكانية تدقيق النتائج.' }
+          { badge: 'الإعلام', title: 'النمذجة الدلالية وأتمتة الإيرادات', desc: 'تم إنشاء ونشر نموذج دلالي مركزي لأتمتة حسابات مؤشرات الأداء الرئيسية (KPI) المعقدة لاستبدال جداول البيانات اليدوية. قامت المنصة بتشفير هياكل الرسوم المعقدة، وكشفت عن أخطاء البيانات المخفية، وأنشأت أساساً قابلاً للتطوير والتدقيق متوافقاً تماماً مع مقاييس الأعمال.' }
         ]
       },
       company: {
