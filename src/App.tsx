@@ -148,7 +148,7 @@ const AIDataLayerSection = () => {
               Cognitive Infrastructure
             </span>
             <h2 className="text-3xl md:text-4xl font-sans font-bold text-[#0f172a] mb-6 tracking-[-0.01em] leading-tight flex flex-col items-center">
-              <span>Semantic Layer + Rules Engine + Graph</span>
+              <span>Semantic Layer + Rules Engine + Knowledge Graph</span>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-emerald-600 uppercase mt-2">= AI Data Layer</span>
             </h2>
             <p className="text-lg md:text-xl text-slate-500 leading-relaxed font-medium">
