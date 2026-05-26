@@ -69,9 +69,9 @@ const resources = {
           desc: 'Our security-first approach ensures that enterprise-grade safety is baked into the very core of our semantic ontology, providing a bulletproof environment for all data operations.',
           badge: 'Enterprise Certified',
           features: [
-            { title: 'Zero Trust Connectivity', desc: 'All endpoints are authenticated and authorized before any IP connectivity employing mutual TLS (mTLS) for identity bases session establishment.' },
-            { title: 'Encryption at Rest', desc: 'Data Bench protects your data end‑to‑end with AES‑256 encrypted storage and TLS‑secured communication across every service and replication layer.' },
-            { title: 'Encryption in Transit', desc: 'Encryption in transit using NIST‑certified cryptography, including AES‑256‑GCM for data plane encryption.' },
+            { title: 'Zero Trust Connectivity', desc: 'All endpoints authenticated and authorized before any IP connectivity. Mutual TLS (mTLS) employed for identity based sessions.' },
+            { title: 'Encryption at Rest', desc: 'AES-256 encrypted storage and TLS-secured communication across all service & replication layers' },
+            { title: 'Encryption in Transit', desc: 'End-to-end NIST-certified cryptography, including AES-256-GCM for data plane encryption' },
             { title: 'RBAC', desc: 'Granular role-based access control at the database column level.' }
           ]
         },
