@@ -255,15 +255,15 @@ const LinkedInSection = () => {
       badge: "3 weeks ago",
       title: "AI Needs More Than Data: The Growing Importance of Meaning and Context",
       text: "Semantic layers and knowledge graphs used to be an afterthought because humans handled most of the complexity.",
-      image: "/databenchotra.jpg",
+      image: "/Semantic.png",
       url: "https://www.linkedin.com/posts/data-bench_knowledgegraph-semanticlayer-ontology-activity-7447307280787587072-tDWG?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAfTR_wBBByb0C7UERxOLxKheF6sLNa6Wx4"
     },
     { 
       id: 4, 
       badge: "1 month ago",
-      title: "The Role of Knowledge Graphs in ERP Migrations",
-      text: "Migrating to a modern ERP platform shouldn't be a trust-fall. Transforming source systems into an interactive knowledge validation graph ensures clean, risk-free transitions.",
-      image: "/Knowledge.jpeg",
+      title: "The Next AI Advantage Won’t Be Models. It Will Be Context.",
+      text: "Every decision your organization makes leaves a trace. Most of those traces vanish before any system can learn from them.",
+      image: "/nextpost.png",
       url: "https://www.linkedin.com/posts/data-bench_ais-next-trillion-dollar-opportunity-the-activity-7457465160836911104-oD75?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAfTR_wBBByb0C7UERxOLxKheF6sLNa6Wx4"
     },
     { 
