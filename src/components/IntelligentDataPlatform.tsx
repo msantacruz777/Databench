@@ -82,7 +82,7 @@ export const IntelligentDataPlatform = () => {
                 </div>
 
                 {/* Fixed height title container to align descriptions */}
-                <div className="min-h-[2.5rem] flex items-start">
+                <div className="min-h-[3.75rem] flex items-start">
                   <h3 className="text-xl font-display font-bold leading-snug text-[#1d4c6a]">
                     {card.title}
                   </h3>

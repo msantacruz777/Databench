@@ -51,8 +51,6 @@ const UseCasesSection = () => {
     desc: string;
   }>;
 
-  const [expanded, setExpanded] = useState<Record<number, boolean>>({});
-
   return (
     <section id="use-cases" className="pt-12 pb-12 bg-white">
       <div className="max-w-7xl mx-auto px-6">
@@ -68,7 +66,7 @@ const UseCasesSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {items.map((item, i) => {
             const titleColors = [
               'text-[#1d4c6a]',
@@ -79,8 +77,6 @@ const UseCasesSection = () => {
               'text-[#1d4c6a]'
             ];
             
-            const isExpanded = !!expanded[i];
-            
             return (
               <motion.div 
                 key={i}
@@ -88,39 +84,22 @@ const UseCasesSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 viewport={{ once: true }}
-                className={cn(
-                  "bg-white pt-8 pb-8 pl-8 pr-10 md:pt-10 md:pb-10 md:pl-10 md:pr-12 rounded-[2.5rem] border border-slate-100 shadow-[0_4px_25px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_60px_rgba(0,0,0,0.06)] transition-all duration-500 flex flex-col text-left group",
-                  isExpanded ? "h-auto animate-fade-in" : "h-[490px] md:h-[510px]"
-                )}
+                className="bg-white pt-8 pb-8 pl-8 pr-10 md:pt-10 md:pb-10 md:pl-10 md:pr-12 rounded-[2.5rem] border border-slate-100 shadow-[0_4px_25px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_60px_rgba(0,0,0,0.06)] transition-all duration-500 flex flex-col h-full text-left group"
               >
-                <div className="flex flex-col h-full justify-between">
-                  <div>
-                    <div className="mb-8">
-                      <span className="px-5 py-2 bg-slate-50 text-[#10b981] text-[13px] font-black tracking-[0.1em] uppercase rounded-lg border border-slate-100/50 inline-block group-hover:bg-[#10b981] group-hover:text-white group-hover:border-[#10b981] transition-all duration-300">
-                        {item.badge}
-                      </span>
-                    </div>
-                    <h3 
-                      className={cn("text-xl md:text-2xl font-sans font-bold mb-6 tracking-tight leading-[1.2] min-h-[5.5rem] flex items-start", titleColors[i] || "text-[#0f172a]")}
-                      dangerouslySetInnerHTML={{ __html: item.title }}
-                    />
-                    <div className="w-12 h-[2px] bg-slate-100 mb-6 group-hover:w-20 group-hover:bg-[#10b981] transition-all duration-500" />
-                    <p className={cn(
-                      "text-slate-500 leading-[1.65] text-[15px] md:text-[16px] font-medium text-left tracking-normal normal-case break-words",
-                      !isExpanded && "line-clamp-[7]"
-                    )}>
-                      {item.desc}
-                    </p>
+                <div className="flex flex-col h-full">
+                  <div className="mb-8">
+                    <span className="px-5 py-2 bg-slate-50 text-[#10b981] text-[13px] font-black tracking-[0.1em] uppercase rounded-lg border border-slate-100/50 inline-block group-hover:bg-[#10b981] group-hover:text-white group-hover:border-[#10b981] transition-all duration-300">
+                      {item.badge}
+                    </span>
                   </div>
-                  
-                  <div className="mt-6 pt-2">
-                    <button
-                      onClick={() => setExpanded(prev => ({ ...prev, [i]: !prev[i] }))}
-                      className="text-[#10b981] hover:text-emerald-700 font-bold text-[13px] tracking-wider uppercase transition-colors duration-200 cursor-pointer flex items-center gap-1"
-                    >
-                      {isExpanded ? "Read less" : "Read more..."}
-                    </button>
-                  </div>
+                  <h3 
+                    className={cn("text-xl md:text-2xl font-sans font-bold mb-6 tracking-tight leading-[1.2] min-h-[5.5rem] flex items-start", titleColors[i] || "text-[#0f172a]")}
+                    dangerouslySetInnerHTML={{ __html: item.title }}
+                  />
+                  <div className="w-12 h-[2px] bg-slate-100 mb-6 group-hover:w-20 group-hover:bg-[#10b981] transition-all duration-500" />
+                  <p className="text-slate-500 leading-[1.65] text-[15px] md:text-[16px] font-medium flex-grow text-left tracking-normal normal-case break-words">
+                    {item.desc}
+                  </p>
                 </div>
               </motion.div>
             );
@@ -170,7 +149,7 @@ const AIDataLayerSection = () => {
             </span>
             <h2 className="text-3xl md:text-4xl font-sans font-bold text-[#0f172a] mb-6 tracking-[-0.01em] leading-tight flex flex-col items-center">
               <span>Semantic Layer + Rules Engine + Graph</span>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-emerald-600 uppercase mt-2">AI Data Layer</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-emerald-600 uppercase mt-2">= AI Data Layer</span>
             </h2>
             <p className="text-lg md:text-xl text-slate-500 leading-relaxed font-medium">
               Data Bench Hyper Graph activates context, embeds inference, reduces hallucinations and optimizes agentic outcomes
@@ -469,7 +448,7 @@ const FinalSection = () => {
                   <h4 className="text-2xl font-display font-bold text-slate-800 tracking-tight">Global Presence</h4>
                 </div>
                 <p className="text-lg text-slate-500 leading-relaxed font-medium">
-                  Our teams are strategically located to serve global enterprises across multiple time zones, providing dedicated support and local expertise where it matters most.
+                  Our teams are strategically located to serve global enterprises across multiple time zones.
                 </p>
                 <div className="mt-12 grid grid-cols-2 gap-6">
                   {['Toronto', 'Waterloo', 'London', 'Dubai'].map(loc => (
