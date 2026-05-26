@@ -256,7 +256,7 @@ const LinkedInSection = () => {
       title: "Unifying Disparate Data Sources with Precision",
       text: "Breaking down organizational silos requires sophisticated entity resolution. Standardizing terminology and mapping relationships automatically creates a single, trusted source of truth.",
       image: "/databenchotra.jpg",
-      url: "https://www.linkedin.com/company/data-bench/"
+      url: "https://www.linkedin.com/feed/update/urn:li:activity:7447307280787587072"
     },
     { 
       id: 4, 
@@ -264,7 +264,7 @@ const LinkedInSection = () => {
       title: "The Role of Knowledge Graphs in ERP Migrations",
       text: "Migrating to a modern ERP platform shouldn't be a trust-fall. Transforming source systems into an interactive knowledge validation graph ensures clean, risk-free transitions.",
       image: "/Knowledge.jpeg",
-      url: "https://www.linkedin.com/company/data-bench/"
+      url: "https://www.linkedin.com/posts/data-bench_ais-next-trillion-dollar-opportunity-the-activity-7457465160836911104-oD75?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAfTR_wBBByb0C7UERxOLxKheF6sLNa6Wx4"
     },
     { 
       id: 5, 
