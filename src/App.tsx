@@ -253,10 +253,10 @@ const LinkedInSection = () => {
     { 
       id: 3, 
       badge: "3 weeks ago",
-      title: "Unifying Disparate Data Sources with Precision",
-      text: "Breaking down organizational silos requires sophisticated entity resolution. Standardizing terminology and mapping relationships automatically creates a single, trusted source of truth.",
+      title: "AI Needs More Than Data: The Growing Importance of Meaning and Context",
+      text: "Semantic layers and knowledge graphs used to be an afterthought because humans handled most of the complexity.",
       image: "/databenchotra.jpg",
-      url: "https://www.linkedin.com/feed/update/urn:li:activity:7447307280787587072"
+      url: "https://www.linkedin.com/posts/data-bench_knowledgegraph-semanticlayer-ontology-activity-7447307280787587072-tDWG?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAfTR_wBBByb0C7UERxOLxKheF6sLNa6Wx4"
     },
     { 
       id: 4, 
