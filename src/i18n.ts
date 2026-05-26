@@ -69,9 +69,9 @@ const resources = {
           desc: 'Our security-first approach ensures that enterprise-grade safety is baked into the very core of our semantic ontology, providing a bulletproof environment for all data operations.',
           badge: 'Enterprise Certified',
           features: [
-            { title: 'Zero Trust Connectivity', desc: 'All endpoints must be authenticated and authorized before any IP connectivity is permitted.  Connection address is ephemeral and disposable.' },
+            { title: 'Zero Trust Connectivity', desc: 'All endpoints are authenticated and authorized before any IP connectivity employing mutual TLS (mTLS) for identity bases session establishment.' },
             { title: 'Encryption at Rest', desc: 'Data Bench protects your data end‑to‑end with AES‑256 encrypted storage and TLS‑secured communication across every service and replication layer.' },
-            { title: 'Encryption in Transit', desc: 'NetFoundry provides end‑to‑end, zero‑trust encryption in transit using NIST‑certified cryptography, including AES‑256‑GCM for data plane encryption and mutual TLS (mTLS) for identity‑based session establishment.' },
+            { title: 'Encryption in Transit', desc: 'Encryption in transit using NIST‑certified cryptography, including AES‑256‑GCM for data plane encryption.' },
             { title: 'RBAC', desc: 'Granular role-based access control at the database column level.' }
           ]
         },

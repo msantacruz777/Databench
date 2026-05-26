@@ -152,7 +152,7 @@ const AIDataLayerSection = () => {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-emerald-600 uppercase mt-2">= AI Data Layer</span>
             </h2>
             <p className="text-lg md:text-xl text-slate-500 leading-relaxed font-medium">
-              Data Bench Hyper Graph activates context, embeds inference, reduces hallucinations and optimizes agentic outcomes
+              Data Bench hypergraph activates context, embeds inference, reduces hallucinations and optimizes agentic outcomes
             </p>
           </motion.div>
         </div>
