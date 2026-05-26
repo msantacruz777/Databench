@@ -117,19 +117,19 @@ const AIDataLayerSection = () => {
     {
       title: 'Semantic Layer',
       icon: <Layers className="w-6 h-6 text-emerald-600" />,
-      bullets: ['Contextualization', 'Ontology Creation'],
+      bullets: ['Automated Graph Assembly', 'Hyper Relations'],
       color: 'emerald'
     },
     {
       title: 'Rules Engine',
       icon: <Shield className="w-6 h-6 text-blue-600" />,
-      bullets: ['Embedded Inference', 'Governance Controls'],
+      bullets: ['Embedded Inference', 'Ontology Creation'],
       color: 'blue'
     },
     {
-      title: 'Graph',
+      title: 'Knowledge Graph',
       icon: <GitBranch className="w-6 h-6 text-indigo-600" />,
-      bullets: ['Hyper Relation', 'Automated Graph Assembly'],
+      bullets: ['Contextualization', 'Governance'],
       color: 'indigo'
     }
   ];

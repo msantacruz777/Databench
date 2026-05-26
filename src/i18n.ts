@@ -14,7 +14,7 @@ const resources = {
       },
       hero: {
         quote: 'From Data Chaos to Clarity.',
-        subheading: "Unleash the power of Semantic Ontology.\nBuilt for speed, simplicity, flexibility, and iterative growth.",
+        subheading: "Unleash the power of a Semantic Ontology.\nBuilt for speed, simplicity, flexibility, and iterative growth.",
         bestUseCase: {
           badge: 'Best Use Case',
           quote: 'Facing the regulatory pressure of IFRS compliance, a leading Caribbean financial and insurance group successfully transformed a fragmented, manual reporting process into a unified data environment.',
@@ -25,10 +25,10 @@ const resources = {
       platform: {
         label: 'PLATFORM',
         title: 'The Data Modernization <br /> Workbench',
-        description: 'A comprehensive suite designed to seamlessly ingest, harmonize, and analyze your most critical assets.',
+        description: 'A comprehensive suite designed to seamlessly ingest, harmonize, and analyze your most critical data assets.',
         ingest: {
           title: 'Ingest & Harmonize',
-          subtitle: 'Landing zones',
+          subtitle: 'Landing Zone',
           desc: 'Ingest raw data directly from source systems, intelligent harmonizing engines, and powerful analytics ready for action.'
         },
         governance: {
@@ -69,10 +69,10 @@ const resources = {
           desc: 'Our security-first approach ensures that enterprise-grade safety is baked into the very core of our semantic ontology, providing a bulletproof environment for all data operations.',
           badge: 'Enterprise Certified',
           features: [
-            { title: 'Zero Trust Connectivity', desc: 'All endpoints authenticated and authorized before any IP connectivity' },
+            { title: 'Zero Trust Connectivity', desc: 'All endpoints must be authenticated and authorized before any IP connectivity is permitted.  Connection address is ephemeral and disposable.' },
             { title: 'Encryption at Rest', desc: 'Data Bench protects your data end‑to‑end with AES‑256 encrypted storage and TLS‑secured communication across every service and replication layer.' },
             { title: 'Encryption in Transit', desc: 'NetFoundry provides end‑to‑end, zero‑trust encryption in transit using NIST‑certified cryptography, including AES‑256‑GCM for data plane encryption and mutual TLS (mTLS) for identity‑based session establishment.' },
-            { title: 'RBAC', desc: 'Granular role-based access control' }
+            { title: 'RBAC', desc: 'Granular role-based access control at the database column level.' }
           ]
         },
         result: {
@@ -95,10 +95,10 @@ const resources = {
         subtitle: 'Scalable outcomes from governance to integration.',
         viewAll: 'Request a Demo',
         items: [
-          { badge: 'Finance', title: 'Post-Merger Risk Management & Integration', desc: 'Unified 122 million customer records from five banking systems with 100% accuracy in 18 hours. The platform eliminated post‑merger data silos, ensured error‑free payment processing, and delivered a transparent, auditable foundation for enterprise‑wide risk management.' },
+          { badge: 'Finance', title: 'Post-Merger Risk Management & Integration', desc: "Unified 100+ million customer records from five banking systems in 18 hours. Tested by the bank's data team with 100% accuracy on all query results. The platform eliminated post‑merger data silos and delivered a transparent, auditable foundation for enterprise wide risk management. It also allowed complex temporal analysis of loan behavior." },
           { badge: 'Manufacturing', title: 'ERP Migration & Harmonization', desc: 'Data Bench facilitates migrating four legacy systems into a modern ERP. Source data moves into a unifying knowledge graph for 100% validation before migration, ensuring a risk-free transition and operational visibility. It uses advanced pattern matching and supervised ML with reinforcement learning.' },
           { badge: 'Private Equity', title: 'Unified Multi-ERP <br /> Analytics', desc: 'Implemented a centralized semantic layer to unify reporting across three distinct operational ERPs with inconsistent structures. The platform standardized terminology and logic, eliminated manual aggregation, and created a single source of truth that accelerated reporting while preserving operational independence' },
-          { badge: 'Insurance', title: 'Regulatory Compliance Reporting', desc: 'The Data Bench platform was employed to replace fragmented workflows with a scalable infrastructure that unified data from three core legacy systems to automate the production of multi-source regulatory reporting. This eliminated inconsistent business logic and manual errors, ensuring organizational confidence in reporting and preserved auditability of results' },
+          { badge: 'Insurance', title: 'Regulatory Compliance Reporting', desc: 'The Data Bench platform was employed to replace fragmented workflows with a scalable infrastructure that unified data from three core legacy systems to automate the production of multi-regulatory reporting. This eliminated inconsistent business logic and manual errors, ensuring organizational confidence in reporting and preserving auditability of results.' },
           { badge: 'Retail', title: 'Unified Client-centred Analytics', desc: 'A major agriculture retail and investment consortium grew through acquisition and diversification. Data Bench unified disparate client lists into golden records. Temporary, transaction-specific consortia added complexity. The Data Bench knowledge graph proved critical for understanding deal flow, relationships, and participant records.' },
           { badge: 'Media', title: 'Semantic Modeling & Revenue Automation', desc: 'Created and deployed a centralized semantic model to automate complex KPI calculations to replace manual spreadsheets. The platform encoded intricate fee structures, surfaced hidden data errors, and established a scalable, auditable foundation fully aligned with business metrics.' }
         ]
