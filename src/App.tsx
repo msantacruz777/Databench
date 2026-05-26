@@ -273,38 +273,6 @@ const LinkedInSection = () => {
       text: "Continuous learning loops enable pattern matching that evolves with your business logic. Supervised ML paired with reinforcement learning delivers automated, highly precise mapping.",
       image: "/Graph.png",
       url: "https://www.linkedin.com/company/data-bench/"
-    },
-    { 
-      id: 6, 
-      badge: "2 months ago",
-      title: "Securing Sensitive Data at Rest and in Motion",
-      text: "Modern data platforms must balance complete visibility with rigorous security protocols. Learn how end-to-end auditability and rule enforcement keep enterprises fully compliant.",
-      image: "/image7.png",
-      url: "https://www.linkedin.com/company/data-bench/"
-    },
-    { 
-      id: 7, 
-      badge: "2 months ago",
-      title: "Beyond Spreadsheets: Automating Complex KPIs",
-      text: "Centralized semantic modeling encodes complex, nested business definitions directly. Say goodbye to fragmented manual spreadsheets and inconsistent reporting logic.",
-      image: "/databenchotra.jpg",
-      url: "https://www.linkedin.com/company/data-bench/"
-    },
-    { 
-      id: 8, 
-      badge: "3 months ago",
-      title: "Post-Merger Risk & System Harmonization",
-      text: "Unifying millions of customer accounts from disparate, newly-acquired banking networks with 100% accuracy requires scalable patterns. Explore our integration blueprints.",
-      image: "/Knowledge.jpeg",
-      url: "https://www.linkedin.com/company/data-bench/"
-    },
-    { 
-      id: 9, 
-      badge: "4 months ago",
-      title: "Architecting Governance for AI Readiness",
-      text: "An enterprise is only as ready for AI as its underlying data infrastructure. Comprehensive data governance ensures models draw from contextually accurate, safe datasets.",
-      image: "/Graph.png",
-      url: "https://www.linkedin.com/company/data-bench/"
     }
   ];
 
