@@ -239,7 +239,7 @@ const LinkedInSection = () => {
       badge: "4 days ago",
       title: "Data Lineage: The Story Behind Trusted AI",
       text: "AI initiatives rely on more than just models, they rely on trusted data. Data lineage preserves the full story behind every data point: where it originated and who modified it.",
-      image: "/Graph.png",
+      image: "/Wave.png",
       url: "https://www.linkedin.com/feed/update/urn:li:activity:7430294102388277248"
     },
     { 
@@ -268,11 +268,11 @@ const LinkedInSection = () => {
     },
     { 
       id: 5, 
-      badge: "1 month ago",
-      title: "Supervised ML for Smart Enterprise Mapping",
-      text: "Continuous learning loops enable pattern matching that evolves with your business logic. Supervised ML paired with reinforcement learning delivers automated, highly precise mapping.",
-      image: "/Graph.png",
-      url: "https://www.linkedin.com/company/data-bench/"
+      badge: "2 months ago",
+      title: "Why Knowledge Graphs and Semantic Layers Are Becoming Essential for AI-Ready Data",
+      text: "Enterprises are already recognizing the strategic value of knowledge graphs and semantic layers, which will become increasingly important for data to be AI ready.",
+      image: "/lastpost.png",
+      url: "https://www.linkedin.com/posts/data-bench_tech-trends-activity-7442612549105172481-bhyO?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAfTR_wBBByb0C7UERxOLxKheF6sLNa6Wx4"
     }
   ];
 
@@ -419,7 +419,7 @@ const FinalSection = () => {
                   Our teams are strategically located to serve global enterprises across multiple time zones.
                 </p>
                 <div className="mt-12 grid grid-cols-2 gap-6">
-                  {['Toronto', 'Waterloo', 'London', 'Dubai'].map(loc => (
+                  {['Toronto', 'Waterloo', 'London', 'Abu Dhabi'].map(loc => (
                     <div key={loc} className="flex items-center gap-3 text-sm text-slate-900 font-bold uppercase tracking-widest group/loc">
                       <div className="w-2 h-2 rounded-full bg-slate-400 group-hover/loc:bg-emerald-500 group-hover/loc:scale-125 transition-all" />
                       {loc}

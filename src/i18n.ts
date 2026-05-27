@@ -70,7 +70,7 @@ const resources = {
           badge: 'Enterprise Certified',
           features: [
             { title: 'Zero Trust Connectivity', desc: 'All endpoints authenticated and authorized before any IP connectivity. Mutual TLS (mTLS) employed for identity based sessions.' },
-            { title: 'RBAC', desc: 'Granular role-based access control at the database column level.' },
+            { title: 'RBAC', desc: 'Granular Role Based Access Control at the database column level.' },
             { title: 'Encryption at Rest', desc: 'AES-256 encrypted storage and TLS-secured communication across all service & replication layers' },
             { title: 'Encryption in Transit', desc: 'End-to-end NIST-certified cryptography, including AES-256-GCM for data plane encryption' }
           ]
