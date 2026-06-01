@@ -229,18 +229,18 @@ const LinkedInSection = () => {
     { 
       id: 0, 
       badge: "Today",
-      title: "The Invisible Cost of Manual Data Handling",
-      text: "Manual deduplication is often an invisible cost in many organizations. When teams rely on manual processes to clean and deduplicate their data sets, they lose valuable time and increase risk.",
+      title: "Data Bench: Intelligent Data Platform for AI-Ready Data",
+      text: "We are excited to launch our new website! Guided by our belief that great decisions come from more than data—they come from understanding context—we help organizations integrate, harmonize, and transform fragmented information.",
       image: "/Knowledge.jpeg",
-      url: "https://www.linkedin.com/feed/update/urn:li:activity:7444774375997800448"
+      url: "https://www.linkedin.com/posts/data-bench_data-bench-intelligent-data-platform-for-activity-7467260260987277312-dumE?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAfTR_wBBByb0C7UERxOLxKheF6sLNa6Wx4"
     },
     { 
       id: 1, 
       badge: "4 days ago",
-      title: "Data Lineage: The Story Behind Trusted AI",
-      text: "AI initiatives rely on more than just models, they rely on trusted data. Data lineage preserves the full story behind every data point: where it originated and who modified it.",
+      title: "Toronto Tech Week: Meet the Funds",
+      text: "Toronto Tech Week is here and the energy is inspiring! Our CEO Matthew Linton joined the conversation at Meet the Funds to connect with the ambitious and fast-moving Canadian tech ecosystem.",
       image: "/Wave.png",
-      url: "https://www.linkedin.com/feed/update/urn:li:activity:7430294102388277248"
+      url: "https://www.linkedin.com/posts/data-bench_torontotechweek-meetthefunds-databench-activity-7465069987737763840-0cI9?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAfTR_wBBByb0C7UERxOLxKheF6sLNa6Wx4"
     },
     { 
       id: 2, 
