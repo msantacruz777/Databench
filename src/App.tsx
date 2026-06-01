@@ -236,7 +236,7 @@ const LinkedInSection = () => {
     },
     { 
       id: 2, 
-      badge: "2 weeks ago",
+      badge: "Last week",
       title: "Toronto Tech Week: Homecoming",
       text: "The Data Bench team heard from an exceptional lineup of Canadian founders and technology leaders at Toronto Tech Week Homecoming, highlighting the scalable global tech transformation and resilient leadership shaping the future of innovation.",
       image: "/image7.png",
