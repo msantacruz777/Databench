@@ -268,7 +268,7 @@ const LinkedInSection = () => {
     },
     { 
       id: 5, 
-      badge: "2 months ago",
+      badge: "2 weeks ago",
       title: "AI Effectiveness Depends on Data Quality and Governance",
       text: "AI is only as effective as the data behind it. Fragmented systems, outdated records, and disconnected information make scaling much harder than expected. The companies advancing fastest are investing in data quality, governance, and structure first, building the foundation that allows AI to deliver meaningful outcomes at scale.",
       image: "/lastpost.png",
