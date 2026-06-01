@@ -235,20 +235,20 @@ const LinkedInSection = () => {
       url: "https://www.linkedin.com/posts/data-bench_data-bench-intelligent-data-platform-for-activity-7467260260987277312-dumE?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAfTR_wBBByb0C7UERxOLxKheF6sLNa6Wx4"
     },
     { 
+      id: 2, 
+      badge: "2 weeks ago",
+      title: "Toronto Tech Week: Homecoming",
+      text: "The Data Bench team heard from an exceptional lineup of Canadian founders and technology leaders at Toronto Tech Week Homecoming, highlighting the scalable global tech transformation and resilient leadership shaping the future of innovation.",
+      image: "/image7.png",
+      url: "https://www.linkedin.com/feed/update/urn:li:activity:7465494536358686720"
+    },
+    { 
       id: 1, 
-      badge: "4 days ago",
+      badge: "Last week",
       title: "Toronto Tech Week: Meet the Funds",
       text: "Toronto Tech Week is here and the energy is inspiring! Our CEO Matthew Linton joined the conversation at Meet the Funds to connect with the ambitious and fast-moving Canadian tech ecosystem.",
       image: "/Wave.png",
       url: "https://www.linkedin.com/posts/data-bench_torontotechweek-meetthefunds-databench-activity-7465069987737763840-0cI9?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAfTR_wBBByb0C7UERxOLxKheF6sLNa6Wx4"
-    },
-    { 
-      id: 2, 
-      badge: "2 weeks ago",
-      title: "The High Price of Unmanaged Data",
-      text: "Unmanaged data costs more than money. It costs time to value. Fragmented, ungoverned data slows decisions, erodes trust, and keeps teams trapped in manual cycles.",
-      image: "/image7.png",
-      url: "https://www.linkedin.com/feed/update/urn:li:activity:7420144528793399296"
     },
     { 
       id: 3, 
