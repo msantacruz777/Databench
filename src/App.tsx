@@ -269,10 +269,10 @@ const LinkedInSection = () => {
     { 
       id: 5, 
       badge: "2 months ago",
-      title: "Why Knowledge Graphs and Semantic Layers Are Becoming Essential for AI-Ready Data",
-      text: "Enterprises are already recognizing the strategic value of knowledge graphs and semantic layers, which will become increasingly important for data to be AI ready.",
+      title: "AI Effectiveness Depends on Data Quality and Governance",
+      text: "AI is only as effective as the data behind it. Fragmented systems, outdated records, and disconnected information make scaling much harder than expected. The companies advancing fastest are investing in data quality, governance, and structure first, building the foundation that allows AI to deliver meaningful outcomes at scale.",
       image: "/lastpost.png",
-      url: "https://www.linkedin.com/posts/data-bench_tech-trends-activity-7442612549105172481-bhyO?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAfTR_wBBByb0C7UERxOLxKheF6sLNa6Wx4"
+      url: "https://www.linkedin.com/feed/update/urn:li:activity:7460759333539217408"
     }
   ];
 
