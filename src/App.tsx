@@ -260,11 +260,11 @@ const LinkedInSection = () => {
     },
     { 
       id: 4, 
-      badge: "1 month ago",
-      title: "The Next AI Advantage Won’t Be Models. It Will Be Context.",
-      text: "Every decision your organization makes leaves a trace. Most of those traces vanish before any system can learn from them.",
+      badge: "1 week ago",
+      title: "Data Modernization for Enterprise AI Success",
+      text: "Enterprise AI success depends on one thing: trusted, connected, and governed data. We help organizations modernize and activate their data through stable, semantic-first architectures to move efficiently from data chaos to structural clarity.",
       image: "/nextpost.png",
-      url: "https://www.linkedin.com/posts/data-bench_ais-next-trillion-dollar-opportunity-the-activity-7457465160836911104-oD75?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAfTR_wBBByb0C7UERxOLxKheF6sLNa6Wx4"
+      url: "https://www.linkedin.com/feed/update/urn:li:activity:7462544398891839488"
     },
     { 
       id: 5, 
