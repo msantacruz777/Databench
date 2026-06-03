@@ -9,7 +9,7 @@ const resources = {
         customer: 'Use Cases',
         company: 'Company',
         aiDataLayer: 'AI Data Layer',
-        blog: 'Blog',
+        blog: 'Media',
         requestDemo: 'Request a Demo'
       },
       hero: {
@@ -111,7 +111,7 @@ const resources = {
         contact: 'Contact'
       },
       linkedin: {
-        title: 'Blog'
+        title: 'Media'
       }
     }
   },
@@ -122,7 +122,7 @@ const resources = {
         customer: 'Casos de Uso',
         company: 'Empresa',
         aiDataLayer: 'Capa de Datos IA',
-        blog: 'Blog',
+        blog: 'Media',
         requestDemo: 'Solicitar una Demo'
       },
       hero: {
@@ -224,7 +224,7 @@ const resources = {
         contact: 'Contacto'
       },
       linkedin: {
-        title: 'Blog'
+        title: 'Media'
       }
     }
   },
@@ -235,7 +235,7 @@ const resources = {
         customer: 'حالات الاستخدام',
         company: 'الشركة',
         aiDataLayer: 'طبقة بيانات الذكاء الاصطناعي',
-        blog: 'المدونة',
+        blog: 'Media',
         requestDemo: 'طلب عرض تجريبي'
       },
       hero: {
@@ -337,7 +337,7 @@ const resources = {
         contact: 'اتصل بنا'
       },
       linkedin: {
-        title: 'المدونة'
+        title: 'Media'
       }
     }
   }
