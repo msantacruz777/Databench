@@ -236,7 +236,7 @@ const LinkedInSection = () => {
     },
     { 
       id: 0, 
-      badge: "Yesterday",
+      badge: "Last week",
       title: "Data Bench: Intelligent Data Platform for AI-Ready Data",
       text: "We are excited to launch our new website! Guided by our belief that great decisions come from more than data—they come from understanding context—we help organizations integrate, harmonize, and transform fragmented information.",
       image: "/Knowledge.jpeg",
