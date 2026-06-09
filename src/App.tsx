@@ -227,8 +227,16 @@ const LinkedInSection = () => {
 
   const posts = [
     { 
-      id: 0, 
+      id: 6, 
       badge: "Today",
+      title: "Why do AI Agents fail inside enterprises?",
+      text: "Building the agent is often the easy part but challenge comes from disconnected data, unclear workflows, limited governance, and low adoption across teams. AI agents need context, access to reliable information, and processes they can operate within.",
+      image: "/ai_ready_data.png",
+      url: "https://www.linkedin.com/posts/data-bench_data-bench-intelligent-data-platform-for-activity-7470160318044913664-HXDx?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAfTR_wBBByb0C7UERxOLxKheF6sLNa6Wx4"
+    },
+    { 
+      id: 0, 
+      badge: "Yesterday",
       title: "Data Bench: Intelligent Data Platform for AI-Ready Data",
       text: "We are excited to launch our new website! Guided by our belief that great decisions come from more than data—they come from understanding context—we help organizations integrate, harmonize, and transform fragmented information.",
       image: "/Knowledge.jpeg",
