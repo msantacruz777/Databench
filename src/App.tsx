@@ -254,7 +254,7 @@ const LinkedInSection = () => {
       badge: "Last week",
       title: "Toronto Tech Week: Meet the Funds",
       text: "Toronto Tech Week is here and the energy is inspiring! Our CEO Matthew Linton joined the conversation at Meet the Funds to connect with the ambitious and fast-moving Canadian tech ecosystem.",
-      image: "/Wave.png",
+      image: "/meet_the_funds.png",
       url: "https://www.linkedin.com/posts/data-bench_torontotechweek-meetthefunds-databench-activity-7465069987737763840-0cI9?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAfTR_wBBByb0C7UERxOLxKheF6sLNa6Wx4"
     },
     { 
