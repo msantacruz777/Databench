@@ -262,7 +262,7 @@ const LinkedInSection = () => {
       badge: "1 week ago",
       title: "Golden Records vs Multiple Customer Versions in MDM",
       text: "As AI adoption grows, trusted data foundations are key. Golden Records help create a unified, trusted view across the enterprise, overcoming duplicate customer records and disconnected systems to enable smarter and faster decision-making.",
-      image: "/Semantic.png",
+      image: "/golden_records.png",
       url: "https://www.linkedin.com/feed/update/urn:li:activity:7463272428539064320"
     },
     { 
