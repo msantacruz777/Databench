@@ -235,7 +235,7 @@ const LinkedInSection = () => {
     },
     { 
       id: 6, 
-      badge: "2 days ago",
+      badge: "Last week",
       title: "Why do AI Agents fail inside enterprises?",
       text: "Building the agent is often the easy part but challenge comes from disconnected data, unclear workflows, limited governance, and low adoption across teams. AI agents need context, access to reliable information, and processes they can operate within.",
       image: "/ai_ready_data.png",
