@@ -226,8 +226,16 @@ const LinkedInSection = () => {
 
   const posts = [
     { 
-      id: 6, 
+      id: 8, 
       badge: "Today",
+      title: "Data Modernization & AI Governance",
+      text: "Enterprise AI adoption demands a trustworthy, secure, and governed data foundation. We help organizations modernize their infrastructure to establish precise data governance, preparing disparate data sources for secure, scale-ready AI integration.",
+      image: "/data_modernization_governance.jpg",
+      url: "https://www.linkedin.com/posts/data-bench_datamodernization-ai-datagovernance-activity-7472687639997861888-YN-M?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAfTR_wBBByb0C7UERxOLxKheF6sLNa6Wx4"
+    },
+    { 
+      id: 6, 
+      badge: "2 days ago",
       title: "Why do AI Agents fail inside enterprises?",
       text: "Building the agent is often the easy part but challenge comes from disconnected data, unclear workflows, limited governance, and low adoption across teams. AI agents need context, access to reliable information, and processes they can operate within.",
       image: "/ai_ready_data.png",
