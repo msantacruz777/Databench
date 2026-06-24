@@ -226,6 +226,14 @@ const LinkedInSection = () => {
 
   const posts = [
     { 
+      id: 10, 
+      badge: "Today",
+      title: "Data Bench: Intelligent Data Platform",
+      text: "Enterprises face critical challenges with disconnected databases, fragmented data sources, and missing context. Our Intelligent Data Platform integrates and harmonizes structured and unstructured assets, preparing organizations with reliable, context-rich data ready for next-generation AI.",
+      image: "/intelligent_data_platform.jpg",
+      url: "https://www.linkedin.com/posts/data-bench_data-bench-intelligent-data-platform-for-activity-7475606270373191680-PGQt?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAfTR_wBBByb0C7UERxOLxKheF6sLNa6Wx4"
+    },
+    { 
       id: 9, 
       badge: "Yesterday",
       title: "Infusing Business Strategy with Data Analytics",
