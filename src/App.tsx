@@ -226,8 +226,16 @@ const LinkedInSection = () => {
 
   const posts = [
     { 
+      id: 9, 
+      badge: "Yesterday",
+      title: "Infusing Business Strategy with Data Analytics",
+      text: "Unlocking true competitive advantage requires more than just collecting data—it demands infusing your business strategy with robust, governed data analytics. We help companies integrate strategic decision frameworks into modern data systems, empowering leaders with clear, context-rich intelligence that drives long-term growth.",
+      image: "/business_strategy_analytics.jpg",
+      url: "https://www.linkedin.com/posts/data-bench_infuse-business-strategy-with-data-analytics-activity-7475225962729693186-BU_h?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAfTR_wBBByb0C7UERxOLxKheF6sLNa6Wx4"
+    },
+    { 
       id: 8, 
-      badge: "Today",
+      badge: "Last week",
       title: "Data Modernization & AI Governance",
       text: "Enterprise AI adoption demands a trustworthy, secure, and governed data foundation. We help organizations modernize their infrastructure to establish precise data governance, preparing disparate data sources for secure, scale-ready AI integration.",
       image: "/data_modernization_governance.jpg",
