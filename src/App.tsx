@@ -226,8 +226,24 @@ const LinkedInSection = () => {
 
   const posts = [
     { 
+      id: 12, 
+      badge: "This week",
+      title: "Connecting the Dots: The Critical Role of Semantic Metadata in Enterprise AI",
+      text: "To deliver reliable outcomes, enterprise AI needs more than raw data—it needs deep, structured semantic context. By establishing a robust metadata layer that links disparate databases and maps relationships, we ensure AI systems understand the real-world context of your business, leading to accurate and trustworthy decisions at scale.",
+      image: "/semantic_metadata_context.jpg",
+      url: "https://www.linkedin.com/feed/update/urn:li:activity:7478488064995205120"
+    },
+    { 
+      id: 11, 
+      badge: "This week",
+      title: "Data Harmonization: The Key to Unleashing Enterprise AI",
+      text: "Siloed databases, fragmented records, and lack of clear semantic context are the main bottlenecks preventing reliable generative AI in the enterprise. We bridge this gap by harmonizing disparate data sources, delivering context-rich and fully governed information that empowers scale-ready AI integration.",
+      image: "/data_context_harmonization.jpg",
+      url: "https://www.linkedin.com/feed/update/urn:li:activity:7477734867716390913"
+    },
+    { 
       id: 10, 
-      badge: "Today",
+      badge: "Last week",
       title: "Data Bench: Intelligent Data Platform",
       text: "Enterprises face critical challenges with disconnected databases, fragmented data sources, and missing context. Our Intelligent Data Platform integrates and harmonizes structured and unstructured assets, preparing organizations with reliable, context-rich data ready for next-generation AI.",
       image: "/intelligent_data_platform.jpg",
@@ -235,7 +251,7 @@ const LinkedInSection = () => {
     },
     { 
       id: 9, 
-      badge: "Yesterday",
+      badge: "Last week",
       title: "Infusing Business Strategy with Data Analytics",
       text: "Unlocking true competitive advantage requires more than just collecting data—it demands infusing your business strategy with robust, governed data analytics. We help companies integrate strategic decision frameworks into modern data systems, empowering leaders with clear, context-rich intelligence that drives long-term growth.",
       image: "/business_strategy_analytics.jpg",
