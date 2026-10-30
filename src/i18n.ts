@@ -10,6 +10,8 @@ const resources = {
         company: 'Company',
         aiDataLayer: 'AI Data Layer',
         blog: 'Media',
+        media: 'Media',
+        partners: 'Partners',
         requestDemo: 'Request a Demo'
       },
       hero: {
@@ -123,6 +125,8 @@ const resources = {
         company: 'Empresa',
         aiDataLayer: 'Capa de Datos IA',
         blog: 'Media',
+        media: 'Media',
+        partners: 'Partners',
         requestDemo: 'Solicitar una Demo'
       },
       hero: {
@@ -236,6 +240,8 @@ const resources = {
         company: 'الشركة',
         aiDataLayer: 'طبقة بيانات الذكاء الاصطناعي',
         blog: 'Media',
+        media: 'Media',
+        partners: 'Partners',
         requestDemo: 'طلب عرض تجريبي'
       },
       hero: {

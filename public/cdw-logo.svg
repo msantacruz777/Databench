@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 100" fill="none">
+  <path d="M 108 20 C 160 8, 252 16, 252 50 C 252 84, 130 100, 32 96 C 28 96, 26 90, 30 86 C 80 72, 218 82, 230 50 C 238 28, 170 18, 108 20 Z" fill="#D00000" />
+  <text x="14" y="66" fill="#D00000" fontSize="58px" fontWeight="900" fontStyle="italic" fontFamily="Arial Black, Impact, sans-serif" letterSpacing="-0.03em">CDW</text>
+  <g transform="translate(240, 56)">
+    <circle cx="6" cy="6" r="5.5" stroke="#D00000" strokeWidth="1.2" fill="none" />
+    <text x="6" y="8.8" fill="#D00000" fontSize="6px" fontWeight="bold" fontFamily="sans-serif" textAnchor="middle">R</text>
+  </g>
+</svg>

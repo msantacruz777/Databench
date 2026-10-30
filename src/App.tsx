@@ -26,7 +26,12 @@ import {
   Quote,
   Mail,
   Phone,
-  Plus
+  Plus,
+  Cloud,
+  Server,
+  Cpu,
+  Building2,
+  ExternalLink
 } from 'lucide-react';
 import { cn } from './lib/utils';
 import './i18n';
@@ -226,20 +231,36 @@ const LinkedInSection = () => {
 
   const posts = [
     { 
-      id: 12, 
+      id: 14, 
       badge: "This week",
-      title: "Connecting the Dots: The Critical Role of Semantic Metadata in Enterprise AI",
-      text: "To deliver reliable outcomes, enterprise AI needs more than raw data—it needs deep, structured semantic context. By establishing a robust metadata layer that links disparate databases and maps relationships, we ensure AI systems understand the real-world context of your business, leading to accurate and trustworthy decisions at scale.",
-      image: "/semantic_metadata_context.jpg",
-      url: "https://www.linkedin.com/feed/update/urn:li:activity:7478488064995205120"
+      title: "Dubai AI Festival: Transforming Fragmented Data into a Foundation for AI",
+      text: "Dr. Lway Nackasha attended the Dubai AI Festival, exploring the latest conversations and innovations shaping the future of AI. As organizations accelerate AI adoption, Data Bench helps transform fragmented data into a connected, reliable foundation for AI through data modernization, Semantic Layers, and Knowledge Graphs.",
+      image: "/dubai_ai_festival_2.jpg",
+      url: "https://www.linkedin.com/feed/update/urn:li:activity:7521603461910659072"
+    },
+    { 
+      id: 12, 
+      badge: "Last week",
+      title: "Connecting Enterprise Data to Decisions That Drive Business Value",
+      text: "Organizations collect data across multiple systems, but turning it into meaningful business insights requires understanding the context behind it. Building a stronger foundation for AI starts with connecting and contextualizing enterprise data around real business processes, customer relationships, and organizational goals.",
+      image: "/business_understanding_ai.jpg",
+      url: "https://www.linkedin.com/posts/data-bench_a-practical-guide-to-understanding-your-business-activity-7516551658244358146-3K_q"
     },
     { 
       id: 11, 
-      badge: "This week",
-      title: "Data Harmonization: The Key to Unleashing Enterprise AI",
-      text: "Siloed databases, fragmented records, and lack of clear semantic context are the main bottlenecks preventing reliable generative AI in the enterprise. We bridge this gap by harmonizing disparate data sources, delivering context-rich and fully governed information that empowers scale-ready AI integration.",
-      image: "/data_context_harmonization.jpg",
-      url: "https://www.linkedin.com/feed/update/urn:li:activity:7477734867716390913"
+      badge: "Last week",
+      title: "Meet Reza Babaee — Technology & R&D Leader",
+      text: "Meet Reza Babaee, Ph.D. — Technology & R&D Leader at Data Bench. Reza specializes in data integration, knowledge graphs, entity resolution, and NLP, connecting structured and unstructured data with large language models to turn complex enterprise data into actionable insights.",
+      image: "/reza_babaee.jpg",
+      url: "https://www.linkedin.com/feed/update/urn:li:activity:7515808770850230272"
+    },
+    { 
+      id: 13, 
+      badge: "Last week",
+      title: "Your ERP Isn't 30 Years Old — Your Operating Activity Is",
+      text: "Enterprises frequently blame legacy ERPs for operational friction, but the real challenge lies in disconnected workflows and fragmented data models. By building an intelligent data layer over core transactional systems, organizations can modernize operating activities, unlock cross-functional intelligence, and drive scalable enterprise agility.",
+      image: "/semantic_layer.jpg",
+      url: "https://www.linkedin.com/posts/data-bench_your-erp-isnt-30-years-old-your-operating-activity-7520906000816676865-nl8H?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAfTR_wBBByb0C7UERxOLxKheF6sLNa6Wx4"
     },
     { 
       id: 10, 
@@ -397,12 +418,13 @@ const LinkedInSection = () => {
                     </div>
                   </div>
 
-                  {/* Small Thumbnail Image */}
-                  <div className="mb-6 rounded-lg overflow-hidden h-32 bg-slate-200 border border-slate-100 shadow-sm relative">
+                  {/* Thumbnail Image */}
+                  <div className="mb-6 rounded-xl overflow-hidden h-48 md:h-52 bg-slate-100 border border-slate-100 shadow-xs relative">
                     <img 
                       src={post.image} 
                       alt={post.title} 
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+                      className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700" 
+                      loading="lazy"
                       referrerPolicy="no-referrer"
                     />
                   </div>
@@ -411,14 +433,17 @@ const LinkedInSection = () => {
                     <h3 className="text-lg font-display font-bold text-[#1d4c6a] leading-tight mb-4 group-hover:text-emerald-700 transition-colors">
                       {post.title}
                     </h3>
-                    <p className="text-slate-500 text-[14px] leading-relaxed line-clamp-2">
+                    <p className="text-slate-500 text-[14px] leading-relaxed line-clamp-3">
                       {post.text}
                     </p>
                   </div>
 
-                  <div className="mt-8 pt-6 border-t border-slate-200/50 flex items-center gap-2 text-emerald-600 text-sm font-bold transition-all opacity-100 translate-y-0 md:opacity-0 md:group-hover:opacity-100 md:translate-y-2 md:group-hover:translate-y-0">
-                    <span>Read on LinkedIn</span>
-                    <ArrowRight className="w-4 h-4" />
+                  <div className="mt-8 pt-6 border-t border-slate-200/50 flex items-center justify-between text-emerald-600 text-sm font-bold transition-all">
+                    <span className="flex items-center gap-2 group-hover:text-emerald-700">
+                      Read on LinkedIn
+                      <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                    </span>
+                    <ExternalLink className="w-4 h-4 text-slate-400 group-hover:text-emerald-600 transition-colors" />
                   </div>
                 </motion.a>
               </div>
@@ -524,10 +549,15 @@ const FinalSection = () => {
           {/* Contact Us Column */}
           <div className="flex flex-col">
             <span className="text-xs font-black text-emerald-500 uppercase tracking-[0.2em] mb-6">Contact Us</span>
-            <div className="flex flex-col gap-8">
+            <div className="flex flex-col gap-4">
               <div>
                 <a href="mailto:contact@databench.co" className="text-lg font-display font-medium text-slate-600 hover:text-emerald-600 transition-colors">
                   contact@databench.co
+                </a>
+              </div>
+              <div>
+                <a href="mailto:partnership@databench.co" className="text-lg font-display font-medium text-slate-600 hover:text-emerald-600 transition-colors">
+                  partnership@databench.co
                 </a>
               </div>
             </div>
