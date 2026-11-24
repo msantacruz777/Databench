@@ -12,6 +12,7 @@ export const Navbar = () => {
     { name: t('nav.aiDataLayer'), href: '#ai-data-layer' },
     { name: t('nav.customer'), href: '#use-cases' },
     { name: t('nav.media'), href: '#media' },
+    { name: 'Partnership', href: '#partnership' },
     { name: t('nav.company'), href: '#company' },
   ];
 

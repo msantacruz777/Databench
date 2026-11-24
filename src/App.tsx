@@ -43,6 +43,7 @@ import { IntelligentDataPlatform } from './components/IntelligentDataPlatform';
 import { ResultSection } from './components/ResultSection';
 import { SecuritySection } from './components/SecuritySection';
 import { BenchLogo } from './components/BenchLogo';
+import { PartnershipSection } from './components/PartnershipSection';
 
 
 // --- Components ---
@@ -513,7 +514,7 @@ const FinalSection = () => {
         </div>
 
         {/* 3-Column Info Footer Row (Matching Image) */}
-        <div className="grid md:grid-cols-3 gap-16 pt-12 border-t border-slate-100">
+        <div id="contact" className="grid md:grid-cols-3 gap-16 pt-12 border-t border-slate-100">
           {/* Mission Column */}
           <div className="flex flex-col">
             <span className="text-xs font-black text-emerald-500 uppercase tracking-[0.2em] mb-6">Mission</span>
@@ -583,6 +584,7 @@ export default function App() {
         <SecuritySection />
         <UseCasesSection />
         <LinkedInSection />
+        <PartnershipSection />
         <FinalSection />
       </main>
 
